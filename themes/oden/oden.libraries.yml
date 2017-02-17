@@ -3,3 +3,5 @@ global:
   css:
     theme:
       css/importer.css: {}
+  js:
+    js/menu-main.js: {}

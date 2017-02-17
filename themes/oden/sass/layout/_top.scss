@@ -1,0 +1,159 @@
+.region-top
+{
+  background: $navy;
+  color: white;
+  padding: 8px 25px;
+  font-size: 0.875em;
+  font-weight: 500;
+  line-height: 26px;
+  
+  a
+  {
+    color: white;
+    text-decoration: none;
+    
+    &:hover
+    {
+      text-decoration: underline;
+    }
+  }
+  
+  & > div
+  {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  &:after
+  {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .menu
+  {
+    margin: 0;
+    padding: 0;
+    
+    li
+    {
+      display: inline-block;
+    }
+  }
+}
+
+.menu--social
+{
+  display: inline-block;
+  vertical-align: top;
+  
+  a
+  {
+    display: block;
+    padding: 0 16px 0 30px;
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+  .twitter
+  {
+    background-image: url(../img/social-twitter-white.svg);
+  }
+  .linkedin
+  {
+    background-image: url(../img/social-linkedin-white.svg);
+  }
+  .facebook
+  {
+    background-image: url(../img/social-facebook-white.svg);
+  }
+  .youtube
+  {
+    background-image: url(../img/social-youtube-white.svg);
+  }
+}
+
+.block-search
+{
+  display: inline-block;
+  vertical-align: top;
+  background: white;
+  border-radius: 100px;
+  position: relative;
+  padding: 0 13px 0 90px;
+  height: 26px;
+  
+  label
+  {
+    width: auto;
+    height: auto;
+    color: $navy;
+    left: 34px;
+    clip: auto;
+  }
+  .form-search
+  {
+    height: 26px;
+    line-height: 26px;
+    border: 0;
+    width: 140px;
+    padding: 0 6px;
+    color: $navy;
+  }
+  .form-submit
+  {
+    position: absolute;
+    left: 12px;
+    top: 0;
+    width: 16px;
+    height: 26px;
+    border: 0;
+    background: transparent url(../img/icon-search-navy.svg) no-repeat center center;
+    border: 0;
+    font-size: 0;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+}
+
+.menu--top
+{
+  float: right;
+  
+  a
+  {
+    display: block;
+    padding: 0 10px;
+  }
+  .member-login
+  {
+    padding-left: 30px;
+    background: url(../img/icon-login-white.svg) no-repeat left center;
+  }
+}
+.block-language
+{
+  float: right;
+  margin-left: 12px;
+  
+  ul
+  {
+    margin: 0;
+    padding: 0;
+  }
+  li
+  {
+    display: inline-block;
+  }
+  a
+  {
+    display: inline-block;
+    padding: 0 2px;
+  }
+  .en:after
+  {
+    content: "|";
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 4px;
+  }
+}
