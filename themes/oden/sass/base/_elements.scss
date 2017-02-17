@@ -1,0 +1,35 @@
+h1
+{
+  color: $navy;
+  font-size: 1.8em;
+  margin: 0 0 0.67em 0;
+}
+h2
+{
+  color: $navy;
+  font-size: 1.5em;
+  margin: 0 0 0.67em 0;
+}
+h3
+{
+  color: $navy;
+  font-size: 1.25em;
+  margin: 0 0 0.67em 0;
+}
+
+a
+{
+  color: $navy;
+  text-decoration: underline;
+}
+
+p, ul, ol
+{
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+  
+  &:last-child
+  {
+    margin-bottom: 0;
+  }
+}

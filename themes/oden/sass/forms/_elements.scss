@@ -1,0 +1,38 @@
+input,
+textarea,
+button
+{
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button,
+.button,
+input[type=button],
+input[type=submit]
+{
+  display: inline-block;
+  position: relative;
+  border: 0;
+  color: white;
+  background-color: $purple;
+  background-image: url(../img/arrow-right-white.svg);
+  background-repeat: no-repeat;
+  background-position: 92% center;
+  min-width: 160px;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 100px;
+  text-decoration: none;
+  padding: 10px 24px 10px 12px;
+  margin-right: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  
+  &:last-child
+  {
+    margin-right: 0;
+  }
+}

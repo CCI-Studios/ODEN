@@ -39,6 +39,10 @@
       display: inline-block;
     }
   }
+  ul
+  {
+    line-height: inherit;
+  }
 }
 
 .menu--social
@@ -109,9 +113,9 @@
     background: transparent url(../img/icon-search-navy.svg) no-repeat center center;
     border: 0;
     font-size: 0;
-    cursor: pointer;
-    -webkit-appearance: none;
-    appearance: none;
+    padding: 0;
+    min-width: 0;
+    border-radius: 0;
   }
 }
 

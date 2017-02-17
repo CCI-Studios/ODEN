@@ -9,6 +9,9 @@ regions:
   top: Top
   navigation: Navigation
   header: Header
+  home_title: 'Home Title'
+  home_pre1: 'Home Pre-Content 1'
+  home_pre2: 'Home Pre-Content 2'
   content: Content
   sidebar: Sidebar
   footer: Footer
