@@ -1,0 +1,45 @@
+.oden-tweets-list
+{
+  ul
+  {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li
+  {
+    display: block;
+    margin-bottom: 35px;
+    padding: 35px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    background: white;
+    border-radius: 2px;
+    
+    &:last-child
+    {
+      margin-bottom: 0;
+    }
+  }
+  .tweet-author
+  {
+    img
+    {
+      display: block;
+      width: 40px;
+      height: auto;
+    }
+  }
+  .TweetAuthor-avatar
+  {
+    float: left;
+    padding: 6px;
+    border: 1px solid #84959e;
+    border-radius: 3px;
+    margin-right: 12px;
+  }
+  .u-hiddenVisually
+  {
+    position: absolute;
+    left: -99999999px;
+  }
+}

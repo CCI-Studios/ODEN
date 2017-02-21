@@ -1,0 +1,165 @@
+footer
+{
+  background: $navy;
+  color: white;
+  padding: 35px 25px;
+  text-align: center;
+  
+  & > div
+  {
+    max-width: 990px;
+    margin: 0 auto;
+  }
+  
+  h2, h3, h4, a
+  {
+    color: white;
+  }
+  .menu--social
+  {
+    font-size: 0.875em;
+    font-weight: 500;
+    line-height: 26px;
+    display: inline-block;
+    margin-top: 30px;
+    
+    ul
+    {
+      line-height: inherit;
+    }
+  }
+  .block-search
+  {
+    display: inline-block;
+    font-size: 0.875em;
+    font-weight: 500;
+    line-height: 26px;
+    margin-top: 30px;
+  }
+}
+.region-footer
+{
+  display: inline;
+  
+  & > div
+  {
+    display: inline;
+    
+    & > div
+    {
+      display: inline;
+    }
+  }
+}
+
+.block-stay-connected
+{
+  text-align: left;
+  
+  &:after
+  {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .block-content
+  {
+    width: 48%;
+    float: left;
+    max-width: 400px;
+  }
+  form
+  {
+    width: 48%;
+    float: right;
+    max-width: 400px;
+    
+    .form-item-email
+    {
+      background: white;
+      border-radius: 100px;
+      height: 40px;
+      padding: 0 15px;
+      
+      label
+      {
+        color: $navy;
+        float: left;
+        height: 40px;
+        line-height: 40px;
+        font-size: 0.875em;
+        font-weight: 500;
+        width: 86px;
+        padding-right: 12px;
+        text-align: center;
+        
+        &:after
+        {
+          content: ":";
+        }
+      }
+      input
+      {
+        border: 0;
+        color: $navy;
+        float: left;
+        height: 40px;
+        line-height: 40px;
+        width: calc(100% - 98px);
+        background: transparent;
+        padding: 0 8px;
+        box-sizing: border-box;
+      }
+    }
+    .button
+    {
+      margin-top: 30px;
+      color: $purple;
+      background-color: white;
+      background-image: url(../img/arrow-right-purple.svg);
+      float: right;
+    }
+  }
+}
+
+.menu--footer
+{
+  display: inline-block;
+  margin-top: 30px;
+  
+  ul
+  {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li
+  {
+    display: inline-block;
+    margin: 0 12px;
+  }
+  a
+  {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875em;
+    
+    &:hover
+    {
+      text-decoration: underline;
+    }
+  }
+}
+.footerinfo
+{
+  font-weight: 500;
+  font-size: 0.875em;
+  display: inline-block;
+  margin-top: 30px;
+  
+  .copyright, .site-by-cci
+  {
+    display: inline-block;
+    margin: 0 12px;
+  }
+}

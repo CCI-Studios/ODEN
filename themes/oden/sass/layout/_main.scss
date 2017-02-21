@@ -4,7 +4,28 @@ main
   
   & > div
   {
-    max-width: 1200px;
+    max-width: 1060px;
     margin: 0 auto;
+  }
+  &:after
+  {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+main.with-sidebar
+{
+  .layout-content
+  {
+    float: left;
+    width: 65.666%;
+    margin-right: 2%;
+  }
+  .layout-sidebar
+  {
+    float: left;
+    width: 32.3333%;
   }
 }

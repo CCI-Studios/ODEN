@@ -19,7 +19,7 @@ input[type=submit]
   background-image: url(../img/arrow-right-white.svg);
   background-repeat: no-repeat;
   background-position: 92% center;
-  min-width: 160px;
+  min-width: 200px;
   text-align: center;
   font-weight: 600;
   border-radius: 100px;
@@ -28,6 +28,7 @@ input[type=submit]
   margin-right: 20px;
   font-size: 14px;
   cursor: pointer;
+  box-sizing: border-box;
   -webkit-appearance: none;
   appearance: none;
   

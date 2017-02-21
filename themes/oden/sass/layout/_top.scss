@@ -50,12 +50,28 @@
   display: inline-block;
   vertical-align: top;
   
+  .menu
+  {
+    margin: 0;
+    padding: 0;
+    
+    li
+    {
+      display: inline-block;
+    }
+  }
   a
   {
     display: block;
     padding: 0 16px 0 30px;
     background-repeat: no-repeat;
     background-position: left center;
+    text-decoration: none;
+    
+    &:hover
+    {
+      text-decoration: underline;
+    }
   }
   .twitter
   {

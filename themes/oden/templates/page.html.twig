@@ -59,29 +59,34 @@
   {{ page.help }}
 
   {{ page.header }}
+  <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
   {{ page.home_title }}
   {{ page.home_pre1 }}
   {{ page.home_pre2 }}
 
-  <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+  <main role="main" {% if page.sidebar %}class="with-sidebar"{% endif %}><div>
 
     <div class="layout-content">
       {{ page.content }}
     </div>{# /.layout-content #}
 
     {% if page.sidebar %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
+      <aside class="layout-sidebar" role="complementary">
+        {{ page.sidebar }}
       </aside>
     {% endif %}
 
-  </main>
+  </div></main>
 
   {% if page.footer %}
-    <footer role="contentinfo">
+    <footer role="contentinfo"><div>
       {{ page.footer }}
-    </footer>
+      
+      <div class="footerinfo">
+        <div class="copyright">&copy; {{ 'Copyright'|t }} {{ ''|date(format='Y') }}</div>
+        <div class="site-by-cci">{{ 'Website by'|t }} <a href="https://ccistudios.com" target="_blank">CCI Studios</a></div>
+      </div>
+    </div></footer>
   {% endif %}
 
 </div>
