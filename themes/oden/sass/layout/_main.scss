@@ -28,4 +28,19 @@ main.with-sidebar
     float: left;
     width: 32.3333%;
   }
+  @include maxwidth(860px)
+  {
+    .layout-content
+    {
+      float: none;
+      width: auto;
+      margin-right: 0;
+    }
+    .layout-sidebar
+    {
+      float: none;
+      width: auto;
+      margin-top: 25px;
+    }
+  }
 }

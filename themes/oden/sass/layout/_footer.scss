@@ -67,12 +67,26 @@ footer
     width: 48%;
     float: left;
     max-width: 400px;
+    
+    @include maxwidth(760px)
+    {
+      width: auto;
+      float: none;
+      margin: 0 auto 25px auto;
+    }
   }
   form
   {
     width: 48%;
     float: right;
     max-width: 400px;
+    
+    @include maxwidth(760px)
+    {
+      width: auto;
+      float: none;
+      margin: 0 auto;
+    }
     
     .form-item-email
     {
@@ -118,6 +132,28 @@ footer
       background-color: white;
       background-image: url(../img/arrow-right-purple.svg);
       float: right;
+      
+      @include maxwidth(760px)
+      {
+        display: block;
+        float: none;
+        margin: 1em auto 0 auto !important;
+      }
+    }
+  }
+}
+html[lang=fr] .block-stay-connected
+{
+  form
+  {
+    .form-item-email
+    {
+      label
+      {
+        font-size: 0.8em;
+        padding-right: 0;
+        width: 98px;
+      }
     }
   }
 }

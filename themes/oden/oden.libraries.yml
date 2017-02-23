@@ -4,6 +4,7 @@ global:
     theme:
       css/importer.css: {}
   js:
+    js/vendor/classList.min.js: {}
     js/menu-main.js: {}
     js/vendor/twitterFetcher.js: {}
     js/twitter-feed.js: {}

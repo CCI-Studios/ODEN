@@ -15,9 +15,21 @@
     background: white;
     border-radius: 2px;
     
+    @include maxwidth(760px)
+    {
+      padding: 25px;
+      margin-bottom: 25px;
+    }
+    
     &:last-child
     {
       margin-bottom: 0;
+    }
+    &:after
+    {
+      content: "";
+      display: block;
+      clear: both;
     }
   }
   .tweet-author

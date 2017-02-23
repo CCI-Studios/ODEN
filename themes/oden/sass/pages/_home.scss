@@ -6,6 +6,12 @@
     background-size: cover;
     padding: 85px 25px;
     
+    @include maxwidth(760px)
+    {
+      padding: 25px;
+      background: rgba(50, 78, 93, 0.5);
+    }
+    
     & > div
     {
       max-width: 1060px;
@@ -27,20 +33,66 @@
   background: white;
   border-radius: 2px;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  
+  @include maxwidth(760px)
+  {
+    margin: 0 auto;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+  @include maxwidth(540px)
+  {
+    .button
+    {
+      display: block;
+      margin-bottom: 1em;
+      margin-right: 0;
+      
+      &:last-child
+      {
+        margin-bottom: 0;
+      }
+    }
+  }
+  @include maxwidth(480px)
+  {
+    h2
+    {
+      font-size: 1.25em;
+    }
+  }
 }
 
-.region-home-title .page-title
+.region-home-title
 {
-  text-align: center;
-  font-size: 1.5em;
-  max-width: 940px;
-  margin: 40px auto 0 auto;
+  .block-page-title-block
+  {
+    padding: 0 25px;
+  }
+  .page-title
+  {
+    text-align: center;
+    font-size: 1.5em;
+    max-width: 940px;
+    margin: 40px auto 0 auto;
+    
+    @include maxwidth(480px)
+    {
+      font-size: 1.25em;
+    }
+  }
 }
 .region-home-pre1
 {
-  padding: 20px 25px 22.5% 25px;
+  padding: 20px 5px 22.5% 5px;
   background: url(../img/bg-home-pre1.jpg) no-repeat bottom center;
   background-size: contain;
+  
+  @include maxwidth(760px)
+  {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
   
   &:after
   {
@@ -59,6 +111,13 @@
       display: table;
       width: 100%;
       border-spacing: 20px;
+      
+      @include maxwidth(760px)
+      {
+        display: block;
+        width: auto;
+        border-spacing: 0;
+      }
     }
   }
   
@@ -71,6 +130,13 @@
     border-radius: 2px;
     position: relative;
     
+    @include maxwidth(760px)
+    {
+      display: block;
+      width: auto;
+      margin-bottom: 25px;
+    }
+    
     &:last-child
     {
       margin-right: 0;
@@ -78,6 +144,11 @@
     & > div
     {
       padding: 35px 35px 70px 35px;
+      
+      @include maxwidth(960px)
+      {
+        padding: 25px 25px 60px 25px;
+      }
     }
     .clearfix:after
     {
@@ -88,6 +159,21 @@
       position: absolute;
       left: 35px;
       bottom: 35px;
+      right: 35px;
+      max-width: 200px;
+      min-width: 0;
+      
+      @include maxwidth(960px)
+      {
+        width: auto;
+        left: 25px;
+        right: 25px;
+        bottom: 25px;
+      }
+      @include maxwidth(480px)
+      {
+        max-width: none;
+      }
     }
   }
 }
@@ -97,6 +183,12 @@
   padding: 7% 25px 7% 25px;
   background: url(../img/bg-home-pre2.jpg) no-repeat top center;
   background-size: cover;
+  
+  @include maxwidth(760px)
+  {
+    padding: 25px;
+    background: rgba(126, 84, 140, 0.75);
+  }
   
   &:after
   {
@@ -121,11 +213,40 @@
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
   border-radius: 2px;
   
+  @include maxwidth(760px)
+  {
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    margin: 0 auto;
+    float: none;
+  }
+  @include maxwidth(540px)
+  {
+    .button
+    {
+      display: block;
+      margin-right: 0;
+      margin-bottom: 1em;
+      
+      &:last-child
+      {
+        margin-bottom: 0;
+      }
+    }
+  }
+  
   .statistic
   {
     padding: 35px 70px 0 15px;
     margin-right: 10px;
     background: url(../img/icon-gears-purple.svg) no-repeat top right;
+    overflow: hidden;
+    
+    @include maxwidth(540px)
+    {
+      padding: 75px 0 0 0;
+      margin-right: 0;
+    }
   }
   .number
   {
@@ -135,6 +256,13 @@
     font-weight: 600;
     line-height: 1;
     padding-right: 5px;
+    
+    @include maxwidth(540px)
+    {
+      font-size: 5em;
+      line-height: 1.5;
+      width: 100px;
+    }
   }
   .percent
   {
@@ -149,5 +277,11 @@
     font-weight: 600;
     font-size: 1.125em;
     line-height: 1.35;
+    
+    @include maxwidth(540px)
+    {
+      display: block;
+      padding-left: 105px;
+    }
   }
 }

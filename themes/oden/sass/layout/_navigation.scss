@@ -1,3 +1,7 @@
+header
+{
+  position: relative;
+}
 .region-navigation
 {
   padding: 0 25px;
@@ -20,6 +24,10 @@
 
 .menu--main
 {
+  @include maxwidth(760px)
+  {
+    display: none;
+  }
   ul
   {
     margin: 0;
@@ -36,6 +44,7 @@
       padding: 12px 30px;
       background: white;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      z-index: 1;
       
       a
       {
@@ -89,9 +98,9 @@
   {
     a:after
     {
-      -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-      transform: rotate(180deg);
+      -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+      transform: rotate(-180deg);
     }
     ul
     {
@@ -114,5 +123,159 @@
     {
       vertical-align: middle;
     }
+    
+    @include maxwidth(760px)
+    {
+      height: 50px;
+      line-height: 50px;
+      margin: 6px 0;
+      
+      img
+      {
+        height: 37px;
+        width: auto;
+      }
+    }
   }
 }
+
+.block-menu-button
+{
+  display: none;
+  margin: 6px 0;
+  
+  @include maxwidth(760px)
+  {
+    display: block;
+    float: left;
+  }
+  
+  .menu-button
+  {
+    display: block;
+    text-decoration: none;
+    font-weight: 500;
+    padding-left: 30px;
+    height: 50px;
+    line-height: 50px;
+    background: url(../img/icon-menu-navy.svg) no-repeat left center;
+  }
+}
+body
+{
+  @include maxwidth(760px)
+  {
+    .menu--main,
+    .region-top .menu--social,
+    .region-top .block-search
+    {
+      display: none;
+    }
+    &.menu-open
+    {
+      .menu--main,
+      .region-top .menu--social,
+      .region-top .block-search
+      {
+        display: block;
+      }
+    }
+    .menu--top
+    {
+      float: left;
+      margin-left: 0;
+      
+      li
+      {
+        margin: 0;
+      }
+      a
+      {
+        display: none;
+      }
+      .member-login
+      {
+        display: block;
+        padding: 0;
+        background: none;
+      }
+    }
+    .menu--main
+    {
+      clear: both;
+      margin-left: -25px;
+      margin-right: -25px;
+      background: $navy;
+      padding-top: 60px;
+      padding-bottom: 80px;
+      
+      li
+      {
+        float: none;
+        height: auto;
+        line-height: normal;
+      }
+      ul ul
+      {
+        position: static;
+        display: none;
+        width: auto;
+        background: none;
+        box-shadow: none;
+        visibility: visible;
+        padding: 0;
+        
+        a
+        {
+          padding: 10px 25px 10px 50px;
+          max-width: none;
+          font-size: 0.875em;
+        }
+      }
+      .open ul
+      {
+        display: block;
+      }
+      a
+      {
+        color: white;
+        display: block;
+        padding: 10px 25px;
+        max-width: 200px;
+      }
+      .menu-item--expanded > a:after
+      {
+        background-image: url(../img/arrow-down-white.svg);
+        float: right;
+      }
+    }
+    .region-top .block-search
+    {
+      position: absolute;
+      top: 125px;
+      left: 25px;
+      right: 25px;
+      z-index: 2;
+      
+      .form-search
+      {
+        width: 100%;
+        background: transparent;
+      }
+    }
+    .region-top .menu--social
+    {
+      position: absolute;
+      bottom: 25px;
+      left: 25px;
+      right: 25px;
+      z-index: 2;
+      
+      a
+      {
+        width: 68px;
+      }
+    }
+  }
+}
+

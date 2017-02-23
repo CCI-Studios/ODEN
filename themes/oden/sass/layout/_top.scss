@@ -134,15 +134,33 @@
     border-radius: 0;
   }
 }
+html[lang=fr] .block-search
+{
+  padding-left: 124px;
+  
+  .form-search
+  {
+    width: 106px;
+  }
+}
 
 .menu--top
 {
   float: right;
+  margin-left: 15px;
   
+  li
+  {
+    margin: 0 10px;
+    
+    &:last-child
+    {
+      margin-right: 0;
+    }
+  }
   a
   {
     display: block;
-    padding: 0 10px;
   }
   .member-login
   {
@@ -153,7 +171,7 @@
 .block-language
 {
   float: right;
-  margin-left: 12px;
+  margin-left: 15px;
   
   ul
   {
@@ -163,11 +181,16 @@
   li
   {
     display: inline-block;
+    
+    &:last-child a
+    {
+      margin-right: 0;
+    }
   }
   a
   {
     display: inline-block;
-    padding: 0 2px;
+    margin: 0 2px;
   }
   .en:after
   {
