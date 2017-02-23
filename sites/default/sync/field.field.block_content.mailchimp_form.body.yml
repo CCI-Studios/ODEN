@@ -1,0 +1,22 @@
+uuid: d46bd860-78ec-4366-9ac6-8b103b32c2c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.mailchimp_form
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.mailchimp_form.body
+field_name: body
+entity_type: block_content
+bundle: mailchimp_form
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

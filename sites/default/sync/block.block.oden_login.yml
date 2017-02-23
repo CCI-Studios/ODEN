@@ -1,0 +1,22 @@
+uuid: 3010ac81-f258-464e-a6fd-733f8bacd033
+langcode: en
+status: false
+dependencies:
+  module:
+    - user
+  theme:
+    - oden
+_core:
+  default_config_hash: 4QlSnWBcxxKMIFRM8sbu_MjSkcp3NjGgnVrc-lynQHI
+id: oden_login
+theme: oden
+region: '-1'
+weight: -2
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  provider: user
+  label_display: visible
+visibility: {  }

@@ -1,0 +1,28 @@
+uuid: d541de29-8be9-4750-990c-a07d6426c56e
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.social
+  module:
+    - block_class
+    - system
+  theme:
+    - oden
+third_party_settings:
+  block_class:
+    classes: ''
+id: social_2
+theme: oden
+region: footer
+weight: -11
+provider: null
+plugin: 'system_menu_block:social'
+settings:
+  id: 'system_menu_block:social'
+  label: Social
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

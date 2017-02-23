@@ -1,0 +1,15 @@
+uuid: 651efd4e-a41b-47a1-9297-7f97f6f8c8a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - user
+third_party_settings:
+  content_translation:
+    enabled: true
+id: user.user
+target_entity_type_id: user
+target_bundle: user
+default_langcode: site_default
+language_alterable: false

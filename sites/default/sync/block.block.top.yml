@@ -1,0 +1,28 @@
+uuid: e0dd7975-4311-4427-9257-09e9cf138626
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.top
+  module:
+    - block_class
+    - system
+  theme:
+    - oden
+third_party_settings:
+  block_class:
+    classes: ''
+id: top
+theme: oden
+region: top
+weight: -3
+provider: null
+plugin: 'system_menu_block:top'
+settings:
+  id: 'system_menu_block:top'
+  label: 'Top Menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

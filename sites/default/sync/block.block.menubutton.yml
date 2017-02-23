@@ -1,0 +1,29 @@
+uuid: 9479b6a6-ffe4-4a14-bceb-3b8888843558
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:cfa1fa7f-e779-4560-83a4-ab73a52661d8'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - oden
+third_party_settings:
+  block_class:
+    classes: block-menu-button
+id: menubutton
+theme: oden
+region: navigation
+weight: -12
+provider: null
+plugin: 'block_content:cfa1fa7f-e779-4560-83a4-ab73a52661d8'
+settings:
+  id: 'block_content:cfa1fa7f-e779-4560-83a4-ab73a52661d8'
+  label: 'Menu button'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

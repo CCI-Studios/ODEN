@@ -1,0 +1,22 @@
+uuid: c7a3e1d3-db30-4619-893d-881c496892a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.mailchimp_form
+    - field.field.block_content.mailchimp_form.body
+  module:
+    - text
+id: block_content.mailchimp_form.default
+targetEntityType: block_content
+bundle: mailchimp_form
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

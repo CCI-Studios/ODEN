@@ -1,0 +1,28 @@
+uuid: 00ae3c0a-66e3-4714-aab1-3f9e59a65b6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - block_class
+    - system
+  theme:
+    - oden
+third_party_settings:
+  block_class:
+    classes: ''
+id: mainnavigation
+theme: oden
+region: navigation
+weight: -10
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

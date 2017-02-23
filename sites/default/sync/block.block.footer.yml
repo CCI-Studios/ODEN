@@ -1,0 +1,28 @@
+uuid: 03b3f991-d2ba-497b-b87e-5fca7fe70253
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - block_class
+    - system
+  theme:
+    - oden
+third_party_settings:
+  block_class:
+    classes: ''
+id: footer
+theme: oden
+region: footer
+weight: -9
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Footer
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

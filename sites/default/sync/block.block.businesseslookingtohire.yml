@@ -1,0 +1,35 @@
+uuid: 11bf0187-fe7f-4014-bee4-c5d4a3543978
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:639fcab7-eafb-4552-b899-cb1b4bb3634a'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - oden
+third_party_settings:
+  block_class:
+    classes: ''
+id: businesseslookingtohire
+theme: oden
+region: home_pre1
+weight: -7
+provider: null
+plugin: 'block_content:639fcab7-eafb-4552-b899-cb1b4bb3634a'
+settings:
+  id: 'block_content:639fcab7-eafb-4552-b899-cb1b4bb3634a'
+  label: 'Businesses Looking to Hire'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

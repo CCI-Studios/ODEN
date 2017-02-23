@@ -1,0 +1,24 @@
+uuid: 488e63a2-0c38-45c1-8b52-12205c31700d
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - search
+  theme:
+    - oden
+third_party_settings:
+  block_class:
+    classes: ''
+id: searchform
+theme: oden
+region: top
+weight: -5
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  provider: search
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,16 @@
+uuid: ea026cf6-0138-4edc-a730-c8f27021d69e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.mailchimp_form
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.mailchimp_form
+target_entity_type_id: block_content
+target_bundle: mailchimp_form
+default_langcode: site_default
+language_alterable: true

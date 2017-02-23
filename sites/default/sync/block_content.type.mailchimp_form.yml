@@ -1,0 +1,8 @@
+uuid: 010e0239-acd6-41d7-8fc6-a36874b6dd72
+langcode: en
+status: true
+dependencies: {  }
+id: mailchimp_form
+label: 'Mailchimp form'
+revision: 0
+description: ''

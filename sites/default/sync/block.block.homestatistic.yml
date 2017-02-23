@@ -1,0 +1,35 @@
+uuid: 62907a70-216a-49f3-9d36-e06700d01f60
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:fe6dfb64-f178-4fbe-b044-f25a31fc8664'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - oden
+third_party_settings:
+  block_class:
+    classes: block-home-statistic
+id: homestatistic
+theme: oden
+region: home_pre2
+weight: 0
+provider: null
+plugin: 'block_content:fe6dfb64-f178-4fbe-b044-f25a31fc8664'
+settings:
+  id: 'block_content:fe6dfb64-f178-4fbe-b044-f25a31fc8664'
+  label: 'Home Statistic'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

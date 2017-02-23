@@ -1,0 +1,35 @@
+uuid: 78544550-117b-4be2-b111-30d9e5dd68d5
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:888adf74-7502-42b0-b0cd-004dde17b25c'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - oden
+third_party_settings:
+  block_class:
+    classes: ''
+id: serviceagencies
+theme: oden
+region: home_pre1
+weight: -8
+provider: null
+plugin: 'block_content:888adf74-7502-42b0-b0cd-004dde17b25c'
+settings:
+  id: 'block_content:888adf74-7502-42b0-b0cd-004dde17b25c'
+  label: 'Service Agencies'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,29 @@
+uuid: 4c29cbab-15b4-498f-85da-4e9ef4bb7863
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:mailchimp_form:97f741f1-fc40-4e28-af8a-736b82fa308b'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - oden
+third_party_settings:
+  block_class:
+    classes: block-stay-connected
+id: stayconnected
+theme: oden
+region: footer
+weight: -12
+provider: null
+plugin: 'block_content:97f741f1-fc40-4e28-af8a-736b82fa308b'
+settings:
+  id: 'block_content:97f741f1-fc40-4e28-af8a-736b82fa308b'
+  label: 'Stay Connected'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
