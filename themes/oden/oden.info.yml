@@ -27,3 +27,4 @@ libraries-override:
         css/components/tablesort.css: false
         css/components/tabledrag.css: false
         css/components/tableselect.css: false
+  system/admin: false

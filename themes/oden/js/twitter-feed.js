@@ -4,9 +4,14 @@
   
   container.innerHTML += "<div class='oden-tweets-list'></div>";
   
+  var maxTweets = 3;
+  if (document.querySelector(".oden-tweets").classList.contains("oden-tweets__sidebar")) {
+    maxTweets = 1;
+  }
+  
   var twitterFetcherConfig = {
     "profile": {"screenName": "odenetwork"},
-    "maxTweets": 3,
+    "maxTweets": maxTweets,
     "dataOnly": true,
     "customCallback": handleTweets
   };

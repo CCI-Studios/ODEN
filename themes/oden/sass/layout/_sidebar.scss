@@ -1,3 +1,21 @@
+.region-sidebar
+{
+  .block
+  {
+    margin-bottom: 35px;
+    
+    @include maxwidth(760px)
+    {
+      margin-bottom: 25px;
+    }
+    
+    &:last-child
+    {
+      margin-bottom: 0;
+    }
+  }
+}
+
 .oden-tweets-list
 {
   ul
@@ -53,5 +71,17 @@
   {
     position: absolute;
     left: -99999999px;
+  }
+}
+
+.block--sidebar-action
+{
+  border: 2px solid $purple;
+  border-radius: 4px;
+  padding: 35px;
+  
+  @include maxwidth(480px)
+  {
+    padding: 25px;
   }
 }
