@@ -1,0 +1,16 @@
+uuid: 43703657-097f-4436-b268-23f4b491818e
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: staff_member
+label: 'Staff Member'
+effects:
+  4c0d9e16-df9b-427a-8da9-3982226b2648:
+    uuid: 4c0d9e16-df9b-427a-8da9-3982226b2648
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 200
+      height: 200

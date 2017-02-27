@@ -1,0 +1,17 @@
+uuid: 3a139433-d1a3-4ec1-8fce-d76f3b1c6f3e
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Staff Member'
+type: staff_member
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

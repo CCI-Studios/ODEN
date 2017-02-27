@@ -1,4 +1,4 @@
-uuid: 74165bca-6c3c-42d8-8a7d-e2c05929cfe1
+uuid: b2c354f7-0c8d-4ce5-8ab3-74ba81ddca13
 langcode: en
 status: true
 dependencies:
@@ -7,16 +7,17 @@ dependencies:
   module:
     - block_class
     - block_content
+    - ctools
     - system
   theme:
     - oden
 third_party_settings:
   block_class:
-    classes: oden-tweets
-id: latesttweets
+    classes: 'oden-tweets oden-tweets__sidebar'
+id: odentweets
 theme: oden
 region: sidebar
-weight: -15
+weight: -11
 provider: null
 plugin: 'block_content:68a87033-7f32-432b-a0ab-d3b8462373d3'
 settings:
@@ -28,8 +29,18 @@ settings:
   info: ''
   view_mode: full
 visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      basic_page: basic_page
+      board_member: board_member
+      news: news
+      staff_member: staff_member
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
   request_path:
     id: request_path
     pages: '<front>'
-    negate: false
+    negate: true
     context_mapping: {  }

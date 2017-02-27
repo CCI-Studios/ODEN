@@ -1,15 +1,16 @@
-uuid: 651efd4e-a41b-47a1-9297-7f97f6f8c8a9
+uuid: 11afc3a1-ab25-47b5-a540-3d40a5239a6f
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.board_member
   module:
     - content_translation
-    - user
 third_party_settings:
   content_translation:
     enabled: true
-id: user.user
-target_entity_type_id: user
-target_bundle: user
+id: node.board_member
+target_entity_type_id: node
+target_bundle: board_member
 default_langcode: site_default
 language_alterable: true

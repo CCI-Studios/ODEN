@@ -1,0 +1,13 @@
+uuid: a3a420a4-81b0-4be7-ab76-ea3f6cac42e6
+langcode: en
+status: true
+dependencies: {  }
+id: member
+label: Member
+weight: 3
+is_admin: null
+permissions:
+  - 'translate user'
+  - 'create content translations'
+  - 'update content translations'
+  - 'access user profiles'

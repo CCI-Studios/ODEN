@@ -1,0 +1,23 @@
+uuid: 5f95984e-5e40-4761-a58d-1a8e623ba477
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: team
+label: Team
+type: 'canonical_entities:node'
+pattern: 'about-us/meet-the-team/[node:title]'
+selection_criteria:
+  34d9f290-eef1-45fe-9d6c-e56e7241614f:
+    id: node_type
+    bundles:
+      board_member: board_member
+      staff_member: staff_member
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 34d9f290-eef1-45fe-9d6c-e56e7241614f
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,45 @@
+uuid: b37cef0c-9d3a-4354-a78e-3ec499f21046
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_photo
+    - node.type.board_member
+  module:
+    - content_translation
+    - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
+id: node.board_member.field_photo
+field_name: field_photo
+entity_type: node
+bundle: board_member
+label: Photo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: 45917808-91b7-492f-9307-bccee27eae29
+    alt: ''
+    title: ''
+    width: 200
+    height: 200
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

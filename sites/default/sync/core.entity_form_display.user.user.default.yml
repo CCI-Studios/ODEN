@@ -1,0 +1,47 @@
+uuid: f4cc6fea-2070-47bb-896b-86ca1015ba47
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_corporate_status
+    - field.field.user.user.field_organization
+  module:
+    - path
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: -10
+    settings: {  }
+    third_party_settings: {  }
+  field_corporate_status:
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+  field_organization:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  language:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  timezone: true

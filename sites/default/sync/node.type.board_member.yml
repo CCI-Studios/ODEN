@@ -1,0 +1,17 @@
+uuid: ae536344-f0a2-4216-99e0-a0da24516f73
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Board Member'
+type: board_member
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

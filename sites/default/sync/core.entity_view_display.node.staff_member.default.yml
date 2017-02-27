@@ -1,0 +1,50 @@
+uuid: 2777871f-c0aa-4d59-a62a-2bf292392864
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.staff_member.body
+    - field.field.node.staff_member.field_email
+    - field.field.node.staff_member.field_photo
+    - field.field.node.staff_member.field_position
+    - image.style.staff_member
+    - node.type.staff_member
+  module:
+    - image
+    - text
+    - user
+id: node.staff_member.default
+targetEntityType: node
+bundle: staff_member
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+  field_email:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: email_mailto
+  field_photo:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: staff_member
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_position:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  langcode: true
+  links: true

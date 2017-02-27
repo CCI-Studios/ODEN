@@ -15,7 +15,7 @@ _core:
 id: oden_page_title
 theme: oden
 region: content
-weight: -8
+weight: -12
 provider: null
 plugin: page_title_block
 settings:
@@ -26,6 +26,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
+    pages: "<front>\r\n/about-us/meet-the-team/*"
     negate: true
     context_mapping: {  }

@@ -1,0 +1,46 @@
+uuid: 30573c5c-2c2a-4100-9a38-ca2fa72b0bf0
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:c5d8c8e4-5848-49d8-addc-878eff071605'
+  module:
+    - block_class
+    - block_content
+    - ctools
+    - system
+  theme:
+    - oden
+third_party_settings:
+  block_class:
+    classes: 'block--sidebar-action block--sidebar-action-1'
+id: businesseslookingtohiresidebar
+theme: oden
+region: sidebar
+weight: -14
+provider: null
+plugin: 'block_content:c5d8c8e4-5848-49d8-addc-878eff071605'
+settings:
+  id: 'block_content:c5d8c8e4-5848-49d8-addc-878eff071605'
+  label: 'Businesses Looking to Hire'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      basic_page: basic_page
+      board_member: board_member
+      news: news
+      staff_member: staff_member
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

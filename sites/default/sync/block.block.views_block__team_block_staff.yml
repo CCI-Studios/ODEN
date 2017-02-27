@@ -1,9 +1,9 @@
-uuid: 605f27b2-fe83-488d-8477-7a7a915ac500
+uuid: b343f0c2-7576-46d8-87ca-c9ef13b69f5b
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.news_articles
+    - views.view.team
   module:
     - block_class
     - system
@@ -13,22 +13,22 @@ dependencies:
 third_party_settings:
   block_class:
     classes: ''
-id: views_block__news_articles_block_1
+id: views_block__team_block_staff
 theme: oden
 region: content
-weight: -9
+weight: -8
 provider: null
-plugin: 'views_block:news_articles-block_1'
+plugin: 'views_block:team-block_staff'
 settings:
-  id: 'views_block:news_articles-block_1'
+  id: 'views_block:team-block_staff'
   label: ''
   provider: views
-  label_display: visible
+  label_display: '0'
   views_label: ''
   items_per_page: none
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
+    pages: /about-us/meet-the-team
     negate: false
     context_mapping: {  }

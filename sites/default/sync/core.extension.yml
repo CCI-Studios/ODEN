@@ -1,4 +1,5 @@
 module:
+  auto_entityqueue: 0
   block: 0
   block_class: 0
   block_content: 0
@@ -8,18 +9,22 @@ module:
   config_translation: 0
   content_translation: 0
   contextual: 0
+  crop: 0
   ctools: 0
   ctools_block: 0
   ctools_views: 0
   datetime: 0
   dblog: 0
   dynamic_page_cache: 0
+  easy_breadcrumb: 0
   editor: 0
   editor_advanced_link: 0
+  entityqueue: 0
   field: 0
   field_ui: 0
   file: 0
   filter: 0
+  focal_point: 0
   image: 0
   imce: 0
   language: 0
@@ -43,6 +48,7 @@ module:
   text: 0
   token: 0
   toolbar: 0
+  twig_tweak: 0
   update: 0
   user: 0
   views: 0

@@ -1,0 +1,32 @@
+uuid: cbcb0127-7417-44ad-900a-de9684f235a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_corporate_status
+    - field.field.user.user.field_organization
+  module:
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  field_corporate_status:
+    weight: 7
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_organization:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  member_for:
+    weight: 5
+hidden:
+  langcode: true

@@ -1,0 +1,45 @@
+uuid: 3d3e35b6-a26d-4ee8-abd4-e8804aac78cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news_articles
+  module:
+    - block_class
+    - ctools
+    - system
+    - views
+  theme:
+    - oden
+third_party_settings:
+  block_class:
+    classes: block--news
+id: views_block__news_articles_block_1_2
+theme: oden
+region: sidebar
+weight: -12
+provider: null
+plugin: 'views_block:news_articles-block_1'
+settings:
+  id: 'views_block:news_articles-block_1'
+  label: 'Latest ODEN News'
+  provider: views
+  label_display: visible
+  views_label: 'Latest ODEN News'
+  items_per_page: '1'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      basic_page: basic_page
+      board_member: board_member
+      news: news
+      staff_member: staff_member
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

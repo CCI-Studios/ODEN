@@ -1,0 +1,22 @@
+uuid: 9604e0aa-651a-44a5-969f-c0d4642ce7ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.board_member
+  module:
+    - text
+id: node.board_member.body
+field_name: body
+entity_type: node
+bundle: board_member
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

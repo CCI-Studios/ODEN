@@ -1,0 +1,16 @@
+uuid: 296269a5-b025-4ec9-ba51-5bcca9f962e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.corporate_status
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.corporate_status
+target_entity_type_id: taxonomy_term
+target_bundle: corporate_status
+default_langcode: site_default
+language_alterable: true

@@ -1,9 +1,9 @@
-uuid: 605f27b2-fe83-488d-8477-7a7a915ac500
+uuid: 86e1d417-4347-4454-94fb-98c41e88a2e5
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.news_articles
+    - views.view.team
   module:
     - block_class
     - system
@@ -13,22 +13,22 @@ dependencies:
 third_party_settings:
   block_class:
     classes: ''
-id: views_block__news_articles_block_1
+id: views_block__team_block_board
 theme: oden
 region: content
-weight: -9
+weight: -7
 provider: null
-plugin: 'views_block:news_articles-block_1'
+plugin: 'views_block:team-block_board'
 settings:
-  id: 'views_block:news_articles-block_1'
-  label: ''
+  id: 'views_block:team-block_board'
+  label: 'ODEN Board of Directors'
   provider: views
   label_display: visible
-  views_label: ''
+  views_label: 'ODEN Board of Directors'
   items_per_page: none
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
+    pages: /about-us/meet-the-team
     negate: false
     context_mapping: {  }
