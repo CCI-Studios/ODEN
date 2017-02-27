@@ -91,12 +91,22 @@
   {% endif %}
   {{ title_suffix }}
 
+  {% if display_submitted %}
+    <div class="node__meta">
+      {{ author_picture }}
+      <div{{ author_attributes.addClass('node__submitted') }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {{ metadata }}
+      </div>
+    </div>
+  {% endif %}
+
   <div{{ content_attributes.addClass('node__content') }}>
     {{ content }}
   </div>
   
-  <div class="node-read-more">
-    <a href="{{ url }}" class="button">{{ 'Read Full Article'|t }}</a>
+  <div class="read-more">
+    <a href="/news" class="button">{{ 'Back to News'|t }}</a>
   </div>
 
 </article>
