@@ -68,6 +68,8 @@
       display: block;
       width: 100%;
       height: auto;
+      border-radius: 2px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
   }
   .view-content h2
@@ -75,14 +77,50 @@
     font-size: 1.25em;
     margin: 0.25em 0 0 0;
   }
-  .field-position,
-  .field-email
+  .field-position
   {
     font-weight: 500;
     font-size: 0.9375em;
   }
+  .field-email
+  {
+    font-weight: 500;
+    font-size: 0.8125em;
+  }
   .read-more
   {
     margin-top: 0.5em;
+  }
+}
+
+
+.node--staff-member--full
+{
+  h1
+  {
+    margin-bottom: 0.2em;
+  }
+  .field-photo
+  {
+    float: left;
+    margin-right: 35px;
+    margin-bottom: 30px;
+    
+    img
+    {
+      display: block;
+      border-radius: 2px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+  }
+  .field-position
+  {
+    font-weight: 500;
+    margin-bottom: 1em;
+  }
+  .field-email
+  {
+    font-weight: 500;
+    margin-bottom: 1em;
   }
 }

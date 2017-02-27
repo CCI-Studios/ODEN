@@ -279,3 +279,25 @@ body
   }
 }
 
+.block--breadcrumbs
+{
+  padding: 0 25px;
+  font-weight: 500;
+  font-size: 0.875em;
+  
+  & > div
+  {
+    max-width: 1060px;
+    margin: 0 auto;
+  }
+  .breadcrumb
+  {
+    padding-top: 20px;
+    margin-bottom: -30px;
+    
+    li:before
+    {
+      padding: 0 3px;
+    }
+  }
+}
