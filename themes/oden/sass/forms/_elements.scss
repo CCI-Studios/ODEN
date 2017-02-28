@@ -38,3 +38,56 @@ input[type=submit]
     margin-right: 0;
   }
 }
+
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=password],
+textarea
+{
+  background: white;
+  color: $navy;
+  border: 1px solid $navy;
+  padding: 0 12px;
+  width: 100%;
+  height: 42px;
+  line-height: 40px;
+  border-radius: 21px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+textarea
+{
+  line-height: normal;
+  height: 6em;
+  padding: 10px 15px;
+}
+
+select
+{
+  width: 100%;
+  box-sizing: border-box;
+}
+
+label
+{
+  display: block;
+  margin-bottom: 0.25em;
+}
+
+.form-item
+{
+  margin-bottom: 1.5em;
+}
+.form-composite
+{
+  margin-left: 0;
+  margin-right: 0;
+  
+  & > legend
+  {
+    font-weight: inherit;
+  }
+}

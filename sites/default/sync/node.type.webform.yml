@@ -1,0 +1,23 @@
+uuid: 56af401f-4b89-415a-8094-0ca06d0a6a58
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: e0BoXlrxD4xhZMqJm5A1gTUkmntzhvyhDNY-3Y4glyc
+name: Webform
+type: webform
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

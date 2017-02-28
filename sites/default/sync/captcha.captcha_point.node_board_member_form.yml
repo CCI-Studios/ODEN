@@ -1,0 +1,7 @@
+uuid: cf1ed777-0cc6-4640-94af-9c7014494094
+langcode: en
+status: false
+dependencies: {  }
+formId: node_board_member_form
+captchaType: default
+label: null

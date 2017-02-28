@@ -20,13 +20,13 @@ main.with-sidebar
   .layout-content
   {
     float: left;
-    width: 65.666%;
-    margin-right: 2%;
+    width: 65%;
+    margin-right: 3%;
   }
   .layout-sidebar
   {
     float: left;
-    width: 32.3333%;
+    width: 32%;
   }
   @include maxwidth(860px)
   {

@@ -1,0 +1,36 @@
+.webform--contact-us
+{
+  .form-item-first-name,
+  .form-item-email-address,
+  .form-item.form-item-method-comm
+  {
+    width: 48%;
+    margin-right: 4%;
+    float: left;
+    clear: left;
+    
+    @include maxwidth(540px)
+    {
+      width: auto;
+      margin-right: 0;
+      float: none;
+    }
+  }
+  .form-item-last-name,
+  .form-item-phone-number,
+  .form-item-reason-for-communication
+  {
+    width: 48%;
+    float: left;
+    
+    @include maxwidth(540px)
+    {
+      width: auto;
+      float: none;
+    }
+  }
+  .form-item-message
+  {
+    clear: left;
+  }
+}

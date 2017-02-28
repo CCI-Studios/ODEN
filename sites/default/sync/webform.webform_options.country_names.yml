@@ -1,0 +1,12 @@
+uuid: 4d3f2fce-e0d7-47a2-9138-4a0a9bdf24eb
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: LcoGYtMhMwy6X5Wryrr_mUqNPzdSCVNcyqZULa_7qo0
+id: country_names
+label: 'Country names'
+options: ''

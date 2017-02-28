@@ -1,0 +1,7 @@
+uuid: c2f6558f-db93-4772-b118-1a82a05b78fa
+langcode: en
+status: false
+dependencies: {  }
+formId: node_news_form
+captchaType: default
+label: null
