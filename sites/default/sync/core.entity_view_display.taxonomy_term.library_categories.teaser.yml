@@ -1,0 +1,26 @@
+uuid: 42f2418c-0f7f-4e5b-a9a7-eaa38d690a06
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.teaser
+    - field.field.taxonomy_term.library_categories.field_thumbnail
+    - taxonomy.vocabulary.library_categories
+  module:
+    - image
+id: taxonomy_term.library_categories.teaser
+targetEntityType: taxonomy_term
+bundle: library_categories
+mode: teaser
+content:
+  field_thumbnail:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+hidden:
+  description: true
+  langcode: true

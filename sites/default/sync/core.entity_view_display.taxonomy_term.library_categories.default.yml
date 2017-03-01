@@ -1,0 +1,16 @@
+uuid: da473962-eda6-4f30-a043-d77942a5042d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.library_categories.field_thumbnail
+    - taxonomy.vocabulary.library_categories
+id: taxonomy_term.library_categories.default
+targetEntityType: taxonomy_term
+bundle: library_categories
+mode: default
+content: {  }
+hidden:
+  description: true
+  field_thumbnail: true
+  langcode: true

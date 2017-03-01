@@ -1,0 +1,19 @@
+uuid: d26b273e-cbef-47e1-a34e-60c9654c82bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.library_articles
+id: search_library
+label: 'Search Library'
+path: /library/search
+clean_url: true
+show_all_when_no_keys: false
+index: library_articles
+limit: 10
+searched_fields:
+  body: body
+style: view_modes
+view_mode_configuration:
+  'entity:node_library_article': teaser
+show_search_form: true

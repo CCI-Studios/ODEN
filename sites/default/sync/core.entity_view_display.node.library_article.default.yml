@@ -1,0 +1,26 @@
+uuid: 7e9922cb-9b30-4044-a6da-bc1672aa4688
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.library_article.body
+    - field.field.node.library_article.field_category
+    - node.type.library_article
+  module:
+    - text
+    - user
+id: node.library_article.default
+targetEntityType: node
+bundle: library_article
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_category: true
+  langcode: true
+  links: true

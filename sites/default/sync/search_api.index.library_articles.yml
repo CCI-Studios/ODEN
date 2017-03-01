@@ -1,0 +1,79 @@
+uuid: 2bfeb45f-fc51-46d4-9252-a9fc33c79a95
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - search_api.server.library
+  module:
+    - search_api
+    - node
+id: library_articles
+name: 'Library Articles'
+description: ''
+read_only: false
+field_settings:
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+  body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - library_article
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  html_filter:
+    fields:
+      - title
+      - body
+    title: true
+    alt: true
+    tags:
+      h1: 5
+      h2: 3
+      h3: 2
+      strong: 2
+      b: 2
+    weights:
+      preprocess_index: -10
+      preprocess_query: -10
+  node_status: {  }
+  rendered_item: {  }
+  tokenizer:
+    fields:
+      - body
+    spaces: ''
+    overlap_cjk: 1
+    minimum_word_size: '3'
+    weights:
+      preprocess_index: -6
+      preprocess_query: -6
+  ignorecase:
+    fields:
+      - title
+      - body
+    weights:
+      preprocess_index: -10
+      preprocess_query: -10
+tracker_settings:
+  default: {  }
+options:
+  index_directly: true
+  cron_limit: 50
+server: library

@@ -56,6 +56,12 @@ textarea
   box-sizing: border-box;
   -webkit-appearance: none;
   appearance: none;
+  outline: none;
+  
+  &:focus
+  {
+    box-shadow: 0 0 2px 1px #00a7ff;
+  }
 }
 
 textarea

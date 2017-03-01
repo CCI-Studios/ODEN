@@ -1,0 +1,10 @@
+uuid: e543c112-89b5-4595-a578-28942dcd02c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.teaser
+label: Teaser
+targetEntityType: taxonomy_term
+cache: true

@@ -6,7 +6,6 @@ dependencies:
     - views.view.news_articles
   module:
     - block_class
-    - ctools
     - system
     - views
   theme:
@@ -28,18 +27,8 @@ settings:
   views_label: 'Latest ODEN News'
   items_per_page: '1'
 visibility:
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
-    bundles:
-      basic_page: basic_page
-      board_member: board_member
-      news: news
-      staff_member: staff_member
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
   request_path:
     id: request_path
-    pages: '<front>'
+    pages: "<front>\r\n/library"
     negate: true
     context_mapping: {  }

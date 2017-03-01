@@ -1,0 +1,16 @@
+uuid: d6af09f6-33fb-46cf-9843-ccb89760c62b
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: library_thumbnail
+label: 'Library Thumbnail'
+effects:
+  9eb86d99-d2c3-4a53-937f-4ecda2c0bb57:
+    uuid: 9eb86d99-d2c3-4a53-937f-4ecda2c0bb57
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 340
+      height: 180

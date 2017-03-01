@@ -14,7 +14,7 @@ third_party_settings:
 id: webform
 theme: oden
 region: content
-weight: 0
+weight: -10
 provider: null
 plugin: webform_block
 settings:

@@ -1,0 +1,15 @@
+<?php
+
+function oden_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id)
+{
+  if ($form_id == "user_login_form")
+  {
+    print_r(array_keys($form));
+    unset($form['name']['#description']);
+    unset($form['pass']['#description']);
+  } else if ($form_id == "user_register_form") {
+    unset($form['account']['mail']['#description']);
+  } else {
+    // print $form_id;
+  }
+}

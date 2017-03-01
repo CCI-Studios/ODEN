@@ -12,3 +12,4 @@ permissions:
   - 'access content'
   - 'use text format full_html'
   - 'search content'
+  - 'view search api pages'

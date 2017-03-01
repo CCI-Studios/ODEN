@@ -1,0 +1,9 @@
+uuid: 551fee54-7f58-4f11-8639-c18e0b146189
+langcode: en
+status: true
+dependencies: {  }
+name: 'Library Categories'
+vid: library_categories
+description: ''
+hierarchy: 0
+weight: 0

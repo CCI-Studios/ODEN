@@ -1,0 +1,22 @@
+uuid: 479718f0-e12b-4099-9641-9a1868c8d534
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: library_articles
+label: 'Library Articles'
+type: 'canonical_entities:node'
+pattern: 'library/[node:field_category:entity:name]/[node:title]'
+selection_criteria:
+  88298d81-6afd-40b3-aacd-5f278e1fd02d:
+    id: node_type
+    bundles:
+      library_article: library_article
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 88298d81-6afd-40b3-aacd-5f278e1fd02d
+selection_logic: and
+weight: -5
+relationships: {  }

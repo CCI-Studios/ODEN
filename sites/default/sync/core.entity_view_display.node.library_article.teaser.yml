@@ -1,0 +1,28 @@
+uuid: 3fdc780d-9e8b-424f-8102-ef644a3c5308
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.library_article.body
+    - field.field.node.library_article.field_category
+    - node.type.library_article
+  module:
+    - text
+    - user
+id: node.library_article.teaser
+targetEntityType: node
+bundle: library_article
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 0
+    settings:
+      trim_length: 200
+    third_party_settings: {  }
+hidden:
+  field_category: true
+  langcode: true
+  links: true

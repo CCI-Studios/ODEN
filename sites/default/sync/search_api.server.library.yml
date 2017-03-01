@@ -1,0 +1,17 @@
+uuid: 17022985-8284-4ba0-aba6-2b99cf8b9492
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: library
+name: Library
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 1
+  partial_matches: false
+  autocomplete:
+    suggest_suffix: true
+    suggest_words: true

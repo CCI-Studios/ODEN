@@ -9,7 +9,7 @@ _core:
 id: oden_local_tasks
 theme: oden
 region: content
-weight: -10
+weight: -15
 provider: null
 plugin: local_tasks_block
 settings:

@@ -1,0 +1,33 @@
+uuid: 82e0d6bd-24e6-4e44-b1be-846edf084229
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api_page.search_api_page.search_library
+  module:
+    - block_class
+    - search_api_page
+    - system
+  theme:
+    - oden
+third_party_settings:
+  block_class:
+    classes: block--library-search
+id: searchapipagesearchblockform
+theme: oden
+region: content
+weight: -9
+provider: null
+plugin: search_api_page_form_block
+settings:
+  id: search_api_page_form_block
+  label: 'Search Api Page search block form'
+  provider: search_api_page
+  label_display: '0'
+  search_api_page: search_library
+visibility:
+  request_path:
+    id: request_path
+    pages: /library
+    negate: false
+    context_mapping: {  }
