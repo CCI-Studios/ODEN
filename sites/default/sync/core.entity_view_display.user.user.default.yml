@@ -3,16 +3,36 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.user.user.field_corporate_status
+    - field.field.user.user.field_add
+    - field.field.user.user.field_membership_expiry
+    - field.field.user.user.field_membership_type
     - field.field.user.user.field_organization
+    - field.field.user.user.field_website
   module:
+    - datetime
+    - link
     - user
 id: user.user.default
 targetEntityType: user
 bundle: user
 mode: default
 content:
-  field_corporate_status:
+  field_add:
+    weight: 9
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_membership_expiry:
+    weight: 10
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+  field_membership_type:
     weight: 7
     label: above
     settings:
@@ -26,6 +46,17 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  field_website:
+    weight: 8
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
   member_for:
     weight: 5
 hidden:

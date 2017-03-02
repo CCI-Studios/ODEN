@@ -1,12 +1,16 @@
-uuid: 17cff1ad-9b7a-448b-9c46-cd278efcbd2d
+uuid: fa87e0bf-7f8b-42d8-8f46-7e58d29a97f2
 langcode: en
 status: true
 dependencies:
   module:
+    - field_permissions
     - taxonomy
     - user
-id: user.field_corporate_status
-field_name: field_corporate_status
+third_party_settings:
+  field_permissions:
+    permission_type: custom
+id: user.field_membership_type
+field_name: field_membership_type
 entity_type: user
 type: entity_reference
 settings:

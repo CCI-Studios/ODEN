@@ -1,0 +1,23 @@
+uuid: 4b547484-aabc-4b0f-9ee6-c71622b90236
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_website
+  module:
+    - link
+    - user
+id: user.user.field_website
+field_name: field_website
+entity_type: user
+bundle: user
+label: Website
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

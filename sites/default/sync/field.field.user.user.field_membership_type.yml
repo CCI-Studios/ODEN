@@ -1,19 +1,19 @@
-uuid: 84248f65-7554-4787-a37c-05a8c076dd5a
+uuid: a0252864-a979-4b93-8c49-1811e3f155ba
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.user.field_corporate_status
-    - taxonomy.vocabulary.corporate_status
+    - field.storage.user.field_membership_type
+    - taxonomy.vocabulary.membership_type
   module:
     - user
-id: user.user.field_corporate_status
-field_name: field_corporate_status
+id: user.user.field_membership_type
+field_name: field_membership_type
 entity_type: user
 bundle: user
-label: 'Corporate Status'
+label: 'Membership Type'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
@@ -21,7 +21,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      corporate_status: corporate_status
+      membership_type: membership_type
     sort:
       field: _none
     auto_create: false

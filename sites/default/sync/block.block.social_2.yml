@@ -15,7 +15,7 @@ third_party_settings:
 id: social_2
 theme: oden
 region: footer
-weight: -11
+weight: -17
 provider: null
 plugin: 'system_menu_block:social'
 settings:

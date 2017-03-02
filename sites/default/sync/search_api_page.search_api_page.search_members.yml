@@ -1,0 +1,19 @@
+uuid: 20d9877a-7e60-406f-9095-0c71a4dc75c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.members
+id: search_members
+label: 'Search Members'
+path: /membership/list/search
+clean_url: true
+show_all_when_no_keys: false
+index: members
+limit: 10
+searched_fields:
+  field_organization: field_organization
+style: view_modes
+view_mode_configuration:
+  'entity:user_user': default
+show_search_form: true

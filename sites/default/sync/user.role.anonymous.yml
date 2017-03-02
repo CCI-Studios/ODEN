@@ -12,3 +12,4 @@ permissions:
   - 'access content'
   - 'search content'
   - 'view search api pages'
+  - 'create field_membership_type'

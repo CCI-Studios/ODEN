@@ -30,6 +30,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "<front>\r\n/library"
+    pages: "<front>\r\n/library\r\n/membership/list*"
     negate: true
     context_mapping: {  }

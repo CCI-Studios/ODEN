@@ -1,0 +1,70 @@
+uuid: e1b0ed5a-6db3-47d1-886d-909e36fe88c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_organization
+    - field.storage.user.field_membership_expiry
+    - search_api.server.library
+  module:
+    - search_api
+    - user
+id: members
+name: Members
+description: ''
+read_only: false
+field_settings:
+  field_organization:
+    label: Organization
+    datasource_id: 'entity:user'
+    property_path: field_organization
+    type: text
+    dependencies:
+      config:
+        - field.storage.user.field_organization
+  status:
+    label: 'User status'
+    datasource_id: 'entity:user'
+    property_path: status
+    type: boolean
+  field_membership_expiry:
+    label: 'Membership Expiry'
+    datasource_id: 'entity:user'
+    property_path: field_membership_expiry
+    type: date
+    dependencies:
+      config:
+        - field.storage.user.field_membership_expiry
+datasource_settings:
+  'entity:user':
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  ignorecase:
+    fields:
+      - field_organization
+    weights:
+      preprocess_index: -10
+      preprocess_query: -10
+  rendered_item: {  }
+  role_filter:
+    default: false
+    roles:
+      - member
+  tokenizer:
+    fields: {  }
+    spaces: ''
+    overlap_cjk: 1
+    minimum_word_size: '3'
+    weights:
+      preprocess_index: -6
+      preprocess_query: -6
+tracker_settings:
+  default: {  }
+options:
+  index_directly: true
+  cron_limit: 50
+server: library

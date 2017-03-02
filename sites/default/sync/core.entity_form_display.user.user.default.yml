@@ -3,9 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.user.user.field_corporate_status
+    - field.field.user.user.field_add
+    - field.field.user.user.field_membership_expiry
+    - field.field.user.user.field_membership_type
     - field.field.user.user.field_organization
+    - field.field.user.user.field_website
   module:
+    - datetime
+    - link
     - path
     - user
 id: user.user.default
@@ -17,7 +22,19 @@ content:
     weight: -10
     settings: {  }
     third_party_settings: {  }
-  field_corporate_status:
+  field_add:
+    weight: 34
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_membership_expiry:
+    weight: 35
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+  field_membership_type:
     weight: 32
     settings: {  }
     third_party_settings: {  }
@@ -29,6 +46,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+  field_website:
+    weight: 33
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
   language:
     weight: 0
     settings: {  }

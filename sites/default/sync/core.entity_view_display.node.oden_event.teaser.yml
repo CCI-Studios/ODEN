@@ -1,0 +1,27 @@
+uuid: 3a2e2c46-9602-471f-b0b4-573061f9244a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.oden_event.body
+    - node.type.oden_event
+  module:
+    - text
+    - user
+id: node.oden_event.teaser
+targetEntityType: node
+bundle: oden_event
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden:
+  langcode: true

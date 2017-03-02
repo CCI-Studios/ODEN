@@ -1,0 +1,16 @@
+uuid: 18956a95-e242-44ea-a2ac-c94626589279
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.oden_event
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.oden_event
+target_entity_type_id: node
+target_bundle: oden_event
+default_langcode: site_default
+language_alterable: true

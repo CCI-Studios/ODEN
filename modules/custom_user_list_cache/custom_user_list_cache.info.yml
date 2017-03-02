@@ -1,0 +1,4 @@
+name: Custom user_list Cache Tag
+type: module
+description: 'Invalidate user_list cache tag when a user is updated'
+core: 8.x

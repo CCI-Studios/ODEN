@@ -1,0 +1,21 @@
+uuid: 61d4e5b3-dcf7-40c8-a866-898b0919b99b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_membership_expiry
+  module:
+    - datetime
+    - user
+id: user.user.field_membership_expiry
+field_name: field_membership_expiry
+entity_type: user
+bundle: user
+label: 'Membership Expiry'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

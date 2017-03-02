@@ -1,0 +1,115 @@
+.view-member-list
+{
+  .view-map
+  {
+    float: left;
+    margin-right: 20px;
+    
+    .button
+    {
+      padding-top: 0;
+      padding-bottom: 0;
+      height: 32px;
+      line-height: 32px;
+      width: 175px;
+    }
+  }
+  .view-filters
+  {
+    display: none;
+  }
+  .member-filter
+  {
+    font-size: 0.9375em;
+    float: left;
+    line-height: 28px;
+    
+    .label
+    {
+      font-weight: 500;
+      float: left;
+      margin-right: 12px;
+    }
+    ul
+    {
+      margin: 0;
+      list-style: none;
+      float: left;
+      line-height: 28px;
+    }
+    li
+    {
+      float: left;
+      margin-right: 15px;
+    }
+    a
+    {
+      display: block;
+      font-weight: 500;
+    }
+  }
+  .view-content
+  {
+    clear: both;
+  }
+}
+
+.path-membership .search-api-page-block-form
+{
+  .form-type-search label:after
+  {
+    content: " Members:";
+  }
+  .form-search
+  {
+    width: 120px;
+    
+    @include maxwidth(380px)
+    {
+      width: 77px;
+    }
+  }
+}
+
+.view-search-members
+{
+  .search-results
+  {
+    clear: both;
+  }
+  .view-header
+  {
+    padding-bottom: 1.5em;
+  }
+}
+
+.view-member-list,
+.view-search-members
+{
+  .views-row
+  {
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    margin-bottom: 35px;
+    padding: 35px;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .views-field-field-organization
+  {
+    font-weight: 500;
+    font-size: 1.4em;
+  }
+  .views-field-nothing
+  {
+    float: right;
+    
+    @include maxwidth(540px)
+    {
+      display: none;
+    }
+  }
+  .view-empty
+  {
+    clear: both;
+  }
+}

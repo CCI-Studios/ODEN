@@ -15,7 +15,7 @@ third_party_settings:
 id: stayconnected
 theme: oden
 region: footer
-weight: -12
+weight: -18
 provider: null
 plugin: 'block_content:97f741f1-fc40-4e28-af8a-736b82fa308b'
 settings:

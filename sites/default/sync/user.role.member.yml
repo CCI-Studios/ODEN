@@ -7,7 +7,8 @@ label: Member
 weight: 3
 is_admin: null
 permissions:
-  - 'translate user'
-  - 'create content translations'
-  - 'update content translations'
-  - 'access user profiles'
+  4: 'view own field_membership_expiry'
+  6: 'create member_event content'
+  7: 'delete own member_event content'
+  8: 'edit own member_event content'
+  9: 'view own field_membership_type'

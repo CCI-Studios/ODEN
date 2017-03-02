@@ -1,9 +1,0 @@
-uuid: 04235bfd-0a72-401d-9556-8a4bf61b682f
-langcode: en
-status: true
-dependencies: {  }
-name: 'Corporate Status'
-vid: corporate_status
-description: ''
-hierarchy: 0
-weight: 0

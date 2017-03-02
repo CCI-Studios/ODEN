@@ -1,0 +1,33 @@
+uuid: 6a66de34-f236-47d6-a901-4c2f179a887d
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api_page.search_api_page.search_members
+  module:
+    - block_class
+    - search_api_page
+    - system
+  theme:
+    - oden
+third_party_settings:
+  block_class:
+    classes: ''
+id: searchmembersform
+theme: oden
+region: footer
+weight: -14
+provider: null
+plugin: search_api_page_form_block
+settings:
+  id: search_api_page_form_block
+  label: 'Search members block form'
+  provider: search_api_page
+  label_display: '0'
+  search_api_page: search_members
+visibility:
+  request_path:
+    id: request_path
+    pages: sdf
+    negate: false
+    context_mapping: {  }

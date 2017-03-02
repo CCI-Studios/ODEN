@@ -1,0 +1,17 @@
+uuid: 4103f895-3252-477d-96b2-041114889961
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'ODEN Event'
+type: oden_event
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

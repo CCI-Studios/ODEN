@@ -1,0 +1,532 @@
+uuid: 5131d7a9-0117-41a3-a7bb-b3a452958a0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block.block.searchmembersform
+    - field.storage.user.field_organization
+    - field.storage.user.field_website
+    - user.role.member
+  module:
+    - better_exposed_filters
+    - datetime
+    - link
+    - user
+id: member_list
+label: 'Member List'
+module: views
+description: ''
+tag: ''
+base_table: users_field_data
+base_field: uid
+core: 8.x
+display:
+  default:
+    display_plugin: default
+    id: default
+    display_title: Master
+    position: 0
+    display_options:
+      access:
+        type: none
+        options: {  }
+      cache:
+        type: tag
+        options: {  }
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_comment: ''
+          query_tags: {  }
+      exposed_form:
+        type: bef
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: false
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          input_required: 0
+          text_input_required: 'Select any filter and click on Apply to see results'
+          bef:
+            general:
+              allow_secondary: false
+              secondary_label: 'Advanced options'
+              autosubmit: false
+              autosubmit_hide: false
+            field_organization_value:
+              bef_format: default
+              more_options:
+                is_secondary: false
+                rewrite:
+                  filter_rewrite_values: ''
+          text_input_required_format: full_html
+      pager:
+        type: full
+        options:
+          items_per_page: 10
+          offset: 0
+          id: 0
+          total_pages: null
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+          quantity: 9
+      style:
+        type: default
+      row:
+        type: fields
+      fields:
+        field_website:
+          id: field_website
+          table: user__field_website
+          field: field_website
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: uri
+          type: link
+          settings:
+            trim_length: 80
+            url_only: true
+            url_plain: false
+            rel: '0'
+            target: '0'
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: 'View Member'
+            make_link: true
+            path: '{{ field_website }}'
+            absolute: false
+            external: true
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: button
+            prefix: ''
+            suffix: ''
+            target: _blank
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          plugin_id: custom
+        field_organization:
+          id: field_organization
+          table: user__field_organization
+          field: field_organization
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: true
+            path: '{{ field_website }}'
+            absolute: false
+            external: true
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: _blank
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+      filters:
+        status:
+          value: '1'
+          table: users_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: user
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+        roles_target_id:
+          id: roles_target_id
+          table: user__roles
+          field: roles_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            member: member
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          entity_type: user
+          plugin_id: user_roles
+        field_organization_value:
+          id: field_organization_value
+          table: user__field_organization
+          field: field_organization_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: starts
+          value: a
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_organization_value_op
+            label: 'Organization (field_organization)'
+            description: null
+            use_operator: false
+            operator: field_organization_value_op
+            identifier: field_organization_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: true
+          group_info:
+            label: 'Member Agencies'
+            description: ''
+            identifier: field_organization_value
+            optional: true
+            widget: radios
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: A-C
+                operator: regular_expression
+                value: '^[a-cA-C]'
+              2:
+                title: D-I
+                operator: regular_expression
+                value: '^[d-iD-I]'
+              3:
+                title: J-O
+                operator: regular_expression
+                value: '^[j-oJ-O]'
+              4:
+                title: P-S
+                operator: regular_expression
+                value: '^[p-sP-S]'
+              5:
+                title: T-Z
+                operator: regular_expression
+                value: '^[t-zT-Z]'
+          plugin_id: string
+        field_membership_expiry_value:
+          id: field_membership_expiry_value
+          table: user__field_membership_expiry
+          field: field_membership_expiry_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: today
+            type: offset
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
+      sorts:
+        field_organization_value:
+          id: field_organization_value
+          table: user__field_organization
+          field: field_organization_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
+      title: 'Membership List'
+      header:
+        area_text_custom_1:
+          id: area_text_custom_1
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: 'View Map'
+          empty: true
+          tokenize: false
+          content: '<div class="view-map"><a href="/membership/map" class="button">View Map</a></div>'
+          plugin_id: text_custom
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: 'Org Name Filter'
+          empty: true
+          tokenize: false
+          content: "<div class=\"member-filter\">\n<div class=\"label\">Member Agencies</div>\n<ul>\n<li><a href=\"?field_organization_value=All\">All</a></li>\n<li><a href=\"?field_organization_value=1\">A-C</a></li>\n<li><a href=\"?field_organization_value=2\">D-I</a></li>\n<li><a href=\"?field_organization_value=3\">J-O</a></li>\n<li><a href=\"?field_organization_value=4\">P-S</a></li>\n<li><a href=\"?field_organization_value=5\">T-Z</a></li>\n</ul>\n</div>"
+          plugin_id: text_custom
+        entity_block:
+          id: entity_block
+          table: views
+          field: entity_block
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          target: searchmembersform
+          view_mode: default
+          bypass_access: true
+          plugin_id: entity
+      footer: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: '<p>There are no members matching your criteria.</p>'
+          plugin_id: text_custom
+      relationships: {  }
+      arguments: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+      tags:
+        - 'config:field.storage.user.field_organization'
+        - 'config:field.storage.user.field_website'
+  block_1:
+    display_plugin: block
+    id: block_1
+    display_title: Block
+    position: 1
+    display_options:
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+      tags:
+        - 'config:field.storage.user.field_organization'
+        - 'config:field.storage.user.field_website'
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Page
+    position: 2
+    display_options:
+      display_extenders: {  }
+      path: membership/list
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+      tags:
+        - 'config:field.storage.user.field_organization'
+        - 'config:field.storage.user.field_website'
