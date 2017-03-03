@@ -6,5 +6,13 @@ global:
   js:
     js/vendor/classList.min.js: {}
     js/menu-main.js: {}
+    js/member-list.js: {}
     js/vendor/twitterFetcher.js: {}
     js/twitter-feed.js: {}
+    
+member-map:
+  version: 1.x
+  js:
+    https://maps.googleapis.com/maps/api/js?key=AIzaSyBdeyJodUvidd3zx74pxNfuBGy_QkpF9Dw:
+      type: external
+    js/member-map.js: {}

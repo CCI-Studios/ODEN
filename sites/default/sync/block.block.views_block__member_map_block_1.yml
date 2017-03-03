@@ -1,0 +1,34 @@
+uuid: 970f0f62-a5c9-48f1-a4a1-c529c12c8f26
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.member_map
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - oden
+third_party_settings:
+  block_class:
+    classes: block--member-map
+id: views_block__member_map_block_1
+theme: oden
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:member_map-block_1'
+settings:
+  id: 'views_block:member_map-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /membership/map
+    negate: false
+    context_mapping: {  }

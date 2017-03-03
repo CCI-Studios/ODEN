@@ -6,6 +6,7 @@ dependencies:
     - field.field.user.user.field_add
     - field.field.user.user.field_membership_expiry
     - field.field.user.user.field_membership_type
+    - field.field.user.user.field_opt_out_member_map
     - field.field.user.user.field_organization
     - field.field.user.user.field_website
   module:
@@ -39,6 +40,15 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+  field_opt_out_member_map:
+    weight: 11
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
   field_organization:
     weight: 6
     label: above
