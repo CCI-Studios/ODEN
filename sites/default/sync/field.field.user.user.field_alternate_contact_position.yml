@@ -1,0 +1,20 @@
+uuid: 203443b7-13b5-407c-9dc8-91efbefbbb79
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_alternate_contact_position
+  module:
+    - user
+id: user.user.field_alternate_contact_position
+field_name: field_alternate_contact_position
+entity_type: user
+bundle: user
+label: Title/Position
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,20 @@
+uuid: e8bf4ae0-dcdc-4701-808c-b23874cc2218
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_key_contact_email
+  module:
+    - user
+id: user.user.field_key_contact_email
+field_name: field_key_contact_email
+entity_type: user
+bundle: user
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

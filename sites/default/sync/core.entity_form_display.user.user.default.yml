@@ -4,73 +4,191 @@ status: true
 dependencies:
   config:
     - field.field.user.user.field_add
+    - field.field.user.user.field_alternate_contact_email
+    - field.field.user.user.field_alternate_contact_name
+    - field.field.user.user.field_alternate_contact_phone_nu
+    - field.field.user.user.field_alternate_contact_position
+    - field.field.user.user.field_key_contact
+    - field.field.user.user.field_key_contact_email
+    - field.field.user.user.field_key_contact_phone_number
+    - field.field.user.user.field_key_contact_position
     - field.field.user.user.field_membership_expiry
     - field.field.user.user.field_membership_type
+    - field.field.user.user.field_operating_budget
     - field.field.user.user.field_opt_out_member_map
     - field.field.user.user.field_organization
+    - field.field.user.user.field_other_disabilities_ser
+    - field.field.user.user.field_primary_disability_served
     - field.field.user.user.field_website
   module:
     - datetime
+    - field_group
     - link
     - path
+    - telephone
     - user
+third_party_settings:
+  field_group:
+    group_key_contact:
+      children:
+        - field_key_contact
+        - field_key_contact_position
+        - field_key_contact_phone_number
+        - field_key_contact_email
+      parent_name: ''
+      weight: 9
+      format_type: fieldset
+      format_settings:
+        label: 'Key Contact Person'
+        description: ''
+        required_fields: true
+        id: ''
+        classes: fieldset--key-contact
+      label: 'Key Contact Person'
+    group_alternate_contact:
+      children:
+        - field_alternate_contact_name
+        - field_alternate_contact_position
+        - field_alternate_contact_phone_nu
+        - field_alternate_contact_email
+      parent_name: ''
+      weight: 10
+      format_type: fieldset
+      format_settings:
+        label: 'Alternate Contact Person'
+        description: ''
+        required_fields: true
+        id: ''
+        classes: fieldset--alt-contact
+      label: 'Alternate Contact Person'
 id: user.user.default
 targetEntityType: user
 bundle: user
 mode: default
 content:
   account:
-    weight: -10
+    weight: 0
     settings: {  }
     third_party_settings: {  }
   field_add:
-    weight: 34
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_alternate_contact_email:
+    weight: 17
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+  field_alternate_contact_name:
+    weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_alternate_contact_phone_nu:
+    weight: 16
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+  field_alternate_contact_position:
+    weight: 15
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_key_contact:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_key_contact_email:
+    weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+  field_key_contact_phone_number:
+    weight: 13
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+  field_key_contact_position:
+    weight: 12
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
   field_membership_expiry:
-    weight: 35
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
   field_membership_type:
-    weight: 32
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+  field_operating_budget:
+    weight: 18
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
   field_opt_out_member_map:
-    weight: 36
+    weight: 8
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
   field_organization:
-    weight: 31
+    weight: 4
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+  field_other_disabilities_ser:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_primary_disability_served:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
   field_website:
-    weight: 33
+    weight: 5
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
   language:
-    weight: 0
+    weight: 1
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 3
     settings: {  }
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 2
     settings: {  }
     third_party_settings: {  }
 hidden:

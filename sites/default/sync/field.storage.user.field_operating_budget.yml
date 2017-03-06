@@ -1,0 +1,40 @@
+uuid: 69c39978-2bc8-4203-9723-983d0de74464
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - user
+third_party_settings:
+  field_permissions:
+    permission_type: private
+id: user.field_operating_budget
+field_name: field_operating_budget
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: lt100
+      label: '$100,000 or less'
+    -
+      value: lt250
+      label: '$101k to $250k'
+    -
+      value: lt500
+      label: '$251k to $500k'
+    -
+      value: lt1m
+      label: '$501k to $1.0M'
+    -
+      value: gt1m
+      label: 'Over $1.0M'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

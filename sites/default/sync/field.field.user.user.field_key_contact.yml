@@ -1,0 +1,20 @@
+uuid: 81f1baae-ea5f-4c83-9500-f0bbb0423317
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_key_contact
+  module:
+    - user
+id: user.user.field_key_contact
+field_name: field_key_contact
+entity_type: user
+bundle: user
+label: 'Key Contact Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

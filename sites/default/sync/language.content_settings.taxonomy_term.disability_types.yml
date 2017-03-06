@@ -1,0 +1,16 @@
+uuid: e630563a-b50b-4408-8db5-3cf7f206440d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.disability_types
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.disability_types
+target_entity_type_id: taxonomy_term
+target_bundle: disability_types
+default_langcode: site_default
+language_alterable: true

@@ -4,14 +4,26 @@ status: true
 dependencies:
   config:
     - field.field.user.user.field_add
+    - field.field.user.user.field_alternate_contact_email
+    - field.field.user.user.field_alternate_contact_name
+    - field.field.user.user.field_alternate_contact_phone_nu
+    - field.field.user.user.field_alternate_contact_position
+    - field.field.user.user.field_key_contact
+    - field.field.user.user.field_key_contact_email
+    - field.field.user.user.field_key_contact_phone_number
+    - field.field.user.user.field_key_contact_position
     - field.field.user.user.field_membership_expiry
     - field.field.user.user.field_membership_type
+    - field.field.user.user.field_operating_budget
     - field.field.user.user.field_opt_out_member_map
     - field.field.user.user.field_organization
+    - field.field.user.user.field_other_disabilities_ser
+    - field.field.user.user.field_primary_disability_served
     - field.field.user.user.field_website
   module:
     - datetime
     - link
+    - options
     - user
 id: user.user.default
 targetEntityType: user
@@ -20,6 +32,58 @@ mode: default
 content:
   field_add:
     weight: 9
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_alternate_contact_email:
+    weight: 21
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_alternate_contact_name:
+    weight: 18
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_alternate_contact_phone_nu:
+    weight: 20
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_alternate_contact_position:
+    weight: 19
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_key_contact:
+    weight: 13
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_key_contact_email:
+    weight: 17
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_key_contact_phone_number:
+    weight: 16
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_key_contact_position:
+    weight: 15
     label: above
     settings:
       link_to_entity: false
@@ -40,6 +104,12 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+  field_operating_budget:
+    weight: 22
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
   field_opt_out_member_map:
     weight: 11
     label: above
@@ -56,6 +126,20 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  field_other_disabilities_ser:
+    weight: 14
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_primary_disability_served:
+    weight: 12
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
   field_website:
     weight: 8
     label: above

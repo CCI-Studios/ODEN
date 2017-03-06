@@ -16,7 +16,6 @@ module:
   ctools_block: 0
   ctools_views: 0
   custom_user_list_cache: 0
-  custom_views_user_cache_tag: 0
   datetime: 0
   dblog: 0
   dynamic_page_cache: 0
@@ -26,6 +25,7 @@ module:
   email_registration: 0
   entityqueue: 0
   field: 0
+  field_group: 0
   field_permissions: 0
   field_ui: 0
   file: 0

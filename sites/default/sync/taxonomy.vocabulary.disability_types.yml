@@ -1,0 +1,9 @@
+uuid: cb2e2f1d-067a-4f18-84cb-e5753f8dc85f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Disability Types'
+vid: disability_types
+description: ''
+hierarchy: 0
+weight: 0

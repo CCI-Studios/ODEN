@@ -1,0 +1,22 @@
+uuid: ee507694-3c08-4123-852d-fe000f7270c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - user
+third_party_settings:
+  field_permissions:
+    permission_type: private
+id: user.field_key_contact_email
+field_name: field_key_contact_email
+entity_type: user
+type: email
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

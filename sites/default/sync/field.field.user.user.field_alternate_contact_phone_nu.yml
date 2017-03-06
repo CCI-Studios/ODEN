@@ -1,0 +1,21 @@
+uuid: 6aca854f-a9bd-4f2b-a6c3-9c0182159884
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_alternate_contact_phone_nu
+  module:
+    - telephone
+    - user
+id: user.user.field_alternate_contact_phone_nu
+field_name: field_alternate_contact_phone_nu
+entity_type: user
+bundle: user
+label: 'Phone Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

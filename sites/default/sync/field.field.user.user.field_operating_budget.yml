@@ -1,0 +1,21 @@
+uuid: bdfbdfb9-43cc-417a-bd73-a0bfc2b06528
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_operating_budget
+  module:
+    - options
+    - user
+id: user.user.field_operating_budget
+field_name: field_operating_budget
+entity_type: user
+bundle: user
+label: 'Operating Budget'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
