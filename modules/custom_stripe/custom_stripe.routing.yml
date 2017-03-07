@@ -1,0 +1,18 @@
+custom_stripe.admin:
+  path: '/admin/config/services/custom_stripe'
+  defaults:
+    _form: '\Drupal\custom_stripe\Form\CustomStripeSettingsAdminForm'
+    _title: 'Stripe Settings'
+  requirements:
+    _permission: 'administer custom stripe settings'
+  options:
+    _admin_route: TRUE
+
+custom_stripe.renewal:
+  path: '/user/{user}/renew'
+  defaults:
+    _form: '\Drupal\custom_stripe\Form\CustomStripeRenewalForm'
+    _title: 'Renew Membership'
+  requirements:
+    _role: 'member'
+    user: \d+

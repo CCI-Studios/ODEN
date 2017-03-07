@@ -5,8 +5,18 @@ dependencies:
   config:
     - field.storage.user.field_membership_type
     - taxonomy.vocabulary.membership_type
+  content:
+    - 'taxonomy_term:membership_type:3da8580b-afa4-49e5-b398-5e5a83230ca0'
   module:
+    - required_api
     - user
+third_party_settings:
+  required_api:
+    required_plugin: required_by_role
+    required_plugin_options:
+      anonymous: anonymous
+      member: member
+      administrator: 0
 id: user.user.field_membership_type
 field_name: field_membership_type
 entity_type: user
@@ -15,7 +25,9 @@ label: 'Membership Type'
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    target_uuid: 3da8580b-afa4-49e5-b398-5e5a83230ca0
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'

@@ -6,7 +6,15 @@ dependencies:
     - field.storage.user.field_operating_budget
   module:
     - options
+    - required_api
     - user
+third_party_settings:
+  required_api:
+    required_plugin: required_by_role
+    required_plugin_options:
+      anonymous: anonymous
+      member: member
+      administrator: 0
 id: user.user.field_operating_budget
 field_name: field_operating_budget
 entity_type: user
@@ -15,7 +23,9 @@ label: 'Operating Budget'
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: lt100
 default_value_callback: ''
 settings: {  }
 field_type: list_string

@@ -31,66 +31,68 @@ bundle: user
 mode: default
 content:
   field_add:
-    weight: 9
+    weight: 5
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_alternate_contact_email:
-    weight: 21
+    weight: 13
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
   field_alternate_contact_name:
-    weight: 18
+    weight: 10
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_alternate_contact_phone_nu:
-    weight: 20
+    weight: 12
     label: above
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    type: basic_string
+    type: string
   field_alternate_contact_position:
-    weight: 19
+    weight: 11
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_key_contact:
-    weight: 13
+    weight: 6
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_key_contact_email:
-    weight: 17
+    weight: 9
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
   field_key_contact_phone_number:
-    weight: 16
+    weight: 8
     label: above
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    type: basic_string
+    type: string
   field_key_contact_position:
-    weight: 15
+    weight: 7
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_membership_expiry:
-    weight: 10
+    weight: 1
     label: above
     settings:
       format_type: medium
@@ -98,60 +100,51 @@ content:
     third_party_settings: {  }
     type: datetime_default
   field_membership_type:
-    weight: 7
+    weight: 2
     label: above
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     type: entity_reference_label
   field_operating_budget:
-    weight: 22
+    weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
-  field_opt_out_member_map:
-    weight: 11
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
   field_organization:
-    weight: 6
+    weight: 0
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_other_disabilities_ser:
-    weight: 14
+    weight: 15
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_primary_disability_served:
-    weight: 12
+    weight: 14
     label: above
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     type: entity_reference_label
   field_website:
-    weight: 8
+    weight: 4
     label: above
     settings:
-      trim_length: 80
-      url_only: false
+      trim_length: null
+      url_only: true
+      target: _blank
       url_plain: false
-      rel: ''
-      target: ''
+      rel: '0'
     third_party_settings: {  }
     type: link
-  member_for:
-    weight: 5
 hidden:
+  field_opt_out_member_map: true
   langcode: true
+  member_for: true

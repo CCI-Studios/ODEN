@@ -15,6 +15,7 @@ module:
   ctools: 0
   ctools_block: 0
   ctools_views: 0
+  custom_stripe: 0
   custom_user_list_cache: 0
   datetime: 0
   dblog: 0
@@ -34,6 +35,7 @@ module:
   honeypot: 0
   image: 0
   imce: 0
+  key: 0
   language: 0
   link: 0
   link_attributes: 0
@@ -49,11 +51,14 @@ module:
   recaptcha: 0
   redirect: 0
   registration_role: 0
+  required_api: 0
+  required_by_role: 0
   search: 0
   search_api: 0
   search_api_db: 0
   search_api_page: 0
   sitemap: 0
+  stripe_api: 0
   system: 0
   taxonomy: 0
   telephone: 0

@@ -1,0 +1,94 @@
+<?php
+
+function custom_stripe_form_user_register_form_alter(&$form, &$form_state) {
+	//atach library for the stripe api and register form
+	$form['#attached']['library'][] = "custom_stripe/register";
+
+	//attach the stripe pub key
+	$stripe_api = \Drupal::service("stripe_api.stripe_api");
+	$pubkey = $stripe_api->getPubKey();
+	$form['#attached']['drupalSettings']['custom_stripe']['stripe_pub_key'] = $pubkey;
+	
+	//attach the custom prices
+	$config = \Drupal::config("custom_stripe.settings");
+	$form['#attached']['drupalSettings']['custom_stripe']['price'] = array(
+		'price_single' => (int)$config->get('price_single'),
+		'price_corporate' => (int)$config->get('price_corporate'),
+		'price_associate_lt100' => (int)$config->get('price_associate_lt100'),
+		'price_associate_lt250' => (int)$config->get('price_associate_lt250'),
+		'price_associate_lt500' => (int)$config->get('price_associate_lt500'),
+		'price_associate_lt1m' => (int)$config->get('price_associate_lt1m'),
+		'price_associate_gt1m' => (int)$config->get('price_associate_gt1m'),
+		'price_full_lt100' => (int)$config->get('price_full_lt100'),
+		'price_full_lt250' => (int)$config->get('price_full_lt250'),
+		'price_full_lt500' => (int)$config->get('price_full_lt500'),
+		'price_full_lt1m' => (int)$config->get('price_full_lt1m'),
+		'price_full_gt1m' => (int)$config->get('price_full_gt1m')
+	);
+	
+	//attach custom validation function (below)
+	$form['#validate'][] = '_custom_stripe_user_register_validate';
+	
+	//add a hidden field for the stripe token
+	$form['stripe_token'] = array(
+		'#type'=>'hidden'
+	);
+}
+
+function _custom_stripe_user_register_validate(&$form, &$form_state) {
+	//validate stripe token exists
+	$token = $form_state->getValue('stripe_token');
+	if (!$token) {
+		return $form_state->setErrorByName('', t('There was an error processing your payment.'));
+	}
+	
+	//validate membership type exists and is valid
+	$membershipType = $form_state->getValue('field_membership_type');
+	if (!$membershipType ) {
+		return $form_state->setErrorByName('field_membership_type', t('Membership Type is required.'));
+	}
+	$membershipType = (int)$membershipType[0]['target_id'];
+	$allowedMembershipTypes = array(12,13,14,15);
+	if (!in_array($membershipType, $allowedMembershipTypes, true)) {
+		return $form_state->setErrorByName('field_membership_type', t('Membership Type is invalid.'));
+	}
+	
+	//validate operating budget exists and is valid
+	$budget = $form_state->getValue('field_operating_budget');
+	if (!$budget) {
+		return $form_state->setErrorByName('field_operating_budget', t('Operating Budget is required.'));
+	}
+	$budget = $budget[0]['value'];
+	$allowedBudgets = array('lt100','lt250','lt500','lt1m','gt1m');
+	if (!in_array($budget, $allowedBudgets, true)) {
+		return $form_state->setErrorByName('field_operating_budget', t('Operating Budget is invalid.'));
+	}
+	
+	//use the membershipType and budget to calculate the price
+	$amount = _custom_stripe_calculate_cost($membershipType, $budget);
+	
+	//attempt to charge the card
+	$stripe_api = \Drupal::service('stripe_api.stripe_api');
+	try {
+		$charge = \Stripe\Charge::create(array('amount'=>$amount,'currency'=>'cad','source'=>$token));
+		//payment succeeded
+		//validation is completed without error
+	} catch(Exception $e) {
+		//payment failed
+		$form_state->setErrorByName('', t('There was an error processing your payment.'));
+	}
+}
+
+function _custom_stripe_calculate_cost($membershipType, $budget) {
+	$config = \Drupal::config("custom_stripe.settings");
+	switch($membershipType) {
+		case 12:
+			return (int)$config->get("price_single");
+		case 13:
+			return (int)$config->get("price_corporate");
+		case 14:
+			return (int)$config->get("price_associate_".$budget);
+		case 15: 
+			return (int)$config->get("price_full_".$budget);
+	}
+}

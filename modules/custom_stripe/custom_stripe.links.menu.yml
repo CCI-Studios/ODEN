@@ -1,0 +1,5 @@
+custom_stripe.admin:
+  title: 'Stripe Settings'
+  description: 'Edit custom Stripe payment settings.'
+  parent: system.admin_config_services
+  route_name: custom_stripe.admin

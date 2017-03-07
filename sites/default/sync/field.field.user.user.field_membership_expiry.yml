@@ -6,7 +6,12 @@ dependencies:
     - field.storage.user.field_membership_expiry
   module:
     - datetime
+    - required_api
     - user
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 1
 id: user.user.field_membership_expiry
 field_name: field_membership_expiry
 entity_type: user
@@ -15,7 +20,10 @@ label: 'Membership Expiry'
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    default_date_type: relative
+    default_date: '+1 year'
 default_value_callback: ''
 settings: {  }
 field_type: datetime

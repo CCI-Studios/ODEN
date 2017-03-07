@@ -1,0 +1,19 @@
+stripe_checkout:
+  version: 1.x
+  js:
+    https://checkout.stripe.com/checkout.js:
+      type: external
+
+register:
+  version: 1.x
+  js:
+    js/register.js: {}
+  dependencies:
+    - custom_stripe/stripe_checkout
+
+renewal:
+  version: 1.x
+  js:
+    js/renewal.js: {}
+  dependencies:
+    - custom_stripe/stripe_checkout

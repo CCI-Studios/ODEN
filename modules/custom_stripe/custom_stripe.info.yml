@@ -1,0 +1,5 @@
+name: Custom Stripe integration
+type: module
+description: 'Stripe integration with user registration and user renewals'
+core: 8.x
+package: Stripe

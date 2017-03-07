@@ -5,7 +5,15 @@ dependencies:
   config:
     - field.storage.user.field_organization
   module:
+    - required_api
     - user
+third_party_settings:
+  required_api:
+    required_plugin: required_by_role
+    required_plugin_options:
+      anonymous: anonymous
+      member: member
+      administrator: 0
 id: user.user.field_organization
 field_name: field_organization
 entity_type: user

@@ -1,0 +1,5 @@
+custom_stripe.renewal:
+  title: Renew Membership
+  route_name: custom_stripe.renewal
+  base_route: entity.user.canonical
+  weight: 2
