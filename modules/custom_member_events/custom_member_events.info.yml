@@ -1,0 +1,4 @@
+name: Custom functionality for Member Events
+type: module
+description: 'Custom functionality for Member Events'
+core: 8.x

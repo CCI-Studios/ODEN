@@ -1,0 +1,6 @@
+custom_member_events.my_events:
+  title: My Member Events
+  route_name: view.my_member_events.page
+  base_route: entity.user.canonical
+  class: '\Drupal\custom_member_events\MyEventsTab'
+  weight: 1
