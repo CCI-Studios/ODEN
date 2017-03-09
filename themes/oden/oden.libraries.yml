@@ -16,3 +16,8 @@ member-map:
     https://maps.googleapis.com/maps/api/js?key=AIzaSyBdeyJodUvidd3zx74pxNfuBGy_QkpF9Dw:
       type: external
     js/member-map.js: {}
+
+calendar:
+  version: 1.x
+  js:
+    js/calendar.js: {}

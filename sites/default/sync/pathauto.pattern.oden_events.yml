@@ -1,0 +1,22 @@
+uuid: 3bc7741c-c58b-47c0-ad05-e23b97d34220
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: oden_events
+label: 'ODEN Events'
+type: 'canonical_entities:node'
+pattern: 'news/events/oden/[node:title]'
+selection_criteria:
+  2223e712-dc13-4026-a933-1e87c7b7e944:
+    id: node_type
+    bundles:
+      oden_event: oden_event
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 2223e712-dc13-4026-a933-1e87c7b7e944
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,22 @@
+uuid: c3635f5c-d20b-4b1b-9993-8a1426a264c9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: member_events
+label: 'Member Events'
+type: 'canonical_entities:node'
+pattern: 'news/events/member/[node:title]'
+selection_criteria:
+  4c441273-f851-4827-8e6f-1a41f016e668:
+    id: node_type
+    bundles:
+      member_event: member_event
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 4c441273-f851-4827-8e6f-1a41f016e668
+selection_logic: and
+weight: -5
+relationships: {  }

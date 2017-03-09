@@ -6,12 +6,17 @@ dependencies:
     - field.storage.node.body
     - node.type.oden_event
   module:
+    - required_api
     - text
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
 id: node.oden_event.body
 field_name: body
 entity_type: node
 bundle: oden_event
-label: Body
+label: Details
 description: ''
 required: false
 translatable: true

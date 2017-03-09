@@ -5,6 +5,8 @@ module:
   block_class: 0
   block_content: 0
   breakpoint: 0
+  calendar: 0
+  calendar_datetime: 0
   captcha: 0
   ckeditor: 0
   config: 0
@@ -15,6 +17,7 @@ module:
   ctools: 0
   ctools_block: 0
   ctools_views: 0
+  custom_member_events: 0
   custom_stripe: 0
   custom_user_list_cache: 0
   datetime: 0
@@ -32,6 +35,7 @@ module:
   file: 0
   filter: 0
   focal_point: 0
+  help: 0
   honeypot: 0
   image: 0
   imce: 0
@@ -70,6 +74,7 @@ module:
   user: 0
   views: 0
   views_custom_cache_tag: 0
+  views_templates: 0
   views_ui: 0
   webform: 0
   webform_node: 0

@@ -24,7 +24,7 @@ header
 
 .menu--main
 {
-  @include maxwidth(760px)
+  @include maxwidth(1080px)
   {
     display: none;
   }
@@ -124,7 +124,7 @@ header
       vertical-align: middle;
     }
     
-    @include maxwidth(760px)
+    @include maxwidth(1080px)
     {
       height: 50px;
       line-height: 50px;
@@ -144,7 +144,7 @@ header
   display: none;
   margin: 6px 0;
   
-  @include maxwidth(760px)
+  @include maxwidth(1080px)
   {
     display: block;
     float: left;
@@ -163,7 +163,7 @@ header
 }
 body
 {
-  @include maxwidth(760px)
+  @include maxwidth(1080px)
   {
     .menu--main,
     .region-top .menu--social,
@@ -187,15 +187,23 @@ body
       
       li
       {
-        margin: 0;
+        margin-right: 0;
+        
+        &:first-child
+        {
+          margin-left: 0;
+        }
+        &:last-child
+        {
+          margin: 0;
+        }
       }
-      a
+      .contact-us
       {
         display: none;
       }
       .member-login
       {
-        display: block;
         padding: 0;
         background: none;
       }

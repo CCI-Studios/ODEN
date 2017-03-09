@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * Template to display a column.
+ *
+ * Available variables:
+ * - item: The item to render within a td element.
+ *
+ * @ingroup themeable
+ */
+#}
+<td
+  id="{{ item.id }}"
+  date-date="{{ item.date }}"
+  data-day-of-month="{{ item.day_of_month }}"
+  headers="{{ item.header_id }}"
+  class="{{ item.class }} {%if item.entry%}has-event{%endif%}"
+  colspan="{{ item.colspan }}"
+  rowspan="{{ item.rowspan }}">
+  <div class="inner">
+    <div class="month-date">{{ item.day_of_month }}</div>
+    <div class="entry">{{ item.entry }}</div>
+    {%if item.entry%}
+      <a class="events-link" href="#day{{item.day_of_month}}" title="Events on {{item.date|date("F jS, Y")}}">Events on {{item.date|date("F jS, Y")}}</a>
+    {%endif%}
+  </div>
+</td>
