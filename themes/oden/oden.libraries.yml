@@ -4,11 +4,12 @@ global:
     theme:
       css/importer.css: {}
   js:
-    js/vendor/classList.min.js: {}
     js/menu-main.js: {}
     js/member-list.js: {}
-    js/vendor/twitterFetcher.js: {}
+    js/twitterFetcher.js: {}
     js/twitter-feed.js: {}
+  dependencies:
+    - core/classList
     
 member-map:
   version: 1.x
