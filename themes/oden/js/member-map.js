@@ -8,9 +8,9 @@
   
   function createMap()
   {
-    var location = new google.maps.LatLng(46.94957, -82.890768);
+    var location = new google.maps.LatLng(45.84957, -82.890768);
     var mapOptions = {
-      zoom: 5,
+      zoom: 6,
       center: location,
       scrollwheel: false
     };
@@ -56,7 +56,7 @@
     var marker = new google.maps.Marker({
       map: map,
       position: latlng,
-      //icon: getMarkerIcon(address)
+      icon: "/themes/oden/img/icon-map-marker.png"
     });
     var infowindow = new google.maps.InfoWindow({
       content: "<h2>"+member.organization+"</h2><p>"+member.address+"<br><a target='_blank' href='"+member.website+"'>"+member.website+"</a></p>",
