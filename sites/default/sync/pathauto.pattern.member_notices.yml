@@ -1,0 +1,22 @@
+uuid: e944daec-5295-447d-9001-e6e672d0a9cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: member_notices
+label: 'Member Notices'
+type: 'canonical_entities:node'
+pattern: 'notices/[node:title]'
+selection_criteria:
+  49cab20d-6fcf-4f00-ad9b-ebd18722fb1a:
+    id: node_type
+    bundles:
+      member_notices: member_notices
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 49cab20d-6fcf-4f00-ad9b-ebd18722fb1a
+selection_logic: and
+weight: -5
+relationships: {  }

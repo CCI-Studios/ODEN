@@ -1,0 +1,17 @@
+uuid: 1b94baf7-6f86-4b5c-aba6-9084c148714f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Member Notices'
+type: member_notices
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

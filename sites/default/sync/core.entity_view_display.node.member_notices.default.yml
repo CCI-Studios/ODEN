@@ -1,0 +1,33 @@
+uuid: ade339d2-c688-490c-ae88-2372ea83c56d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.member_notices.body
+    - field.field.node.member_notices.field_files
+    - node.type.member_notices
+  module:
+    - file
+    - text
+    - user
+id: node.member_notices.default
+targetEntityType: node
+bundle: member_notices
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+  field_files:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+  links:
+    weight: 100
+hidden:
+  langcode: true

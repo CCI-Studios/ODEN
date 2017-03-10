@@ -1,0 +1,21 @@
+uuid: 82799813-501c-45e8-8aa3-9b71a78a264d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.member_notices.body
+    - field.field.node.member_notices.field_files
+    - node.type.member_notices
+  module:
+    - user
+id: node.member_notices.teaser
+targetEntityType: node
+bundle: member_notices
+mode: teaser
+content: {  }
+hidden:
+  body: true
+  field_files: true
+  langcode: true
+  links: true

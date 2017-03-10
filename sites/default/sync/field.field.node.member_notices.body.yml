@@ -1,0 +1,22 @@
+uuid: 6fca0840-e555-44f2-b078-dfde6ea8a568
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.member_notices
+  module:
+    - text
+id: node.member_notices.body
+field_name: body
+entity_type: node
+bundle: member_notices
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

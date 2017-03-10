@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Theme override to present all user data.
+ *
+ * This template is used when viewing a registered user's page,
+ * e.g., example.com/user/123. 123 being the user's ID.
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.field_example'. Fields attached to a user
+ *   such as 'user_picture' are available as 'content.user_picture'.
+ * - attributes: HTML attributes for the container element.
+ * - user: A Drupal User entity.
+ *
+ * @see template_preprocess_user()
+ */
+#}
+<article{{ attributes.addClass('user-profile') }}>
+  <h1>{{ 'Member Area'|t }}</h1>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</article>
+
+<div class="user--submit-event">
+  <h2>{{ 'Submit Your Event'|t }}</h2>
+  <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi odio tincidunt auctor a ornare odio.</p>
+  <a href="/user/{{ user.id }}/events" class="button white">{{ 'Submit Event'|t }}</a>
+</div>
+
+<div class="block--member-notices">
+  <h2>{{ 'Documents and Notices'|t }}</h2>
+  {{ drupal_view('member_notices', 'block') }}
+</div>

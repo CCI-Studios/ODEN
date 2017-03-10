@@ -401,7 +401,18 @@ display:
           content: '<p><a href="/node/add/member_event" class="button">Create Event</a></p>'
           plugin_id: text_custom
       footer: {  }
-      empty: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: '<p>You have not created any events.</p>'
+          plugin_id: text_custom
       relationships:
         uid:
           id: uid

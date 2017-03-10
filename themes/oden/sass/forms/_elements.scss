@@ -38,6 +38,12 @@ input[type=submit]
   {
     margin-right: 0;
   }
+  &.white
+  {
+    background-color: white;
+    color: $purple;
+    background-image: url(../img/arrow-right-purple.svg);
+  }
 }
 
 input[type=text],

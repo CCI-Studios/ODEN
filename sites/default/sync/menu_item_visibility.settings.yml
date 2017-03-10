@@ -1,0 +1,17 @@
+mlid:
+  'menu_link_content:8e0eaa68-9fc6-43fe-902b-f1c748d2f6e6':
+    roles:
+      - member
+    access_check: false
+  'menu_link_content:35708b45-170d-474f-8e71-39f0d09bde63':
+    roles:
+      - authenticated
+    access_check: false
+  'menu_link_content:c6b608e8-6b7b-4b43-a087-e07a265100a6':
+    roles:
+      - anonymous
+    access_check: false
+  'menu_link_content:387ed7e4-99a7-49fa-8061-06e10466dd77':
+    roles:
+      - anonymous
+    access_check: false
