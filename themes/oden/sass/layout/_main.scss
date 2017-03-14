@@ -13,6 +13,11 @@ main
     display: block;
     clear: both;
   }
+  img
+  {
+    max-width: 100%;
+    height: auto !important;
+  }
 }
 
 main.with-sidebar
@@ -43,4 +48,9 @@ main.with-sidebar
       margin-top: 25px;
     }
   }
+}
+
+.messages
+{
+  margin-bottom: 1.5em;
 }

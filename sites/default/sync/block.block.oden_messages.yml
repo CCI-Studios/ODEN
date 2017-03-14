@@ -3,9 +3,13 @@ langcode: en
 status: true
 dependencies:
   module:
+    - block_class
     - system
   theme:
     - oden
+third_party_settings:
+  block_class:
+    classes: ''
 _core:
   default_config_hash: 5MNdk3fpMKx_xxBTcz2T11DL4XEU1H5SgHl8BsYdFsA
 id: oden_messages
@@ -19,4 +23,9 @@ settings:
   label: 'Status messages'
   provider: system
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

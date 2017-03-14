@@ -16,7 +16,7 @@ third_party_settings:
 id: homeheader
 theme: oden
 region: header
-weight: 0
+weight: -17
 provider: null
 plugin: 'block_content:9d3eee25-a2b8-46ed-b79a-978a9a0be9a0'
 settings:

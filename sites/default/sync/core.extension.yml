@@ -19,6 +19,7 @@ module:
   ctools_block: 0
   ctools_views: 0
   custom_member_events: 0
+  custom_member_notifications: 0
   custom_stripe: 0
   custom_user_list_cache: 0
   datetime: 0
@@ -63,6 +64,7 @@ module:
   search_api: 0
   search_api_db: 0
   search_api_page: 0
+  simple_mail: 0
   sitemap: 0
   stripe_api: 0
   system: 0

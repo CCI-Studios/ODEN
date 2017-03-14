@@ -1,4 +1,4 @@
-uuid: 3a72ef32-9037-4d82-b238-473c1e53e97f
+uuid: f1453006-9252-4c14-8f78-87c577d8b519
 langcode: en
 status: true
 dependencies:
@@ -9,21 +9,21 @@ dependencies:
     - oden
 third_party_settings:
   block_class:
-    classes: block--breadcrumbs
-id: breadcrumbs
+    classes: ''
+id: messages
 theme: oden
 region: header
-weight: -18
+weight: -19
 provider: null
-plugin: system_breadcrumb_block
+plugin: system_messages_block
 settings:
-  id: system_breadcrumb_block
-  label: Breadcrumbs
+  id: system_messages_block
+  label: Messages
   provider: system
   label_display: '0'
 visibility:
   request_path:
     id: request_path
     pages: '<front>'
-    negate: true
+    negate: false
     context_mapping: {  }

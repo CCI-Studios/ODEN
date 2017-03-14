@@ -30,6 +30,7 @@ sites/simpletest
 
 # Ignore configuration files that may contain sensitive information.
 # */settings*.php
+sites/default/sync/key.key*.yml
 
 # Ignore paths that contain user-generated content.
 # */files
