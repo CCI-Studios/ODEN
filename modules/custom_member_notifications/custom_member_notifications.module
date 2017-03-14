@@ -1,0 +1,103 @@
+<?php
+
+use Drupal\node\NodeInterface;
+use Drupal\user\Entity\User;
+use Drupal\user\UserInterface;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use DrewM\MailChimp\MailChimp;
+
+function custom_member_notifications_node_insert(NodeInterface $node) {
+  if ($node->getType() == "member_notices" && $node->isPublished()) {
+    //new member notice is published
+    $options = ['absolute' => TRUE];
+    $url = Drupal\Core\Url::fromRoute('entity.node.canonical', ['node' => $node->id()], $options)->toString();
+    
+    $ids = \Drupal::entityQuery('user')
+      ->condition('status', 1)
+      ->condition('roles', 'member')
+      ->execute();
+    $users = User::loadMultiple($ids);
+    
+    foreach ($users as $user) {
+      $to = $user->getEmail();
+      if (!$to) continue;
+      $from = \Drupal::config('system.site')->get('mail');
+      $subject = "New Member Documents and Notices";
+      $body = $node->getTitle() . "<br>\r\n";
+      $body .= $url;
+      simple_mail_queue($from, $to, $subject, $body);
+    }
+  }
+  
+  else if ($node->getType() == "member_event") {
+    //new member event needs approval
+    $options = ['absolute' => TRUE];
+    $url = Drupal\Core\Url::fromRoute('entity.node.edit_form', ['node' => $node->id()], $options)->toString();
+    
+    $to = \Drupal::config('system.site')->get('mail');
+    $from = "cmorris+site@ccistudios.com";
+    $subject = "New Member Event for Approval";
+    $body = $node->getTitle() . "<br>\r\n";
+    $body .= $url;
+    simple_mail_send($from, $to, $subject, $body);
+    
+    //redirect the user to their events page
+    $user = User::load(\Drupal::currentUser()->id());
+    if ($user->hasRole('member')) {
+      drupal_set_message(t("Thank you for your event submission. Please give us up to two business days to review and post your event to our calendar."));
+      $response = new RedirectResponse("/user/".$user->id()."/events");
+      $response->send();
+    }
+  }
+}
+
+function custom_member_notifications_node_update(NodeInterface $node) {
+  if ($node->getType() == "member_event") {
+    //updated member_event
+    if ($node->isPublished() && !$node->original->isPublished()) {
+      //became published
+      $options = ['absolute' => TRUE];
+      $url = Drupal\Core\Url::fromRoute('entity.node.canonical', ['node' => $node->id()], $options)->toString();
+      
+      $user = User::load($node->getOwnerId());
+      
+      $to = $user->getEmail();
+      $from = \Drupal::config('system.site')->get('mail');
+      $subject = "Your Event Has Been Published";
+      $body = $node->getTitle() . "<br>\r\n";
+      $body .= $url;
+      simple_mail_send($from, $to, $subject, $body);
+    }
+  }
+}
+
+function custom_member_notifications_user_update(UserInterface $user) {
+  if ($user->hasRole('member') && $user->isActive() && !$user->original->isActive()) {
+    //member user became active
+    //add this member to the Mailchimp list
+    $email_address = $user->getEmail();
+    $keys = \Drupal::service("key.repository");
+    $mailchimp_api_key = $keys->getKey("mailchimp_api_key")->getKeyValue();
+    $list_id = $keys->getKey("mailchimp_list_id")->getKeyValue();
+    $group_id = $keys->getKey("mailchimp_group_id")->getKeyValue();
+    $MailChimp = new MailChimp($mailchimp_api_key);
+    $subscriber_hash = $MailChimp->subscriberHash($email_address);
+    $result = $MailChimp->put("lists/$list_id/members/$subscriber_hash", [
+      'email_address' => $email_address,
+      'status_if_new' => 'subscribed',
+      'interests' => [$group_id => true]
+    ]);
+  }
+}
+
+function custom_member_notifications_user_insert(UserInterface $user) {
+  $currentUser = \Drupal::currentUser();
+  if (!$currentUser->isAuthenticated()) {
+    $url = "/user-signup";
+    if ($user->getPreferredLangcode() == "fr") {
+      $url = "/fr".$url;
+    }
+    $response = new RedirectResponse($url);
+    $response->send();
+  }
+}

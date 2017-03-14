@@ -1,0 +1,4 @@
+name: Custom notifications for Members
+type: module
+description: 'Custom notifications for Members'
+core: 8.x
