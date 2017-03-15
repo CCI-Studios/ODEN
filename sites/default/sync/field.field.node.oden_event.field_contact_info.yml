@@ -1,9 +1,9 @@
-uuid: 6bded570-cdbd-4348-afa5-886b49c1c526
+uuid: 6b5ba3f8-3a8b-4ea0-b9fa-50a4a1e7dbab
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.body
+    - field.storage.node.field_contact_info
     - node.type.oden_event
   module:
     - required_api
@@ -12,16 +12,15 @@ third_party_settings:
   required_api:
     required_plugin: default
     required_plugin_options: 0
-id: node.oden_event.body
-field_name: body
+id: node.oden_event.field_contact_info
+field_name: field_contact_info
 entity_type: node
 bundle: oden_event
-label: Details
+label: 'Contact info'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
-settings:
-  display_summary: false
-field_type: text_with_summary
+settings: {  }
+field_type: text_long

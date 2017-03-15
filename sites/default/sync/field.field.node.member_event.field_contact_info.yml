@@ -1,0 +1,26 @@
+uuid: a69b380a-4209-4a8c-b151-57a586086bb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_info
+    - node.type.member_event
+  module:
+    - required_api
+    - text
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: node.member_event.field_contact_info
+field_name: field_contact_info
+entity_type: node
+bundle: member_event
+label: 'Contact info'
+description: 'eg. name, phone number, email address'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

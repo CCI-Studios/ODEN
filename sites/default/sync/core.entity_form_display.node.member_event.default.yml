@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.member_event.body
+    - field.field.node.member_event.field_contact_info
     - field.field.node.member_event.field_date
     - field.field.node.member_event.field_location
     - node.type.member_event
@@ -29,6 +30,13 @@ content:
     weight: 3
     settings: {  }
     third_party_settings: {  }
+  field_contact_info:
+    weight: 26
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
   field_date:
     weight: 8
     settings: {  }

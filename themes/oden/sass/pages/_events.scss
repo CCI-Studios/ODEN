@@ -198,14 +198,20 @@
     font-size: 1.125em;
     margin-bottom: 0.8em;
   }
-  .field--name-body .field__label
+  .field-contact-info,
+  .field--name-body
   {
-    font-size: 1.125em;
     margin-bottom: 0.8em;
     
-    &:after
+    .field__label
     {
-      content: ":";
+      font-size: 1.125em;
+      margin-bottom: 0.8em;
+      
+      &:after
+      {
+        content: ":";
+      }
     }
   }
 }

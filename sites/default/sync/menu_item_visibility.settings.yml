@@ -15,3 +15,6 @@ mlid:
     roles:
       - anonymous
     access_check: false
+  'menu_link_content:372c0ac5-b546-491d-8d03-5f9dabaa24a7':
+    roles: {  }
+    access_check: false
