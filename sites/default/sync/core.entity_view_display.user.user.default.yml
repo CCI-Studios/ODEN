@@ -37,12 +37,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-  field_alternate_contact_email:
-    weight: 13
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
   field_alternate_contact_name:
     weight: 10
     label: above
@@ -50,47 +44,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-  field_alternate_contact_phone_nu:
-    weight: 12
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-  field_alternate_contact_position:
-    weight: 11
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
   field_key_contact:
+    type: string
     weight: 6
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
-  field_key_contact_email:
-    weight: 9
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
-  field_key_contact_phone_number:
-    weight: 8
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-  field_key_contact_position:
-    weight: 7
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
   field_membership_expiry:
     weight: 1
     label: above
@@ -119,20 +79,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-  field_other_disabilities_ser:
-    weight: 15
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-  field_primary_disability_served:
-    weight: 14
-    label: above
-    settings:
-      link: false
-    third_party_settings: {  }
-    type: entity_reference_label
   field_website:
     weight: 4
     label: above
@@ -145,6 +91,14 @@ content:
     third_party_settings: {  }
     type: link
 hidden:
+  field_alternate_contact_email: true
+  field_alternate_contact_phone_nu: true
+  field_alternate_contact_position: true
+  field_key_contact_email: true
+  field_key_contact_phone_number: true
+  field_key_contact_position: true
   field_opt_out_member_map: true
+  field_other_disabilities_ser: true
+  field_primary_disability_served: true
   langcode: true
   member_for: true

@@ -1,0 +1,72 @@
+.user-register-form
+{
+  .confirm-parent,
+  .password-parent
+  {
+    overflow: visible;
+  }
+  div.password-confirm
+  {
+    width: auto;
+  }
+  .field-group-fieldset legend
+  {
+    font-weight: bold;
+    font-size: 1.5em;
+    padding: 0 12px;
+    margin-bottom: 15px;
+  }
+  .field--name-field-key-contact,
+  .field--name-field-key-contact-phone-number,
+  .field--name-field-alternate-contact-name,
+  .field--name-field-alternate-contact-phone-nu,
+  .form-item-pass-pass1,
+  .field--name-field-primary-disability-served
+  {
+    width: 48%;
+    float: left;
+    margin-right: 4%;
+    
+    .form-item
+    {
+      margin-top: 0;
+    }
+    @include maxwidth(540px)
+    {
+      width: auto;
+      float: none;
+      margin-right: 0;
+    }
+  }
+  .field--name-field-key-contact-position,
+  .field--name-field-key-contact-email,
+  .field--name-field-alternate-contact-position,
+  .field--name-field-alternate-contact-email,
+  .form-item-pass-pass2,
+  .field--name-field-other-disabilities-ser
+  {
+    float: left;
+    width: 48%;
+    clear: none;
+    
+    .form-item
+    {
+      margin-top: 0;
+    }
+    @include maxwidth(540px)
+    {
+      width: auto;
+      float: none;
+    }
+  }
+  .form-radios
+  {
+    .form-item
+    {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 20px;
+      min-width: 150px;
+    }
+  }
+}

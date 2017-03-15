@@ -8,6 +8,7 @@ function oden_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_stat
     unset($form['pass']['#description']);
   } else if ($form_id == "user_register_form") {
     unset($form['account']['mail']['#description']);
+    unset($form['account']['pass']['#description']);
   } else {
     // print $form_id;
   }

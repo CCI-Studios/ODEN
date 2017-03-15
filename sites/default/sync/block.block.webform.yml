@@ -27,6 +27,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /about-us/contact-us
+    pages: "/about-us/contact-us\r\n/contact-us"
     negate: false
     context_mapping: {  }
