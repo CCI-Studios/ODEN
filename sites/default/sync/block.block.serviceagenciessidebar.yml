@@ -1,9 +1,9 @@
-uuid: 3639486f-5c64-498c-9a09-2797829067cd
+uuid: 8bc4c5a4-a2e9-4074-90da-ef05df115825
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic_block:e2e25bdd-2804-490a-897a-f6315304b9e3'
+    - 'block_content:basic_block:a2b05cb9-9c68-4d26-b65b-1fd2e05689d9'
   module:
     - block_class
     - block_content
@@ -12,16 +12,16 @@ dependencies:
     - oden
 third_party_settings:
   block_class:
-    classes: 'block--sidebar-action block--sidebar-action-3'
-id: supportforfamiliessidebar
+    classes: 'block--sidebar-action block--sidebar-action-1'
+id: serviceagenciessidebar
 theme: oden
 region: sidebar
-weight: -18
+weight: -20
 provider: null
-plugin: 'block_content:e2e25bdd-2804-490a-897a-f6315304b9e3'
+plugin: 'block_content:a2b05cb9-9c68-4d26-b65b-1fd2e05689d9'
 settings:
-  id: 'block_content:e2e25bdd-2804-490a-897a-f6315304b9e3'
-  label: 'Support for Families'
+  id: 'block_content:a2b05cb9-9c68-4d26-b65b-1fd2e05689d9'
+  label: 'Service Agencies'
   provider: block_content
   label_display: visible
   status: true

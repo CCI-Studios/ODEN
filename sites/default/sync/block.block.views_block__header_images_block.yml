@@ -1,0 +1,28 @@
+uuid: 8d5d6720-4cee-4a08-91ec-953469be0fac
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.header_images
+  module:
+    - block_class
+    - views
+  theme:
+    - oden
+third_party_settings:
+  block_class:
+    classes: ''
+id: views_block__header_images_block
+theme: oden
+region: header
+weight: -19
+provider: null
+plugin: 'views_block:header_images-block'
+settings:
+  id: 'views_block:header_images-block'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

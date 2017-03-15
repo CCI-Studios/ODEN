@@ -1,0 +1,42 @@
+.view-header-images
+{
+  position: relative;
+  
+  img
+  {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .slick-dots
+  {
+    text-align: center;
+    
+    li
+    {
+      display: inline-block;
+      margin: 0 6px;
+    }
+    button
+    {
+      font-size: 0;
+      padding: 0;
+      background: $purple;
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border-radius: 8px;
+    }
+    .slick-active button
+    {
+      background-color: $navy;
+    }
+    .dots-pause button
+    {
+      background-image: url(../img/pause.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+}

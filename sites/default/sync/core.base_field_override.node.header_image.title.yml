@@ -1,0 +1,18 @@
+uuid: 7f43be50-c592-476e-bd26-fb83ebd01dfb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.header_image
+id: node.header_image.title
+field_name: title
+entity_type: node
+bundle: header_image
+label: Label
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -10,6 +10,7 @@ global:
     js/twitter-feed.js: {}
   dependencies:
     - core/classList
+    - oden/slick
     
 member-map:
   version: 1.x
@@ -22,3 +23,14 @@ calendar:
   version: 1.x
   js:
     js/calendar.js: {}
+    
+slick:
+  version: 1.6.0
+  js:
+    js/slick.js: {}
+    js/header-images.js: {}
+  css:
+    theme:
+      css/slick.css: {}
+  dependencies:
+    - core/jquery

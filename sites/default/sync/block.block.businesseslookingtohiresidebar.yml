@@ -12,11 +12,11 @@ dependencies:
     - oden
 third_party_settings:
   block_class:
-    classes: 'block--sidebar-action block--sidebar-action-1'
+    classes: 'block--sidebar-action block--sidebar-action-2'
 id: businesseslookingtohiresidebar
 theme: oden
 region: sidebar
-weight: -14
+weight: -19
 provider: null
 plugin: 'block_content:c5d8c8e4-5848-49d8-addc-878eff071605'
 settings:

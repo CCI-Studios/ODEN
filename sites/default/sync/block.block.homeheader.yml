@@ -1,6 +1,6 @@
 uuid: 30018388-2822-4a0f-9c58-54f2a085c6f1
 langcode: en
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:basic_block:9d3eee25-a2b8-46ed-b79a-978a9a0be9a0'
@@ -15,8 +15,8 @@ third_party_settings:
     classes: block-home-header
 id: homeheader
 theme: oden
-region: header
-weight: -17
+region: '-1'
+weight: -19
 provider: null
 plugin: 'block_content:9d3eee25-a2b8-46ed-b79a-978a9a0be9a0'
 settings:

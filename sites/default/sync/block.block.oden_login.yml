@@ -11,7 +11,7 @@ _core:
 id: oden_login
 theme: oden
 region: '-1'
-weight: -16
+weight: -17
 provider: null
 plugin: user_login_block
 settings:

@@ -1,0 +1,26 @@
+uuid: bd6de2da-97da-461f-a56f-794f0042adaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.announcements.body
+    - node.type.announcements
+  module:
+    - text
+    - user
+id: node.announcements.teaser
+targetEntityType: node
+bundle: announcements
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 0
+    settings:
+      trim_length: 200
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  links: true

@@ -1,0 +1,22 @@
+uuid: 1f28d858-922f-445d-8e0c-009ba02a7ab3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: announcements
+label: Announcements
+type: 'canonical_entities:node'
+pattern: 'announcements/[node:created:html_year]/[node:title]'
+selection_criteria:
+  a5f8e44a-d5f7-4161-b9b8-b82a9c2a43ea:
+    id: node_type
+    bundles:
+      announcements: announcements
+    negate: false
+    context_mapping:
+      node: node
+    uuid: a5f8e44a-d5f7-4161-b9b8-b82a9c2a43ea
+selection_logic: and
+weight: -5
+relationships: {  }

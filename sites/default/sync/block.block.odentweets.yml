@@ -16,7 +16,7 @@ third_party_settings:
 id: odentweets
 theme: oden
 region: sidebar
-weight: -11
+weight: -16
 provider: null
 plugin: 'block_content:68a87033-7f32-432b-a0ab-d3b8462373d3'
 settings:
@@ -30,6 +30,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "<front>\r\n/library\r\n/membership/list*\r\n/membership/map\r\n/news/events\r\n/news/events/*"
+    pages: "/library\r\n/membership/list*\r\n/membership/map\r\n/news/events\r\n/news/events/*"
     negate: true
     context_mapping: {  }

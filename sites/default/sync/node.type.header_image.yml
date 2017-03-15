@@ -1,4 +1,4 @@
-uuid: 4e837332-a1ae-4003-9020-8285804803ec
+uuid: a3923488-9707-4013-a050-50fc3107875b
 langcode: en
 status: true
 dependencies:
@@ -6,11 +6,10 @@ dependencies:
     - menu_ui
 third_party_settings:
   menu_ui:
-    available_menus:
-      - main
-    parent: 'main:'
-name: News
-type: news
+    available_menus: {  }
+    parent: ''
+name: 'Header image'
+type: header_image
 description: ''
 help: ''
 new_revision: true

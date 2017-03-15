@@ -1,9 +1,9 @@
-uuid: 605f27b2-fe83-488d-8477-7a7a915ac500
+uuid: c85b217e-969f-45fc-9c92-05aee6bca22b
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.news_articles
+    - views.view.announcements
   module:
     - block_class
     - system
@@ -13,14 +13,14 @@ dependencies:
 third_party_settings:
   block_class:
     classes: ''
-id: views_block__news_articles_block_1
+id: views_block__announcements_block
 theme: oden
 region: content
-weight: -14
+weight: 0
 provider: null
-plugin: 'views_block:news_articles-block_1'
+plugin: 'views_block:announcements-block'
 settings:
-  id: 'views_block:news_articles-block_1'
+  id: 'views_block:announcements-block'
   label: ''
   provider: views
   label_display: visible

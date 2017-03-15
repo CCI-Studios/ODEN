@@ -1,0 +1,28 @@
+uuid: 4344c7cd-faf3-42e5-b34b-f647b8d40caf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.header_image
+  module:
+    - link
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: node.header_image.field_link
+field_name: field_link
+entity_type: node
+bundle: header_image
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link
