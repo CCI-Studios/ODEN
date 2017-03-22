@@ -1,6 +1,7 @@
 .view-team
 {
   text-align: center;
+  margin-top: 1.5em;
   
   &:after
   {
@@ -86,6 +87,7 @@
   {
     font-weight: 500;
     font-size: 0.8125em;
+    word-wrap: break-word;
   }
   .read-more
   {
@@ -122,5 +124,9 @@
   {
     font-weight: 500;
     margin-bottom: 1em;
+  }
+  .read-more
+  {
+    margin-top: 1.5em;
   }
 }
