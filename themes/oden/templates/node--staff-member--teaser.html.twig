@@ -84,11 +84,7 @@
 <div class="{{ classes|join(" ") }}">
 
   <div{{ content_attributes.addClass('node__content') }}>
-    <div class="field field-photo">
-      <a href="{{ url }}">
-        <img src="{{ node.field_photo.entity.fileuri | image_style('staff_member') }}" />
-      </a>
-    </div>
+    {{ content.field_photo }}
     <h2{{ title_attributes }}>{{ label }}</h2>
     {{ content|without('field_photo') }}
     <div class="read-more"><a href="{{ url }}" class="button">{{ 'View Profile'|t }}</a></div>
