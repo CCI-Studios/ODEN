@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.header_image.field_header_image
+    - field.field.node.header_image.field_link
     - node.type.header_image
   module:
     - user
@@ -14,5 +16,8 @@ mode: teaser
 content:
   links:
     weight: 100
+    region: content
 hidden:
+  field_header_image: true
+  field_link: true
   langcode: true

@@ -510,10 +510,11 @@ display:
           plugin_id: search_api_fulltext
       display_extenders: {  }
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
       tags:
         - 'config:field.storage.user.field_organization'
@@ -527,10 +528,11 @@ display:
       display_extenders: {  }
       path: membership/list/search/%
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
       tags:
         - 'config:field.storage.user.field_organization'

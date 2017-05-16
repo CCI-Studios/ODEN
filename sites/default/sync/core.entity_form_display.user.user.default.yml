@@ -70,6 +70,7 @@ content:
     weight: 0
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_add:
     weight: 6
     settings:
@@ -77,6 +78,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_alternate_contact_email:
     weight: 17
     settings:
@@ -84,6 +86,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: email_default
+    region: content
   field_alternate_contact_name:
     weight: 14
     settings:
@@ -91,12 +94,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_alternate_contact_phone_nu:
     weight: 16
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: telephone_default
+    region: content
   field_alternate_contact_position:
     weight: 15
     settings:
@@ -104,6 +109,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_key_contact:
     weight: 11
     settings:
@@ -111,6 +117,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_key_contact_email:
     weight: 14
     settings:
@@ -118,12 +125,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: email_default
+    region: content
   field_key_contact_phone_number:
     weight: 13
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: telephone_default
+    region: content
   field_key_contact_position:
     weight: 12
     settings:
@@ -131,27 +140,32 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_membership_expiry:
     weight: 7
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
+    region: content
   field_membership_type:
     weight: 13
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+    region: content
   field_operating_budget:
     weight: 18
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+    region: content
   field_opt_out_member_map:
     weight: 8
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
   field_organization:
     weight: 4
     settings:
@@ -159,6 +173,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_other_disabilities_ser:
     weight: 12
     settings:
@@ -166,11 +181,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_primary_disability_served:
     weight: 11
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_website:
     weight: 5
     settings:
@@ -178,19 +195,23 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
   language:
     weight: 1
     settings: {  }
     third_party_settings: {  }
+    region: content
   path:
     type: path
     weight: 3
     settings: {  }
     third_party_settings: {  }
+    region: content
   translation:
     weight: 2
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden:
   langcode: true
   timezone: true

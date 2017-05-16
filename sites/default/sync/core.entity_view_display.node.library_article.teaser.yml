@@ -22,6 +22,7 @@ content:
     settings:
       trim_length: 200
     third_party_settings: {  }
+    region: content
 hidden:
   field_category: true
   langcode: true

@@ -10,6 +10,6 @@ weight: 1
 is_admin: false
 permissions:
   - 'access content'
-  - 'use text format full_html'
   - 'search content'
+  - 'use text format full_html'
   - 'view search api pages'

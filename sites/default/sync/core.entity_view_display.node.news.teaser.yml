@@ -21,6 +21,7 @@ content:
     settings:
       trim_length: 200
     third_party_settings: {  }
+    region: content
 hidden:
   langcode: true
   links: true

@@ -12,7 +12,7 @@ _core:
   default_config_hash: xCOijLdB1-UgXxQ9a0D1_pd8vxNEhfMnxXZc8jYhHjs
 id: oden_tools
 theme: oden
-region: '-1'
+region: top
 weight: -18
 provider: null
 plugin: 'system_menu_block:tools'

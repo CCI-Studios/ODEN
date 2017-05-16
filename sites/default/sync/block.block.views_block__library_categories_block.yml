@@ -16,7 +16,7 @@ third_party_settings:
 id: views_block__library_categories_block
 theme: oden
 region: content
-weight: -8
+weight: -11
 provider: null
 plugin: 'views_block:library_categories-block'
 settings:

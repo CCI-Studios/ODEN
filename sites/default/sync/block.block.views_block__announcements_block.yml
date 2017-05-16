@@ -16,7 +16,7 @@ third_party_settings:
 id: views_block__announcements_block
 theme: oden
 region: content
-weight: 0
+weight: -10
 provider: null
 plugin: 'views_block:announcements-block'
 settings:

@@ -15,7 +15,7 @@ third_party_settings:
     classes: block-home-statistic
 id: homestatistic
 theme: oden
-region: '-1'
+region: top
 weight: -16
 provider: null
 plugin: 'block_content:fe6dfb64-f178-4fbe-b044-f25a31fc8664'

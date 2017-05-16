@@ -23,12 +23,14 @@ content:
     weight: 4
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_contact_info:
     weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
   field_date:
     weight: 1
     label: inline
@@ -37,6 +39,7 @@ content:
       format_type: long
     third_party_settings: {  }
     type: datetime_default
+    region: content
   field_location:
     weight: 2
     label: inline
@@ -44,9 +47,11 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   links:
     weight: 0
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden:
   langcode: true

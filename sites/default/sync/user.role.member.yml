@@ -7,8 +7,8 @@ label: Member
 weight: 3
 is_admin: null
 permissions:
-  4: 'view own field_membership_expiry'
-  6: 'create member_event content'
-  7: 'delete own member_event content'
-  8: 'edit own member_event content'
-  9: 'view own field_membership_type'
+  - 'create member_event content'
+  - 'delete own member_event content'
+  - 'edit own member_event content'
+  - 'view own field_membership_expiry'
+  - 'view own field_membership_type'

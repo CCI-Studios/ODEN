@@ -15,7 +15,7 @@ _core:
 id: oden_page_title
 theme: oden
 region: content
-weight: -17
+weight: -19
 provider: null
 plugin: page_title_block
 settings:

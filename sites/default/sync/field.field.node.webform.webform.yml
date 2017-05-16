@@ -24,4 +24,6 @@ settings:
   status: true
   handler: 'default:webform'
   handler_settings: {  }
+  open: ''
+  close: ''
 field_type: webform
