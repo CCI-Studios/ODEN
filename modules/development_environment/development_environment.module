@@ -1,0 +1,58 @@
+<?php
+
+use Drupal\Component\Render\FormattableMarkup;
+use Drupal\Core\Link;
+use Drupal\Core\Url;
+
+/**
+ * Implementation of hook_mail_alter()
+ *
+ * Prevents the sending of emails, and instead logs them to the
+ * Drupal log.
+ */
+function development_environment_mail_alter(&$message)
+{
+	// Stop emails from being sent
+	$message['send'] = FALSE;
+
+	// Generate the body of the message to be shown in the logs
+	$i = 0;
+	$formattable_string = '';
+	$replacements = [];
+	foreach($message['body'] as $body_row)
+	{
+		$rows = explode(PHP_EOL, $body_row);
+		foreach($rows as $row)
+		{
+			$formattable_string .= '@text' . $i . '<br />';
+			$replacements['@text' . $i] = $row;
+			$i++;
+		}
+		$formattable_string .= '<br />';
+	}
+
+	// Put the message body into a format that can be saved to the log
+	$message_body = new FormattableMarkup($formattable_string, $replacements);
+
+	// Put the message data into a format that can be saved to the log
+	$message_data = new FormattableMarkup('<pre>@data</pre>', ['@data' => \Drupal::service('development_environment.var.dump.service')->varDump($message, TRUE, FALSE)]);
+
+	if(\Drupal::moduleHandler()->moduleExists('dblog'))
+	{
+		// Log the unsent mail to the dblog
+		\Drupal::logger('development_environment')->notice(t('The following email was not sent because this instance is a development environment:<br /><br /><hr />@message_body<br /><hr />Full message:@message_data', ['@message_body' => $message_body, '@message_data' => $message_data]));
+	}
+
+	if(\Drupal::currentUser()->hasPermission('access site reports'))
+	{
+		$url = Url::fromRoute('dblog.overview');
+		$link = Link::fromTextAndUrl(t('Drupal log'), $url);
+		$formatted_link = new FormattableMarkup('@link', ['@link' => $link->toString()]);
+
+		drupal_set_message(t('The email to @email was not sent, as this is a development environment. The mail details can be viewed in the @watchdog', ['@email' => $message['to'], '@watchdog' => $formatted_link]));
+	}
+	else
+	{
+		drupal_set_message(t('The email to @email was not sent, as this is a development environment', ['@email' => $message['to']]));
+	}
+}

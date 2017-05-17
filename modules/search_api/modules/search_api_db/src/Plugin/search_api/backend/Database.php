@@ -7,6 +7,7 @@ use Drupal\Component\Utility\Html;
 use Drupal\Component\Utility\Unicode;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Database\Database as CoreDatabase;
+use Drupal\Core\Database\DatabaseException;
 use Drupal\Core\Database\Query\Condition;
 use Drupal\Core\Database\Query\SelectInterface;
 use Drupal\Core\Datetime\DateFormatterInterface;
@@ -28,7 +29,7 @@ use Drupal\search_api\Query\ConditionGroupInterface;
 use Drupal\search_api\Query\QueryInterface;
 use Drupal\search_api\SearchApiException;
 use Drupal\search_api\Utility\DataTypeHelper;
-use Drupal\search_api_autocomplete\Entity\SearchApiAutocompleteSearch;
+use Drupal\search_api_autocomplete\SearchApiAutocompleteSearchInterface;
 use Drupal\search_api_autocomplete\Suggestion;
 use Drupal\search_api_db\DatabaseCompatibility\DatabaseCompatibilityHandlerInterface;
 use Drupal\search_api_db\DatabaseCompatibility\GenericDatabase;
@@ -788,6 +789,11 @@ class Database extends BackendPluginBase implements PluginFormInterface {
       $variables['%table'] = $db['table'];
       $this->logException($e, '%type while trying to add a database index for column %column to table %table: @message in %function (line %line of %file).', $variables, RfcLogLevel::WARNING);
     }
+    catch (DatabaseException $e) {
+      $variables['%column'] = $column;
+      $variables['%table'] = $db['table'];
+      $this->logException($e, '%type while trying to add a database index for column %column to table %table: @message in %function (line %line of %file).', $variables, RfcLogLevel::WARNING);
+    }
 
     if ($new_table) {
       // Add a covering index for fields with multiple values.
@@ -817,6 +823,7 @@ class Database extends BackendPluginBase implements PluginFormInterface {
   protected function sqlType($type) {
     switch ($type) {
       case 'text':
+        return ['type' => 'varchar', 'length' => 30];
       case 'string':
       case 'uri':
         return ['type' => 'varchar', 'length' => 255];
@@ -914,8 +921,20 @@ class Database extends BackendPluginBase implements PluginFormInterface {
             // re-indexing.
             if ($field['boost']) {
               $multiplier = $new_fields[$field_id]->getBoost() / $field['boost'];
+              // Postgres doesn't allow multiplying an integer column with a
+              // float literal, so we have to work around that.
+              $expression = 'score * :mult';
+              $args = [
+                ':mult' => $multiplier,
+              ];
+              if (is_float($multiplier) && $pos = strpos("$multiplier", '.')) {
+                $expression .= ' / :div';
+                $after_point_digits = strlen("$multiplier") - $pos - 1;
+                $args[':div'] = pow(10, min(3, $after_point_digits));
+                $args[':mult'] = (int) round($args[':mult'] * $args[':div']);
+              }
               $this->database->update($text_table)
-                ->expression('score', 'score * :mult', [':mult' => $multiplier])
+                ->expression('score', $expression, $args)
                 ->condition('field_name', self::getTextFieldName($field_id))
                 ->execute();
             }
@@ -2443,19 +2462,22 @@ class Database extends BackendPluginBase implements PluginFormInterface {
       $this->logException($e, '%type while trying to create a temporary table: @message in %function (line %line of %file).');
       return FALSE;
     }
+    catch (DatabaseException $e) {
+      $this->logException($e, '%type while trying to create a temporary table: @message in %function (line %line of %file).');
+      return FALSE;
+    }
     return $result;
   }
 
   /**
    * Implements SearchApiAutocompleteInterface::getAutocompleteSuggestions().
+   *
+   * @todo Add type-hint for $search as soon as we can rely on the class name.
    */
-  public function getAutocompleteSuggestions(QueryInterface $query, SearchApiAutocompleteSearch $search, $incomplete_key, $user_input) {
-    $settings = isset($this->configuration['autocomplete']) ? $this->configuration['autocomplete'] : [];
-    $settings += [
-      'suggest_suffix' => TRUE,
-      'suggest_words' => TRUE,
-    ];
-    // If none of these options is checked, the user apparently chose a very
+  public function getAutocompleteSuggestions(QueryInterface $query, $search, $incomplete_key, $user_input) {
+    $settings = $this->configuration['autocomplete'];
+
+    // If none of the options is checked, the user apparently chose a very
     // roundabout way of telling us he doesn't want autocompletion.
     if (!array_filter($settings)) {
       return [];
@@ -2500,9 +2522,6 @@ class Database extends BackendPluginBase implements PluginFormInterface {
     // suggest them.
     $keys = static::splitIntoWords($user_input);
     $keys = array_combine($keys, $keys);
-    if ($incomplete_key) {
-      $keys[$incomplete_key] = $incomplete_key;
-    }
 
     foreach ($passes as $pass) {
       if ($pass == 2 && $incomplete_key) {

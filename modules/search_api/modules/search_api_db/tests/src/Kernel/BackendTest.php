@@ -77,6 +77,7 @@ class BackendTest extends BackendTestBase {
   protected function backendSpecificRegressionTests() {
     $this->regressionTest2557291();
     $this->regressionTest2511860();
+    $this->regressionTest2846932();
   }
 
   /**
@@ -299,7 +300,7 @@ class BackendTest extends BackendTestBase {
     $this->assertResults([2, 4, 1, 3], $results, 'Search for »test foo«', ['foo']);
 
     $results = $this->buildSearch('foo', ['type,item'])->execute();
-    $this->assertResults([1, 2, 3], $results, 'Search for »foo«', ['foo'], [$this->t('No valid search keys were present in the query.')]);
+    $this->assertResults([1, 2, 3], $results, 'Search for »foo«', ['foo'], ['No valid search keys were present in the query.']);
 
     $keys = [
       '#conjunction' => 'AND',
@@ -459,6 +460,17 @@ class BackendTest extends BackendTestBase {
     $query->addCondition('body', 'ab ab');
     $results = $query->execute();
     $this->assertEquals(5, $results->getResultCount(), 'Fulltext filters on duplicate short words do not change the result.');
+  }
+
+  /**
+   * Tests changing a field boost to a floating point value.
+   *
+   * @see https://www.drupal.org/node/2846932
+   */
+  protected function regressionTest2846932() {
+    $index = $this->getIndex();
+    $index->getField('body')->setBoost(0.8);
+    $index->save();
   }
 
   /**

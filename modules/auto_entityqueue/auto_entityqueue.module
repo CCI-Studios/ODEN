@@ -77,6 +77,7 @@ function auto_entityqueue_add_entity_to_queue($entity, EntityQueue $queue) {
 
   // Get the queue entity settings.
   $entity_settings = $queue->getEntitySettings();
+  $queue_settings = $queue->getQueueSettings();
 
   // Get the subqueues.
   $query = \Drupal::entityQuery('entity_subqueue')->condition('queue', $queue->id());
@@ -86,9 +87,17 @@ function auto_entityqueue_add_entity_to_queue($entity, EntityQueue $queue) {
   // Add entity to each subqueue.
   foreach ($subqueues as $subqueue) {
     $items = $subqueue->get('items')->getValue();
+
+    // Deetermine if we should remove an item from the list to avoid exceeding
+    // the maximum number of items.
+    $remove_item = !empty($queue_settings['max_size']) && count($items) >= $queue_settings['max_size'];
+
     if (isset($entity_settings['handler_settings']['auto_entityqueue']['insert_front']) && $entity_settings['handler_settings']['auto_entityqueue']['insert_front']) {
+      !$remove_item or array_pop($items);
       array_unshift($items, array('target_id' => $entity_id));
-    } else {
+    } 
+    else {
+      !$remove_item or array_shift($items);
       array_push($items, array('target_id' => $entity_id));
     }
     $subqueue->set('items', $items);

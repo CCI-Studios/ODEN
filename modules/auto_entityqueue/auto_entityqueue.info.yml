@@ -5,8 +5,8 @@ description: Automatically adds entities to entityqueues.
 package: Entityqueue
 dependencies:
   - entityqueue
-# Information added by Drupal.org packaging script on 2016-08-08
-version: '8.x-1.x-dev'
+# Information added by Drupal.org packaging script on 2017-05-12
+version: '8.x-1.0-alpha1'
 core: '8.x'
 project: 'auto_entityqueue'
-datestamp: 1470683940
+datestamp: 1494606194

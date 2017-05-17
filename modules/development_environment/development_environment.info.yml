@@ -1,0 +1,10 @@
+name: Development Environment
+description: When this module is enabled, the system it is enabled on is marked as a development environment, logging emails to the watchdog instead of sending them out
+# core: 8.x
+type: module
+
+# Information added by Drupal.org packaging script on 2017-01-31
+version: '8.x-1.1'
+core: '8.x'
+project: 'development_environment'
+datestamp: 1485866004

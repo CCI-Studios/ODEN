@@ -34,9 +34,9 @@ No other modules are required.
 
 INSTALLATION
 ------------
- * Install as you would normally install a contributed drupal module. See:
-  https://www.drupal.org/documentation/install/modules-themes/modules-8
-  for further information.
+Install as you would normally install a contributed Drupal module. For further
+information, see:
+   https://www.drupal.org/node/1897420
 
 CONFIGURATION
 -------------
@@ -99,7 +99,14 @@ The handbook documentation for developers is available at [5].
 
 [5] https://www.drupal.org/node/2001110
 
+To know which parts of the module can be relied upon as its public API, please
+read the "Drupal 8 backwards compatibility and internal API policy" [6] and the
+module's issue regarding potential module-specific changes to that policy [7].
+
+[6] https://www.drupal.org/node/2562903
+[7] https://www.drupal.org/node/2871549
+
 MAINTAINERS
 -----------
 Current maintainers:
- * Thomas Seidl (drunken monkey) - https://www.drupal.org/u/drunken-monkey
+  * Thomas Seidl (drunken monkey) - https://www.drupal.org/u/drunken-monkey

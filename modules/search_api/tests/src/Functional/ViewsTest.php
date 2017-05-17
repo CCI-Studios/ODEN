@@ -2,6 +2,7 @@
 
 namespace Drupal\Tests\search_api\Functional;
 
+use Drupal\block\Entity\Block;
 use Drupal\Component\Render\FormattableMarkup;
 use Drupal\Component\Serialization\Yaml;
 use Drupal\Component\Utility\Html;
@@ -17,6 +18,7 @@ use Drupal\entity_test\Entity\EntityTestMulRevChanged;
 use Drupal\language\Entity\ConfigurableLanguage;
 use Drupal\search_api\Entity\Index;
 use Drupal\search_api\Utility\Utility;
+use Drupal\views\Entity\View;
 
 /**
  * Tests the Views integration of the Search API.
@@ -33,10 +35,11 @@ class ViewsTest extends SearchApiBrowserTestBase {
    * @var string[]
    */
   public static $modules = [
-    'search_api_test_views',
-    'views_ui',
+    'block',
     'language',
     'rest',
+    'search_api_test_views',
+    'views_ui',
   ];
 
   /**
@@ -286,6 +289,8 @@ class ViewsTest extends SearchApiBrowserTestBase {
     ];
     $this->checkResults($query, [], 'Search for results of no available datasource');
 
+    $this->regressionTests();
+
     // Make sure there was a display plugin created for this view.
     /** @var \Drupal\search_api\Display\DisplayInterface[] $displays */
     $displays = \Drupal::getContainer()
@@ -324,6 +329,81 @@ class ViewsTest extends SearchApiBrowserTestBase {
     $this->assertArrayNotHasKey('views_page:search_api_test_view__page_1', $displays, 'No display plugin was created for the test view page display.');
     $this->assertArrayHasKey('views_block:search_api_test_view__block_1', $displays, 'A display plugin was created for the test view block display.');
     $this->assertArrayHasKey('views_rest:search_api_test_view__rest_export_1', $displays, 'A display plugin was created for the test view block display.');
+  }
+
+  /**
+   * Contains regression tests for previous, fixed bugs.
+   */
+  protected function regressionTests() {
+    $this->regressionTest2869121();
+  }
+
+  /**
+   * Tests setting the "Fulltext search" filter to "Required".
+   *
+   * This previously caused problems with form validation and caching.
+   *
+   * @see https://www.drupal.org/node/2869121
+   * @see https://www.drupal.org/node/2873246
+   * @see https://www.drupal.org/node/2871030
+   */
+  protected function regressionTest2869121() {
+    // Make sure setting the fulltext filter to "Required" works as expected.
+    $view = View::load('search_api_test_view');
+    $displays = $view->get('display');
+    $displays['default']['display_options']['filters']['search_api_fulltext']['expose']['required'] = TRUE;
+    $displays['default']['display_options']['cache']['type'] = 'search_api_time';
+    $view->set('display', $displays);
+    $view->save();
+
+    $this->checkResults([], [], 'Search without required fulltext keywords');
+    $this->assertSession()->responseNotContains('Error message');
+    $this->checkResults(
+      ['search_api_fulltext' => 'foo test'],
+      [1, 2, 4],
+      'Search for multiple words'
+    );
+    $this->assertSession()->responseNotContains('Error message');
+    $this->checkResults(
+      ['search_api_fulltext' => 'fo'],
+      [],
+      'Search for short word'
+    );
+    $this->assertSession()->pageTextContains('You must include at least one positive keyword with 3 characters or more');
+
+    // Make sure this also works with the exposed form in a block, and doesn't
+    // throw fatal errors on all pages with the block.
+    $view = View::load('search_api_test_view');
+    $displays = $view->get('display');
+    $displays['page_1']['display_options']['exposed_block'] = TRUE;
+    $view->set('display', $displays);
+    $view->save();
+
+    Block::create([
+      'id' => 'search_api_test_view',
+      'theme' => 'classy',
+      'weight' => -20,
+      'plugin' => 'views_exposed_filter_block:search_api_test_view-page_1',
+      'region' => 'content',
+    ])->save();
+
+    $this->drupalGet('');
+    // We submit the form three times, to make extra sure all Views caches are
+    // triggered.
+    for ($i = 0; $i < 3; ++$i) {
+      // Flush the page-level caches to make sure the Views cache plugin is
+      // used (so we could reproduce the bug if it's there).
+      \Drupal::getContainer()->get('cache.render')->deleteAll();
+      \Drupal::getContainer()->get('cache.dynamic_page_cache')->deleteAll();
+      $this->submitForm([], 'Search');
+      $this->assertSession()->addressEquals('search-api-test');
+      $this->assertSession()->responseNotContains('Error message');
+      $this->assertSession()->pageTextNotContains('search results');
+      // Make sure the Views cache was used, none of the two page caches.
+      $this->assertSession()->responseHeaderEquals('X-Drupal-Cache', 'MISS');
+      $this->assertSession()
+        ->responseHeaderEquals('X-Drupal-Dynamic-Cache', 'MISS');
+    }
   }
 
   /**

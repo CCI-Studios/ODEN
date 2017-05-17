@@ -59,7 +59,7 @@ class Tokenizer extends FieldsProcessorPluginBase {
     $form = parent::buildConfigurationForm($form, $form_state);
 
     $args = [
-      ':pcre-url' => Url::fromUri('http://www.php.net/manual/regexp.reference.character-classes.php')->toString(),
+      ':pcre-url' => Url::fromUri('https://php.net/manual/regexp.reference.character-classes.php')->toString(),
       ':doc-url' => Url::fromUri('https://api.drupal.org/api/drupal/core!lib!Drupal!Component!Utility!Unicode.php/constant/Unicode%3A%3APREG_CLASS_WORD_BOUNDARY/8')->toString(),
     ];
     $form['spaces'] = [
@@ -95,8 +95,8 @@ class Tokenizer extends FieldsProcessorPluginBase {
     parent::validateConfigurationForm($form, $form_state);
 
     $spaces = str_replace('/', '\/', trim($form_state->getValues()['spaces']));
-    if ($spaces !== '' && @preg_match('/(' . $spaces . ')+/u', '') === FALSE) {
-      $form_state->setError($form['spaces'], $form['spaces']['#title'] . ': ' . $this->t('The entered text is no valid regular expression.'));
+    if ($spaces !== '' && @preg_match('/[' . $spaces . ']+/u', '') === FALSE) {
+      $form_state->setError($form['spaces'], $form['spaces']['#title'] . ': ' . $this->t('The entered text is no valid PCRE character class.'));
     }
   }
 
