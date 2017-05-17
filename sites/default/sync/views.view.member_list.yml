@@ -240,7 +240,7 @@ display:
             alter_text: false
             text: ''
             make_link: true
-            path: '{{ field_website }}'
+            path: '{{ field_website_1 }}'
             absolute: false
             external: true
             replace_spaces: false

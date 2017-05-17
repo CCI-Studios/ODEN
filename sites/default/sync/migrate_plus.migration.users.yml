@@ -1,0 +1,61 @@
+uuid: 11562bf1-16ee-4fb0-b1ca-be002d5f274f
+langcode: en
+status: true
+dependencies: {  }
+id: users
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: default
+label: 'Import users'
+source:
+  plugin: csv
+  path: /Users/chrismorris/projects/ODEN/sites/default/files/csv/users.csv
+  delimiter: ','
+  enclosure: ''
+  header_row_count: 1
+  keys:
+    - mail
+process:
+  name: name
+  mail: mail
+  field_organization: field_organization
+  status: status
+  field_add: field_add
+  field_website: field_website
+  field_operating_budget: field_operating_budget
+  field_membership_type:
+    plugin: entity_lookup
+    source: membership_type
+    value_key: name
+    bundle_key: vid
+    bundle: membership_type
+    entity_type: taxonomy_term
+    ignore_case: true
+  field_primary_disability_served:
+    plugin: entity_lookup
+    source: field_primary_disability_served
+    value_key: name
+    bundle_key: vid
+    bundle: disability_types
+    entity_type: taxonomy_term
+    ignore_case: true
+  field_membership_expiry:
+    plugin: format_date
+    source: field_membership_expiry
+    from_format: 'Y-m-d\TH:i:s'
+    to_format: 'Y-m-d\TH:i:s'
+    timezone: America/Toronto
+  field_key_contact: field_key_contact
+  field_key_contact_position: field_key_contact_position
+  field_key_contact_phone_number: field_key_contact_phone_number
+  field_key_contact_email: field_key_contact_email
+  field_alternate_contact_name: field_alternate_contact_name
+  field_alternate_contact_position: field_alternate_contact_position
+  field_alternate_contact_phone_nu: field_alternate_contact_phone_nu
+  field_alternate_contact_email: field_alternate_contact_email
+  field_other_disabilities_ser: field_other_disabilities_ser
+destination:
+  plugin: 'entity:user'
+migration_dependencies: null

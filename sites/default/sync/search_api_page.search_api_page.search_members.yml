@@ -13,7 +13,6 @@ index: members
 limit: 10
 searched_fields:
   field_organization: field_organization
-style: view_modes
-view_mode_configuration:
-  'entity:user_user': default
+style: search_results
+view_mode_configuration: {  }
 show_search_form: true

@@ -36,8 +36,8 @@ display:
       query:
         type: views_query
         options:
-          bypass_access: false
-          skip_access: false
+          skip_access: 1
+          bypass_access: 1
       exposed_form:
         type: basic
         options:
@@ -79,10 +79,10 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '<a href="{{ field_website }} " target="_blank" class="button">{{''View Member''|t}}</a>'
             make_link: false
             path: ''
             absolute: false
@@ -144,55 +144,6 @@ display:
             multi_separator: ', '
           entity_type: user
           plugin_id: search_api_field
-        nothing:
-          id: nothing
-          table: views
-          field: nothing
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: true
-            text: 'View Member'
-            make_link: true
-            path: '{{ field_website }}'
-            absolute: false
-            external: true
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: button
-            prefix: ''
-            suffix: ''
-            target: _blank
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: false
-          plugin_id: custom
         field_organization:
           id: field_organization
           table: search_api_index_members

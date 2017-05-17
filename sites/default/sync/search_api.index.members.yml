@@ -55,7 +55,8 @@ processor_settings:
     roles:
       - member
   tokenizer:
-    fields: {  }
+    fields:
+      - field_organization
     spaces: ''
     overlap_cjk: 1
     minimum_word_size: '3'
