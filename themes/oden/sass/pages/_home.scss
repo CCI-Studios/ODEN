@@ -86,7 +86,7 @@
   .block-block-content
   {
     display: table-cell;
-    width: 33.333%;
+    width: 50%;
     box-sizing: border-box;
     border: 2px solid $purple;
     background: white;
@@ -139,6 +139,13 @@
       }
     }
   }
+  .field--name-body
+  {
+    ul, ol
+    {
+      margin-left: 25px;
+    }
+  }
 }
 
 .view-announcements
@@ -171,3 +178,4 @@
     margin-top: 1.5em;
   }
 }
+
