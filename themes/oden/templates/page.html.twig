@@ -44,7 +44,7 @@
 #}
 <div class="layout-container">
 
-  <header role="banner">
+  <header>
     {{ page.top }}
     {{ page.navigation }}
   </header>
@@ -64,7 +64,7 @@
   {{ page.home_pre1 }}
   {{ page.home_pre2 }}
 
-  <main role="main" {% if page.sidebar %}class="with-sidebar"{% endif %}><div>
+  <main {% if page.sidebar %}class="with-sidebar"{% endif %}><div>
 
     <div class="layout-content">
       {{ page.content }}
@@ -79,7 +79,7 @@
   </div></main>
 
   {% if page.footer %}
-    <footer role="contentinfo"><div>
+    <footer><div>
       {{ page.footer }}
       
       <div class="footerinfo">
