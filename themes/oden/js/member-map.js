@@ -1,4 +1,4 @@
-(function(){
+(function($){
   var map;
   var geocoder;
   var infoWindows = [];
@@ -8,14 +8,21 @@
   
   function createMap()
   {
-    var location = new google.maps.LatLng(45.84957, -82.890768);
     var mapOptions = {
       zoom: 6,
-      center: location,
+      center: getCenter(),
       scrollwheel: false
     };
     map = new google.maps.Map(document.querySelector(".map--members"),mapOptions);
     geocoder = new google.maps.Geocoder();
+  }
+  function getCenter()
+  {
+    if ($(window).width() > 760) {
+      return new google.maps.LatLng(45.84957, -82.890768);
+    } else {
+      return new google.maps.LatLng(45.00157, -82.005168);
+    }
   }
   function createMemberMarkers()
   {
@@ -75,4 +82,4 @@
       infoWindows[i].close();
     }
   }
-})();
+})(jQuery);
