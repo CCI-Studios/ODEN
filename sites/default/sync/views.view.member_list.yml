@@ -453,17 +453,6 @@ display:
           plugin_id: standard
       title: 'Membership List'
       header:
-        area_text_custom_1:
-          id: area_text_custom_1
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: 'View Map'
-          empty: true
-          tokenize: false
-          content: '<div class="view-map"><a href="/membership/map" class="button">View Map</a></div>'
-          plugin_id: text_custom
         area_text_custom:
           id: area_text_custom
           table: views
@@ -474,6 +463,17 @@ display:
           empty: true
           tokenize: false
           content: "<div class=\"member-filter\">\n<div class=\"label\">Member Agencies</div>\n<ul>\n<li><a href=\"?field_organization_value=All\" class=\"filter-all active\">All</a></li>\n<li><a href=\"?field_organization_value=1\" class=\"filter-ac filter-1\">A-C</a></li>\n<li><a href=\"?field_organization_value=2\" class=\"filter-di filter-2\">D-I</a></li>\n<li><a href=\"?field_organization_value=3\" class=\"filter-jo filter-3\">J-O</a></li>\n<li><a href=\"?field_organization_value=4\" class=\"filter-ps filter-4\">P-S</a></li>\n<li><a href=\"?field_organization_value=5\" class=\"filter-tz filter-5\">T-Z</a></li>\n</ul>\n</div>"
+          plugin_id: text_custom
+        area_text_custom_1:
+          id: area_text_custom_1
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: 'View Map'
+          empty: true
+          tokenize: false
+          content: '<div class="view-map"><a href="/membership/map" class="button">View Map</a></div>'
           plugin_id: text_custom
         entity_block:
           id: entity_block
