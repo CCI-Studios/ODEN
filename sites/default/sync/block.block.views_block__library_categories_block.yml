@@ -29,6 +29,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/library\r\n/oden-library"
+    pages: /about-us/library
     negate: false
     context_mapping: {  }

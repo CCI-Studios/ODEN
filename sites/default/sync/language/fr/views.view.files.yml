@@ -25,6 +25,9 @@ display:
           label: Taille
         status:
           label: Statut
+          settings:
+            format_custom_false: Temporaire
+            format_custom_true: Permanent
         changed:
           label: 'Date de modification'
         count:

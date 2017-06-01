@@ -23,6 +23,9 @@ display:
           label: 'Nom d''utilisateur'
         status:
           label: Statut
+          settings:
+            format_custom_true: Actif
+            format_custom_false: Bloqué
         roles_target_id:
           label: Rôles
         created:
@@ -32,12 +35,6 @@ display:
         operations:
           label: Actions
       filters:
-        roles_target_id:
-          expose:
-            label: Rôle
-        permission:
-          expose:
-            label: Droit
         status:
           group_info:
             label: Statut
@@ -46,6 +43,12 @@ display:
                 title: Actif
               2:
                 title: Bloqué
+        roles_target_id:
+          expose:
+            label: Rôle
+        permission:
+          expose:
+            label: Droit
       title: Personnes
       empty:
         area_text_custom:

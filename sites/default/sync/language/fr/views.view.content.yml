@@ -19,11 +19,20 @@ display:
           label: Auteur
         status:
           label: Statut
+          settings:
+            format_custom_true: Publié
+            format_custom_false: 'Non publié'
         changed:
           label: 'Mis à jour'
         operations:
           label: Actions
       filters:
+        title:
+          expose:
+            label: Titre
+        type:
+          expose:
+            label: 'Type de contenu'
         status:
           expose:
             label: Statut
@@ -34,12 +43,6 @@ display:
                 title: Publié
               2:
                 title: 'Non publié'
-        type:
-          expose:
-            label: 'Type de contenu'
-        title:
-          expose:
-            label: Titre
         langcode:
           expose:
             label: Langue

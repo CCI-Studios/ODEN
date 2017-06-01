@@ -21,13 +21,13 @@ provider: null
 plugin: search_api_page_form_block
 settings:
   id: search_api_page_form_block
-  label: 'Search Api Page search block form'
+  label: 'Library Search Form'
   provider: search_api_page
   label_display: '0'
   search_api_page: search_library
 visibility:
   request_path:
     id: request_path
-    pages: /library
+    pages: /about-us/library
     negate: false
     context_mapping: {  }

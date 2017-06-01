@@ -21,7 +21,7 @@ provider: null
 plugin: 'block_content:639fcab7-eafb-4552-b899-cb1b4bb3634a'
 settings:
   id: 'block_content:639fcab7-eafb-4552-b899-cb1b4bb3634a'
-  label: 'Businesses Looking to Hire'
+  label: Businesses
   provider: block_content
   label_display: '0'
   status: true

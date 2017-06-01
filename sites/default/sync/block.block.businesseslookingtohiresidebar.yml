@@ -23,7 +23,7 @@ settings:
   id: 'block_content:c5d8c8e4-5848-49d8-addc-878eff071605'
   label: 'Businesses Looking to Hire'
   provider: block_content
-  label_display: visible
+  label_display: '0'
   status: true
   info: ''
   view_mode: full

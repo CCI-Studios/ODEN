@@ -8,6 +8,6 @@ id: front
 label: 'Front page'
 tags:
   canonical_url: '[site:url]'
-  description: "The ODEN is a professional body of \x03employment service providers united to increase employment opportunities \x03for people who have a disability."
+  description: 'The ODEN is a professional body of employment service providers united to increase employment opportunities for people who have a disability.'
   shortlink: '[site:url]'
   title: 'The Ontario Disability Employment Network'

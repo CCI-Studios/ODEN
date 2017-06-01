@@ -23,6 +23,7 @@ module:
   custom_stripe: 0
   custom_user_list_cache: 0
   datetime: 0
+  datetime_range: 0
   dblog: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
@@ -41,6 +42,7 @@ module:
   honeypot: 0
   image: 0
   imce: 0
+  inline_form_errors: 0
   key: 0
   language: 0
   link: 0
@@ -78,6 +80,7 @@ module:
   token: 0
   toolbar: 0
   twig_tweak: 0
+  unset_html_head_link: 0
   update: 0
   user: 0
   views: 0
