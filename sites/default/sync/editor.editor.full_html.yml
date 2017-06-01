@@ -37,6 +37,7 @@ settings:
           name: Media
           items:
             - DrupalImage
+            - Youtube
             - HorizontalRule
         -
           name: Tools

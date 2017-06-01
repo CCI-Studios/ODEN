@@ -9,6 +9,7 @@ module:
   calendar_datetime: 0
   captcha: 0
   ckeditor: 0
+  ckeditor_youtube: 0
   config: 0
   config_translation: 0
   content_access: 0
