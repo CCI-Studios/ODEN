@@ -21,3 +21,13 @@ $aliases['staging2'] = array(
         ),
         'ssh-options'=> '-p 37241'
 );
+
+$aliases['staging3'] = array(
+        'uri'=> 'staging.odenetwork.com',
+        'root' => '/home7/odenetwo/public_html/subdomains/staging/public_html',
+        'remote-host'=> '66.147.244.154',
+        'remote-user'=> 'odenetwo',
+        'path-aliases'=> array(
+                '%files'=> 'sites/default/files',
+        ),
+);
