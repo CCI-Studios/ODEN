@@ -377,8 +377,8 @@ display:
           field: area_text_custom
           relationship: none
           group_type: group
-          admin_label: ''
-          empty: false
+          admin_label: 'Calendar Legend'
+          empty: true
           tokenize: false
           content: "<div class=\"calendar-legend\">\n<span class=\"views-label\">Legend:</span>\n<span class=\"legend-item legend--oden-event\">ODEN Event</span>\n<span class=\"legend-item legend--member-event\">Member Event</span>\n</div>"
           plugin_id: text_custom
