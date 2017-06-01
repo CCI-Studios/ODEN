@@ -34,14 +34,12 @@
   {{ title_prefix }}
 
   <div class="content">
-    {{ content.field_thumbnail }}
+    <div class="read-more">
+      <a href="{{ url }}" class="button">{{ 'View Articles'|t }}</a>
+    </div>
     {% if not page %}
       <h2><a href="{{ url }}">{{ name }}</a></h2>
     {% endif %}
     {{ title_suffix }}
-    {{ content|without('field_thumbnail') }}
-    <div class="read-more">
-      <a href="{{ url }}" class="button">{{ 'View Articles'|t }}</a>
-    </div>
   </div>
 </div>

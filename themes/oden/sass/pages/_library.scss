@@ -1,5 +1,7 @@
 .view-library-categories
 {
+  clear: left;
+  
   .view-content ul
   {
     margin: 0;
@@ -7,50 +9,10 @@
   }
   .views-row
   {
-    margin: 0;
-    width: 32%;
-    margin-left: 2%;
     margin-bottom: 35px;
-    float: left;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
     border-radius: 2px;
-    
-    &:nth-child(3n+1)
-    {
-      margin-left: 0;
-      clear: left;
-    }
-    @include maxwidth(760px)
-    {
-      width: 48%;
-      margin-left: 4%;
-      
-      &:nth-child(3n+1)
-      {
-        margin-left: 4%;
-        clear: none;
-      }
-      &:nth-child(2n+1)
-      {
-        margin-left: 0;
-        clear: left;
-      }
-    }
-    @include maxwidth(520px)
-    {
-      width: 100%;
-      max-width: 340px;
-      margin-left: auto;
-      margin-right: auto;
-      float: none;
-      
-      &:nth-child(3n+1),
-      &:nth-child(2n+1)
-      {
-        margin-left: auto;
-        clear: none;
-      }
-    }
+    padding: 30px;
   }
   .field-thumbnail img
   {
@@ -61,12 +23,22 @@
   }
   .field--name-name
   {
-    padding: 15px 35px 0 35px;
+    padding: 0;
+  }
+  h2
+  {
+    margin-bottom: 0;
   }
   .read-more
   {
-    padding: 0 35px 35px 35px;
     text-align: center;
+    margin-left: 30px;
+    float: right;
+    
+    @media screen and (max-width: 540px)
+    {
+      display: none;
+    }
   }
 }
 
