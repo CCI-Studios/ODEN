@@ -7,16 +7,16 @@ dependencies:
 id: library_articles
 label: 'Library Articles'
 type: 'canonical_entities:node'
-pattern: 'library/[node:field_category:entity:name]/[node:title]'
+pattern: 'about-us/library/[node:title]'
 selection_criteria:
-  88298d81-6afd-40b3-aacd-5f278e1fd02d:
+  85b0f6af-facd-43e2-94a0-736c2cdaeef1:
     id: node_type
     bundles:
       library_article: library_article
     negate: false
     context_mapping:
       node: node
-    uuid: 88298d81-6afd-40b3-aacd-5f278e1fd02d
+    uuid: 85b0f6af-facd-43e2-94a0-736c2cdaeef1
 selection_logic: and
 weight: -5
 relationships: {  }

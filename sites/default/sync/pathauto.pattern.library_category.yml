@@ -8,16 +8,16 @@ dependencies:
 id: library_category
 label: 'Library Category'
 type: 'canonical_entities:taxonomy_term'
-pattern: 'library/[term:name]'
+pattern: 'about-us/library/category/[term:name]'
 selection_criteria:
-  ccd4efe8-57c6-4cc5-b96a-85c4a46a177b:
+  a52d46c9-d482-44d4-a5ca-9b88117553b9:
     id: 'entity_bundle:taxonomy_term'
     bundles:
       library_categories: library_categories
     negate: false
     context_mapping:
       taxonomy_term: taxonomy_term
-    uuid: ccd4efe8-57c6-4cc5-b96a-85c4a46a177b
+    uuid: a52d46c9-d482-44d4-a5ca-9b88117553b9
 selection_logic: and
 weight: -5
 relationships: {  }
