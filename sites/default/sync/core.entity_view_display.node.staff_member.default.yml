@@ -26,12 +26,12 @@ content:
     third_party_settings: {  }
     region: content
   field_email:
+    type: email_mailto
     weight: 2
+    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: email_mailto
-    region: content
   field_photo:
     weight: 0
     label: hidden
