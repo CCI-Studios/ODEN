@@ -13,3 +13,12 @@ function oden_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_stat
     // print $form_id;
   }
 }
+
+function oden_preprocess_links(&$variables)
+{
+  foreach ($variables['links'] as $key=>$item)
+  {
+    //remove the hreflang attribute for list items
+    $variables['links'][$key]['attributes']->removeAttribute("hreflang");
+  }
+}
