@@ -12,7 +12,6 @@
   
   function submitEvent(e) {
     e.preventDefault();
-    console.log("cost: ", calculateCost());
     handler.open({
       name: "ODEN",
       description: "ODEN Membership Fee",
