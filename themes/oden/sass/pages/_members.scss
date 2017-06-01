@@ -4,6 +4,7 @@
   {
     float: left;
     margin-right: 20px;
+    margin-bottom: 10px;
     
     .button
     {
@@ -41,6 +42,7 @@
     {
       float: left;
       margin-right: 15px;
+      margin-bottom: 0;
     }
     a
     {
@@ -66,7 +68,7 @@
   }
   .form-search
   {
-    width: 120px;
+    width: 190px;
     
     @include maxwidth(380px)
     {
