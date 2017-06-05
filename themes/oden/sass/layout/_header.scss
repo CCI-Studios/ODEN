@@ -2,6 +2,14 @@
 {
   position: relative;
   
+  .views-row
+  {
+    display: none;
+  }
+  .slick-slide
+  {
+    display: block;
+  }
   img
   {
     display: block;
