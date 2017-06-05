@@ -21,7 +21,7 @@
     <div class="month-date">{{ item.day_of_month }}</div>
     <div class="entry">{{ item.entry }}</div>
     {%if item.entry%}
-      <a class="events-link" href="#day{{item.day_of_month}}" title="Events on {{item.date|date("F jS, Y")}}">Events on {{item.date|date("F jS, Y")}}</a>
+      <a class="events-link" href="#events-list" title="Events on {{item.date|date("F jS, Y")}}">Events on {{item.date|date("F jS, Y")}}</a>
     {%endif%}
   </div>
 </td>
