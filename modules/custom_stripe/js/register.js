@@ -1,4 +1,4 @@
-(function(){
+(function($){
   var form = document.forms["user-register-form"];
   var pubkey = drupalSettings.custom_stripe.stripe_pub_key;
   var handler = StripeCheckout.configure({
@@ -11,6 +11,10 @@
   form.addEventListener("submit", submitEvent);
   
   function submitEvent(e) {
+    if (!$(form).valid()) {
+      //if clientside validation fails, then do not continue to payment
+      return;
+    }
     e.preventDefault();
     handler.open({
       name: "ODEN",
@@ -39,4 +43,4 @@
     form["stripe_token"].value = token.id;
     form.submit();
   }
-})();
+})(jQuery);
