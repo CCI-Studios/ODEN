@@ -90,6 +90,10 @@
     </h3>
   {% endif %}
   {{ title_suffix }}
+  
+  <div class="posted-date">
+    {% trans %}<span class="label">Posted on:</span> {{ date }}{% endtrans %}
+  </div>
 
   <div{{ content_attributes.addClass('node__content') }}>
     {{ content }}
