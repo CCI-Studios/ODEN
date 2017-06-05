@@ -93,6 +93,11 @@ label
   margin-bottom: 0.25em;
 }
 
+:-moz-focusring
+{
+  outline: 1px dotted black;
+}
+
 .form-item
 {
   margin-bottom: 1.5em;

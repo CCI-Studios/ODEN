@@ -6,6 +6,7 @@ function oden_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_stat
   {
     unset($form['name']['#description']);
     unset($form['pass']['#description']);
+    unset($form['name']['#attributes']['autofocus']);
   } else if ($form_id == "user_register_form") {
     unset($form['account']['mail']['#description']);
     unset($form['account']['pass']['#description']);
