@@ -1,0 +1,29 @@
+uuid: 0d29ff9f-023d-464b-9d4e-62c0396356ce
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:dde26da9-5c91-4152-8e0a-dd1e3a6de93c'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - oden
+third_party_settings:
+  block_class:
+    classes: block--back-to-top
+id: backtotop
+theme: oden
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:dde26da9-5c91-4152-8e0a-dd1e3a6de93c'
+settings:
+  id: 'block_content:dde26da9-5c91-4152-8e0a-dd1e3a6de93c'
+  label: 'Back to top'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
