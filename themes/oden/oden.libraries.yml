@@ -8,6 +8,7 @@ global:
     js/member-list.js: {}
     js/twitterFetcher.js: {}
     js/twitter-feed.js: {}
+    js/back-to-top.js: {}
   dependencies:
     - core/classList
     - oden/slick
