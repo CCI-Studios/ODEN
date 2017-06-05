@@ -5,13 +5,18 @@ dependencies:
   config:
     - field.storage.user.field_add
   module:
+    - required_api
     - user
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
 id: user.user.field_add
 field_name: field_add
 entity_type: user
 bundle: user
 label: Address
-description: ''
+description: 'Include your street address, city and province.'
 required: false
 translatable: false
 default_value: {  }
