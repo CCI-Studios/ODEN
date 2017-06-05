@@ -1,0 +1,25 @@
+uuid: 3231a28a-98ef-4292-831a-56ffdec83aad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_time
+    - node.type.member_event
+  module:
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: node.member_event.field_event_time
+field_name: field_event_time
+entity_type: node
+bundle: member_event
+label: 'Event Time'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

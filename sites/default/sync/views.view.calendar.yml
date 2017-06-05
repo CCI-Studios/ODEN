@@ -3,13 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_date
+    - field.storage.node.field_event_date
     - node.type.member_event
     - node.type.oden_event
     - views.view.events_list
   module:
     - calendar
     - datetime
+    - datetime_range
     - node
     - user
 id: calendar
@@ -69,7 +70,7 @@ display:
           groupby_times_custom: null
           theme_style: '1'
           groupby_field: ''
-          multiday_theme: '1'
+          multiday_theme: '0'
           multiday_hidden: {  }
           granularity_links:
             day: ''
@@ -215,15 +216,15 @@ display:
           entity_type: node
           entity_field: created
           plugin_id: field
-        field_date:
-          id: field_date
-          table: node__field_date
-          field: field_date
+        field_event_date:
+          id: field_event_date
+          table: node__field_event_date
+          field: field_event_date
           relationship: none
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -264,10 +265,11 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: datetime_default
+          type: daterange_default
           settings:
             timezone_override: ''
             format_type: medium
+            separator: '-'
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -333,10 +335,10 @@ display:
           entity_field: type
           plugin_id: bundle
       sorts:
-        field_date_value:
-          id: field_date_value
-          table: node__field_date
-          field: field_date_value
+        field_event_date_value:
+          id: field_event_date_value
+          table: node__field_event_date
+          field: field_event_date_value
           relationship: none
           group_type: group
           admin_label: ''
@@ -344,7 +346,7 @@ display:
           exposed: false
           expose:
             label: ''
-          granularity: second
+          granularity: day
           plugin_id: datetime
       header:
         calendar_header:
@@ -356,7 +358,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: 1
-          content: '{{ arguments.field_date_value_year_month }}'
+          content: '{{ arguments.field_event_date_value_year_month }}'
           pager_embed: 0
           plugin_id: calendar_header
         calendar_header_1:
@@ -397,10 +399,10 @@ display:
       empty: {  }
       relationships: {  }
       arguments:
-        field_date_value_year_month:
-          id: field_date_value_year_month
-          table: node__field_date
-          field: field_date_value_year_month
+        field_event_date_value_year_month:
+          id: field_event_date_value_year_month
+          table: node__field_event_date
+          field: field_event_date_value_year_month
           relationship: none
           group_type: group
           admin_label: ''
@@ -441,7 +443,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_date'
+        - 'config:field.storage.node.field_event_date'
   page_month:
     display_plugin: page
     id: page_month
@@ -477,4 +479,4 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_date'
+        - 'config:field.storage.node.field_event_date'

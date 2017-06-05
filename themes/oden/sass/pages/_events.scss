@@ -184,7 +184,7 @@
     background: url(../img/logo.svg) no-repeat bottom right;
     background-size: contain;
   }
-  .views-field-field-date
+  .views-field-field-event-date
   {
     margin: 1em 0;
   }
@@ -197,7 +197,8 @@
 .node--type-oden-event,
 .node--type-member-event
 {
-  .field-date,
+  .field-event-date,
+  .field-event-time,
   .field-location
   {
     font-size: 1.125em;

@@ -5,11 +5,12 @@ dependencies:
   config:
     - field.field.node.member_event.body
     - field.field.node.member_event.field_contact_info
-    - field.field.node.member_event.field_date
+    - field.field.node.member_event.field_event_date
+    - field.field.node.member_event.field_event_time
     - field.field.node.member_event.field_location
     - node.type.member_event
   module:
-    - datetime
+    - datetime_range
     - text
     - user
 id: node.member_event.default
@@ -20,28 +21,37 @@ content:
   body:
     label: above
     type: text_default
-    weight: 4
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     region: content
   field_contact_info:
-    weight: 3
+    weight: 4
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_date:
+  field_event_date:
     weight: 1
     label: inline
     settings:
+      separator: '-'
+      format_type: medium
       timezone_override: ''
-      format_type: long
     third_party_settings: {  }
-    type: datetime_default
+    type: daterange_default
+    region: content
+  field_event_time:
+    weight: 2
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_location:
-    weight: 2
+    weight: 3
     label: inline
     settings:
       link_to_entity: false
@@ -50,8 +60,8 @@ content:
     region: content
   links:
     weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   langcode: true

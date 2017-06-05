@@ -6,7 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.oden_event.body
     - field.field.node.oden_event.field_contact_info
-    - field.field.node.oden_event.field_date
+    - field.field.node.oden_event.field_event_date
     - field.field.node.oden_event.field_location
     - node.type.oden_event
   module:
@@ -30,6 +30,6 @@ content:
     region: content
 hidden:
   field_contact_info: true
-  field_date: true
+  field_event_date: true
   field_location: true
   langcode: true

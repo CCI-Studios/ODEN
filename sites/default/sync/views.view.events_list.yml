@@ -3,11 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_date
+    - field.storage.node.field_event_date
     - node.type.member_event
     - node.type.oden_event
   module:
     - datetime
+    - datetime_range
     - node
     - user
 id: events_list
@@ -60,7 +61,7 @@ display:
         options:
           grouping:
             -
-              field: field_date_1
+              field: field_event_date_1
               rendered: true
               rendered_strip: false
           row_class: ''
@@ -203,10 +204,10 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-        field_date:
-          id: field_date
-          table: node__field_date
-          field: field_date
+        field_event_date:
+          id: field_event_date
+          table: node__field_event_date
+          field: field_event_date
           relationship: none
           group_type: group
           admin_label: ''
@@ -241,7 +242,7 @@ display:
             html: false
           element_type: span
           element_class: ''
-          element_label_type: span
+          element_label_type: ''
           element_label_class: ''
           element_label_colon: true
           element_wrapper_type: ''
@@ -252,10 +253,11 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: datetime_default
+          type: daterange_default
           settings:
             timezone_override: ''
             format_type: medium
+            separator: '-'
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -318,13 +320,13 @@ display:
           absolute: false
           entity_type: node
           plugin_id: node_path
-        field_date_2:
-          id: field_date_2
-          table: node__field_date
-          field: field_date
+        field_event_date_2:
+          id: field_event_date_2
+          table: node__field_event_date
+          field: field_event_date
           relationship: none
           group_type: group
-          admin_label: 'Content: Date 2 (Day of Month)'
+          admin_label: 'Content: Event Date 2'
           label: ''
           exclude: true
           alter:
@@ -367,10 +369,11 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: datetime_custom
+          type: daterange_custom
           settings:
             timezone_override: ''
             date_format: j
+            separator: '-'
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -382,18 +385,18 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_date_1:
-          id: field_date_1
-          table: node__field_date
-          field: field_date
+        field_event_date_1:
+          id: field_event_date_1
+          table: node__field_event_date
+          field: field_event_date
           relationship: none
           group_type: group
-          admin_label: 'Content: Date 1 (Grouping)'
+          admin_label: 'Content: Event Date 1'
           label: ''
           exclude: true
           alter:
             alter_text: true
-            text: '<div id="day{{field_date_2}}">{{ field_date_1 }}</div>'
+            text: '<div id="day{{ field_event_date_2 }}">{{ field_event_date_1 }}</div>'
             make_link: false
             path: ''
             absolute: false
@@ -431,10 +434,11 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: datetime_default
+          type: daterange_default
           settings:
             timezone_override: ''
             format_type: medium
+            separator: '-'
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -500,10 +504,10 @@ display:
           entity_field: type
           plugin_id: bundle
       sorts:
-        field_date_value:
-          id: field_date_value
-          table: node__field_date
-          field: field_date_value
+        field_event_date_value:
+          id: field_event_date_value
+          table: node__field_event_date
+          field: field_event_date_value
           relationship: none
           group_type: group
           admin_label: ''
@@ -544,10 +548,10 @@ display:
           plugin_id: text_custom
       relationships: {  }
       arguments:
-        field_date_value_year_month:
-          id: field_date_value_year_month
-          table: node__field_date
-          field: field_date_value_year_month
+        field_event_date_value_year_month:
+          id: field_event_date_value_year_month
+          table: node__field_event_date
+          field: field_event_date_value_year_month
           relationship: none
           group_type: group
           admin_label: ''
@@ -586,7 +590,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_date'
+        - 'config:field.storage.node.field_event_date'
   block_1:
     display_plugin: block
     id: block_1
@@ -603,4 +607,4 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_date'
+        - 'config:field.storage.node.field_event_date'
