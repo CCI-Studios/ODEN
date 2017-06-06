@@ -5,8 +5,16 @@ dependencies:
   config:
     - field.storage.user.field_key_contact_phone_number
   module:
+    - required_api
     - telephone
     - user
+third_party_settings:
+  required_api:
+    required_plugin: required_by_role
+    required_plugin_options:
+      anonymous: anonymous
+      member: member
+      administrator: 0
 id: user.user.field_key_contact_phone_number
 field_name: field_key_contact_phone_number
 entity_type: user
