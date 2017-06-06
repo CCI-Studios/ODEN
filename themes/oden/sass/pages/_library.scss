@@ -13,6 +13,17 @@
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
     border-radius: 2px;
     padding: 30px;
+    
+    & > div
+    {
+      padding-right: 230px;
+      position: relative;
+      
+      @media screen and (max-width: 640px)
+      {
+        padding-right: 0;
+      }
+    }
   }
   .field-thumbnail img
   {
@@ -32,10 +43,12 @@
   .read-more
   {
     text-align: center;
-    margin-left: 30px;
-    float: right;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -19px;
     
-    @media screen and (max-width: 540px)
+    @media screen and (max-width: 640px)
     {
       display: none;
     }
