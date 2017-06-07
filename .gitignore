@@ -42,3 +42,8 @@ sites/default/sync/key.key*.yml
 # Ignore core phpcs.xml and phpunit.xml.
 core/phpcs.xml
 core/phpunit.xml
+
+
+## ignore sendgrid config since it exports the private API key
+sites/default/sync/sendgrid_integration.settings.yml
+

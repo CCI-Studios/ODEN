@@ -51,6 +51,7 @@ module:
   link: 0
   link_attributes: 0
   locale: 0
+  mailsystem: 0
   menu_item_visibility: 0
   menu_link_content: 0
   menu_ui: 0
@@ -74,6 +75,7 @@ module:
   search_api: 0
   search_api_db: 0
   search_api_page: 0
+  sendgrid_integration: 0
   simple_mail: 0
   sitemap: 0
   stripe_api: 0
