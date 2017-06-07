@@ -93,7 +93,7 @@ footer
       background: white;
       border-radius: 100px;
       height: 40px;
-      padding: 0 15px;
+      padding: 0 0 0 15px;
       
       label
       {
@@ -123,6 +123,22 @@ footer
         background: transparent;
         padding: 0 8px;
         box-sizing: border-box;
+      }
+      label.error
+      {
+        color: white;
+        height: auto;
+        line-height: normal;
+        width: auto;
+        padding-right: 0;
+        text-align: left;
+        margin-bottom: 1em;
+        clear: left;
+        
+        &:after
+        {
+          display: none;
+        }
       }
     }
     .button
