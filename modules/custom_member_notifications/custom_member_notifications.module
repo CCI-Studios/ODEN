@@ -64,8 +64,9 @@ function custom_member_notifications_node_update(NodeInterface $node) {
       $to = $user->getEmail();
       $from = \Drupal::config('system.site')->get('mail');
       $subject = "Your Event Has Been Published";
-      $body = $node->getTitle() . "<br>\r\n";
-      $body .= $url;
+      $body = "Your event has been reviewed and published on our event calendar.<br><br>";
+      $body .= "To view your event click here: " . $url . "<br><br>";
+      $body .= "Thank you,<br>ODEN<br>";
       simple_mail_send($from, $to, $subject, $body);
     }
   }
