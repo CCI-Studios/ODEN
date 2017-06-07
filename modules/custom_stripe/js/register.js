@@ -27,8 +27,8 @@
     });
   }
   function calculateCost() {
-    var membershipType = form.field_membership_type.value;
-    var budget = form.field_operating_budget.value;
+    var membershipType = $(form).find("[name=field_membership_type]:checked").val();
+    var budget = $(form).find("[name=field_operating_budget]:checked").val();
     if (!membershipType || !budget) return;
     var prices = drupalSettings.custom_stripe.price;
     switch (membershipType) {
