@@ -9,6 +9,9 @@
   });
   
   form.addEventListener("submit", submitEvent);
+  createCostField();
+  updateCostField();
+  $(form).find("[name=field_membership_type], [name=field_operating_budget]").on("change blur", updateCostField);
   
   function submitEvent(e) {
     if (!$(form).valid()) {
@@ -42,5 +45,12 @@
   function stripeToken(token) {
     form["stripe_token"].value = token.id;
     form.submit();
+  }
+  function createCostField() {
+    $("#edit-field-operating-budget--wrapper").after("<div class='form-item field-cost'><label>Membership Cost</label><div class='field-value'></div></div>");
+  }
+  function updateCostField() {
+    var cost = "$"+(calculateCost()/100).toFixed(2);
+    $(form).find(".field-cost .field-value").text(cost);
   }
 })(jQuery);
