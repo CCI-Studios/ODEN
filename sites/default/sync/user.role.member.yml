@@ -10,5 +10,6 @@ permissions:
   - 'create member_event content'
   - 'delete own member_event content'
   - 'edit own member_event content'
+  - 'use text format limited_html'
   - 'view own field_membership_expiry'
   - 'view own field_membership_type'
