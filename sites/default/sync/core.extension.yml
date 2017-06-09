@@ -68,7 +68,6 @@ module:
   recaptcha: 0
   recreate_block_content: 0
   redirect: 0
-  registration_role: 0
   required_api: 0
   required_by_role: 0
   reroute_email: 0

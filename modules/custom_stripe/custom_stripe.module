@@ -1,6 +1,15 @@
 <?php
 
+use Drupal\user\Entity\User;
+use \Drupal\Core\Entity\EntityInterface;
+
 function custom_stripe_form_user_register_form_alter(&$form, &$form_state) {
+	//do not prompt an admin user for payment
+	$user = User::load(\Drupal::currentUser()->id());
+  if ($user->hasRole('administrator')) {
+		return;
+	}
+	
 	//atach library for the stripe api and register form
 	$form['#attached']['library'][] = "custom_stripe/register";
 
@@ -36,6 +45,12 @@ function custom_stripe_form_user_register_form_alter(&$form, &$form_state) {
 }
 
 function _custom_stripe_user_register_validate(&$form, &$form_state) {
+	//do not prompt an admin user for payment
+	$user = User::load(\Drupal::currentUser()->id());
+  if ($user->hasRole('administrator')) {
+		return;
+	}
+	
 	//validate stripe token exists
 	$token = $form_state->getValue('stripe_token');
 	if (!$token) {
@@ -91,4 +106,15 @@ function _custom_stripe_calculate_cost($membershipType, $budget) {
 		case 15: 
 			return (int)$config->get("price_full_".$budget);
 	}
+}
+
+function custom_stripe_user_presave(EntityInterface $entity) {
+	//do not add the member role for an admin
+	$user = User::load(\Drupal::currentUser()->id());
+  if ($user->hasRole('administrator')) {
+		return;
+	}
+
+	//add member role
+  $entity->addRole("member");
 }
