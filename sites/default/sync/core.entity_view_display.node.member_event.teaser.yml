@@ -31,5 +31,6 @@ content:
 hidden:
   field_contact_info: true
   field_event_date: true
+  field_event_time: true
   field_location: true
   langcode: true

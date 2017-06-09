@@ -71,6 +71,7 @@ module:
   registration_role: 0
   required_api: 0
   required_by_role: 0
+  reroute_email: 0
   search: 0
   search_api: 0
   search_api_db: 0
