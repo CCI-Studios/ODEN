@@ -11,6 +11,7 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access private fields'
+  - 'access toolbar'
   - 'access user profiles'
   - 'access webform submission log'
   - 'administer blocks'
