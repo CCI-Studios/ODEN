@@ -35,7 +35,7 @@ function custom_member_notifications_node_insert(NodeInterface $node) {
     $url = Drupal\Core\Url::fromRoute('entity.node.edit_form', ['node' => $node->id()], $options)->toString();
     
     $to = \Drupal::config('system.site')->get('mail');
-    $from = "cmorris+site@ccistudios.com";
+    $from = "noreply@odenetwork.com";
     $subject = "New Member Event for Approval";
     $body = $node->getTitle() . "<br>\r\n";
     $body .= $url;
