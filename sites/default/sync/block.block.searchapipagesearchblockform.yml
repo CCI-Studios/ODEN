@@ -28,6 +28,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /about-us/library
+    pages: /node/10
     negate: false
     context_mapping: {  }
