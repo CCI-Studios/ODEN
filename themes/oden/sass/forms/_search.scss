@@ -1,0 +1,60 @@
+.block-search-api-page,
+.search-api-page-block-form-search-content
+{
+  display: inline-block;
+  position: relative;
+  padding: 0 13px 0 36px;
+  height: 26px;
+  border: 1px solid $navy;
+  border-radius: 14px;
+  margin-bottom: 1.5em;
+  background: white;
+  
+  label
+  {
+    position: static !important;
+    float: left;
+    width: auto;
+    height: auto;
+    color: $navy;
+    left: 34px;
+    clip: auto;
+    margin: 0 8px 0 0;
+    line-height: 26px;
+    font-weight: 500;
+    font-size: 0.875em;
+  }
+  .form-search
+  {
+    height: 26px;
+    line-height: 26px;
+    border: 0;
+    width: 140px;
+    padding: 0 6px;
+    color: $navy;
+    
+    @include maxwidth(380px)
+    {
+      width: 95px;
+    }
+  }
+  .form-submit
+  {
+    position: absolute;
+    left: 12px;
+    top: 0;
+    width: 16px;
+    height: 26px;
+    border: 0;
+    background: transparent url(../img/icon-search-navy.svg) no-repeat center center;
+    border: 0;
+    font-size: 0;
+    padding: 0;
+    min-width: 0;
+    border-radius: 0;
+  }
+  .form-item
+  {
+    margin: 0;
+  }
+}
