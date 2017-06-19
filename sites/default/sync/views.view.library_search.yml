@@ -237,11 +237,22 @@ display:
           group_type: group
           admin_label: ''
           empty: true
-          tokenize: false
+          tokenize: true
           target: searchapipagesearchblockform
           view_mode: default
           bypass_access: true
           plugin_id: entity
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: true
+          content: '<div class="view-search-summary"><p>Searching for: {{ arguments.keys }}</p></div>'
+          plugin_id: text_custom
       footer: {  }
       empty:
         area_text_custom:

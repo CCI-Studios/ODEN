@@ -197,8 +197,13 @@
 
 .view-library-search
 {
-  .view-empty
+  .view-empty,
+  .view-search-summary
   {
     clear: both;
+  }
+  .view-search-summary
+  {
+    margin-bottom: 1.5em;
   }
 }
