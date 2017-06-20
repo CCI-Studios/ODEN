@@ -295,7 +295,18 @@ display:
           bypass_access: true
           plugin_id: entity
       footer: {  }
-      empty: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: "<p>There are no articles in this category.</p>\n<p><a href=\"/resources/libraryarchives\" class=\"button\">Back to Categories</a></p>"
+          plugin_id: text_custom
       relationships: {  }
       fields: {  }
       display_extenders: {  }
