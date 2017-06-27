@@ -9,6 +9,7 @@ global:
     js/twitterFetcher.js: {}
     js/twitter-feed.js: {}
     js/back-to-top.js: {}
+    js/register-membership-types.js: {}
   dependencies:
     - core/classList
     - oden/slick

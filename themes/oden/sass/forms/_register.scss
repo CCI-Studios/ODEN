@@ -73,4 +73,21 @@
   {
     clear: left;
   }
+  .hide
+  {
+    display: none;
+  }
+  .membership-helper
+  {
+    display: inline-block;
+    background: $navy;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 6px;
+  }
 }

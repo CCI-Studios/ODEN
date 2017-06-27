@@ -17,12 +17,13 @@ third_party_settings:
       anonymous: anonymous
       member: member
       administrator: 0
+      super_administrator: 0
 id: user.user.field_membership_type
 field_name: field_membership_type
 entity_type: user
 bundle: user
 label: 'Membership Type'
-description: ''
+description: "<span class=\"membership-type-single\"><strong> SINGLE MEMBERSHIP</strong><p>An individual who shares the Network’s goals and objectives and does not qualify under other membership categories. Individual members shall be without a vote. Individual members may not hold office, but may serve on committees or task forces of the Network. </p></span>\r\n<span class=\"membership-type-corporate\"><strong> CORPORATE MEMBERSHIP</strong><p> Membership shall be available to corporate businesses having common interests and aims with the Network. Corporate members shall be without a vote. Corporate members cannot hold office, but may serve on committees.  (e.g. TD Canada Trust, Bell Canada, OLG, Tim Horton’s Corporate)</p></span>\r\n<span class=\"membership-type-associate\"><strong>ASSOCIATE MEMBERSHIP</strong><p>Like-minded organizations who share the Network’s goals and objectives. Associate members shall be without a vote.  (e.g. Community Living Ontario, CACL, CMHA-ON, ODSP Action Coalition)</p></span>\r\n<span class=\"membership-type-full\"><strong>FULL MEMBERSHIP</strong><p>Full Membership shall be available to organizations in Ontario operating employment services for persons with a disability facing barriers to employment. For each paid membership, an organization may have one voting representative. Voting representatives shall be members of the staff of the organization.</p><p>Full members will have full voting rights and privileges; be eligible to be elected to the Board; sit on Committees; and, access to the ‘member only’ website login and the information and resources contained within.</p></span>"
 required: false
 translatable: false
 default_value:
