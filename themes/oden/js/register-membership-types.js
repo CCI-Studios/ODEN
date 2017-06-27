@@ -12,7 +12,6 @@
   var buttons = container.querySelectorAll(".membership-helper");
   for (var i=0; i<buttons.length; i++) {
     buttons[i].addEventListener("focus", (function(i){return function(e){showDescription(e, i);}})(i));
-    buttons[i].addEventListener("blur", (function(i){return function(e){hideDescription(e, i);}})(i));
     buttons[i].addEventListener("click", function(e){e.stopPropagation();e.preventDefault();});
   }
   
