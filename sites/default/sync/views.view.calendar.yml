@@ -373,6 +373,17 @@ display:
           content: ''
           pager_embed: 1
           plugin_id: calendar_header
+        area_text_custom_1:
+          id: area_text_custom_1
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: 'List View button'
+          empty: true
+          tokenize: true
+          content: '<div class="calendar-list-view"><a href="/news/events/list/{{ raw_arguments.field_event_date_value_year_month }}">List View</a></div>'
+          plugin_id: text_custom
         area_text_custom:
           id: area_text_custom
           table: views
