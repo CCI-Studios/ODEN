@@ -5,18 +5,19 @@ dependencies:
   module:
     - node
 id: oden_events
-label: 'ODEN Events'
+label: Events
 type: 'canonical_entities:node'
-pattern: 'news/events/oden/[node:title]'
+pattern: 'news/events/[node:title]'
 selection_criteria:
-  2223e712-dc13-4026-a933-1e87c7b7e944:
+  f2cc88c1-21c1-4131-8c09-24d6aaa1f5f0:
     id: node_type
     bundles:
+      member_event: member_event
       oden_event: oden_event
     negate: false
     context_mapping:
       node: node
-    uuid: 2223e712-dc13-4026-a933-1e87c7b7e944
+    uuid: f2cc88c1-21c1-4131-8c09-24d6aaa1f5f0
 selection_logic: and
 weight: -5
 relationships: {  }
