@@ -7,7 +7,7 @@ remove_repeated_segments: 1
 _core:
   default_config_hash: MymgTM4i959vZLJ3F-hpn_ntX-johso5eQqRm-03r0Y
 include_invalid_paths: 0
-excluded_paths: ''
+excluded_paths: news/events/list
 segments_separator: null
 title_segment_as_link: 0
 title_from_page_when_available: 1

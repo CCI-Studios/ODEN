@@ -597,7 +597,7 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: standard
-      title: 'ODEN Events Calendar'
+      title: 'Events List'
       header:
         calendar_header:
           id: calendar_header
@@ -644,7 +644,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          default_action: default
+          default_action: 'not found'
           exception:
             value: all
             title_enable: false
