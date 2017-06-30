@@ -182,8 +182,9 @@ class EasyBreadcrumbBuilder implements BreadcrumbBuilderInterface {
       if ($this->config->get(EasyBreadcrumbConstants::EXCLUDED_PATHS)) {
         $config_textarea = $this->config->get(EasyBreadcrumbConstants::EXCLUDED_PATHS);
         $excludes = preg_split('/[\r\n]+/', $config_textarea, -1, PREG_SPLIT_NO_EMPTY);
-        if (in_array(end($path_elements), $excludes)) {
-          break;
+        if (in_array(implode('/', $path_elements), $excludes)) {
+          array_pop($path_elements);
+          continue;
         }
       }
 
