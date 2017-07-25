@@ -15,7 +15,6 @@ dependencies:
     - field.field.user.user.field_membership_expiry
     - field.field.user.user.field_membership_type
     - field.field.user.user.field_operating_budget
-    - field.field.user.user.field_opt_out_member_map
     - field.field.user.user.field_organization
     - field.field.user.user.field_other_disabilities_ser
     - field.field.user.user.field_primary_disability_served
@@ -158,13 +157,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
-    region: content
-  field_opt_out_member_map:
-    weight: 8
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
     region: content
   field_organization:
     weight: 4
