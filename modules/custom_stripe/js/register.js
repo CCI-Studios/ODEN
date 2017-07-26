@@ -47,7 +47,7 @@
     form.submit();
   }
   function createCostField() {
-    $("#edit-field-operating-budget--wrapper").after("<div class='form-item field-cost'><label>Membership Cost</label><div class='field-value'></div></div>");
+    $("#edit-field-operating-budget--wrapper").after("<div class='form-item field-cost'><label><strong>Membership Cost</strong> (calculated by selection above)</label><div class='field-value'></div></div>");
   }
   function updateCostField() {
     var cost = "$"+(calculateCost()/100).toFixed(2);
