@@ -15,6 +15,7 @@ function oden_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_stat
       "#markup" => '<div><img alt="fees.png" data-entity-type="" data-entity-uuid="" src="/sites/default/files/fees.png" /></div',
       "#weight" => 12
     );
+    $form['actions']['submit']['#value'] = t('Submit');
   } else {
     // print $form_id;
   }
