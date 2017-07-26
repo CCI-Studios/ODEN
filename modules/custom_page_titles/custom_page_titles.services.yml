@@ -1,0 +1,5 @@
+services:
+  custom_page_titles.route_subscriber:
+    class: Drupal\custom_page_titles\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }

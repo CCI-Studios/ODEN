@@ -1,0 +1,7 @@
+<?php
+
+function custom_page_titles_menu_local_tasks_alter(&$data, $route_name) {
+  if (isset($data['tabs'][0]['user.register'])) {
+    $data['tabs'][0]['user.register']['#link']['title'] = t('New Member Form');
+  }
+}

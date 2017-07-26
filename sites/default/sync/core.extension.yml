@@ -23,6 +23,7 @@ module:
   ctools_views: 0
   custom_member_events: 0
   custom_member_notifications: 0
+  custom_page_titles: 0
   custom_stripe: 0
   custom_user_list_cache: 0
   datetime: 0

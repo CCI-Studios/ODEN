@@ -2,8 +2,13 @@ uuid: e4495565-da50-44b7-9d29-d5db158e77c7
 langcode: en
 status: true
 dependencies:
+  module:
+    - block_class
   theme:
     - oden
+third_party_settings:
+  block_class:
+    classes: ''
 _core:
   default_config_hash: c-06bbElRY5sKmglk74ppgTW93Et4-EJFyNiUZMb8JY
 id: oden_local_tasks
