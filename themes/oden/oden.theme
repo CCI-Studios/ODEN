@@ -10,6 +10,11 @@ function oden_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_stat
   } else if ($form_id == "user_register_form") {
     unset($form['account']['mail']['#description']);
     unset($form['account']['pass']['#description']);
+    $form['field_member_type_price'] = array(
+      "#type" => "markup",
+      "#markup" => '<div><img alt="fees.png" data-entity-type="" data-entity-uuid="" src="/sites/default/files/fees.png" /></div',
+      "#weight" => 12
+    );
   } else {
     // print $form_id;
   }

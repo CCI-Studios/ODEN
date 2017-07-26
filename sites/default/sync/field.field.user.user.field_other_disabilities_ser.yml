@@ -5,7 +5,12 @@ dependencies:
   config:
     - field.storage.user.field_other_disabilities_ser
   module:
+    - required_api
     - user
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
 id: user.user.field_other_disabilities_ser
 field_name: field_other_disabilities_ser
 entity_type: user
