@@ -473,7 +473,7 @@ display:
           admin_label: 'View Map'
           empty: true
           tokenize: false
-          content: '<div class="view-map"><a href="/membership/map" class="button">View Map</a></div>'
+          content: '<div class="view-map"><a href="/membership/map" class="button">Map View</a></div>'
           plugin_id: text_custom
         entity_block:
           id: entity_block
