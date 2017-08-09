@@ -44,7 +44,7 @@ function custom_member_notifications_node_insert(NodeInterface $node) {
     //redirect the user to their events page
     $user = User::load(\Drupal::currentUser()->id());
     if ($user->hasRole('member')) {
-      drupal_set_message(t("Thank you for your event submission. Please give us up to two business days to review and post your event to our calendar."));
+      drupal_set_message(t("<p>Thank you for your event submission. Please give us two business days to review and post your event to the Calendar.</p><p>If you require immediate assistance please email sdafoe@odenetwork.com or call us at 1-866-280-6336.</p><p>Member Event \"".$node->getTitle()."\" has been created.</p><p>Thank you,<br>The ODEN Team</p>"));
       $response = new RedirectResponse("/user/".$user->id()."/events");
       $response->send();
     }
