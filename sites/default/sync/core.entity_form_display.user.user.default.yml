@@ -67,9 +67,9 @@ mode: default
 content:
   account:
     weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_add:
     weight: 6
     settings:
@@ -183,16 +183,16 @@ content:
   field_website:
     weight: 5
     settings:
-      placeholder_url: ''
+      placeholder_url: 'http://'
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
     region: content
   language:
     weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   path:
     type: path
     weight: 3
@@ -201,10 +201,9 @@ content:
     region: content
   translation:
     weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
-  field_opt_out_member_map: true
   langcode: true
   timezone: true

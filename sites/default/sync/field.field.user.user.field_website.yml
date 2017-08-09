@@ -6,7 +6,12 @@ dependencies:
     - field.storage.user.field_website
   module:
     - link
+    - required_api
     - user
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
 id: user.user.field_website
 field_name: field_website
 entity_type: user
