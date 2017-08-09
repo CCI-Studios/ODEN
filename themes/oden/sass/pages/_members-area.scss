@@ -15,7 +15,11 @@
 {
   margin-top: 35px;
 }
-.view-member-notices .node--type-member-notices
+.view-member-notices
+{
+  clear: both;
+}
+.node--type-member-notices.node--view-mode-teaser
 {
   padding: 35px;
   margin-bottom: 35px;
@@ -45,4 +49,20 @@
   {
     margin-bottom: 1em;
   }
+}
+
+.block--search-member-notices
+{
+  #search-api-page-block-form .form-type-search label:after
+  {
+    display: none;
+  }
+}
+.search-api-page-block-form[action="/search-member-notices"] .form-type-search label:after
+{
+  display: none;
+}
+.view-search-member-notices
+{
+  clear: both;
 }

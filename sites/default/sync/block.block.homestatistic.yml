@@ -16,7 +16,7 @@ third_party_settings:
 id: homestatistic
 theme: oden
 region: top
-weight: -16
+weight: -13
 provider: null
 plugin: 'block_content:fe6dfb64-f178-4fbe-b044-f25a31fc8664'
 settings:

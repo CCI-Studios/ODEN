@@ -1,0 +1,43 @@
+uuid: 54332ae4-7cd1-4fd1-820d-8555ee9f2f76
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api_page.search_api_page.search_member_notices
+  module:
+    - block_class
+    - search_api_page
+    - system
+    - user
+  theme:
+    - oden
+third_party_settings:
+  block_class:
+    classes: block--search-member-notices
+id: searchapipagesearchnoticesblockform
+theme: oden
+region: content
+weight: -15
+provider: null
+plugin: search_api_page_form_block
+settings:
+  id: search_api_page_form_block
+  label: 'Search Member Notices'
+  provider: search_api_page
+  label_display: '0'
+  search_api_page: search_member_notices
+visibility:
+  request_path:
+    id: request_path
+    pages: "/search-member-notices/*\r\n"
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      administrator: administrator
+      member: member
+      super_administrator: super_administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

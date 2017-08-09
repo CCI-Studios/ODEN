@@ -1,0 +1,80 @@
+uuid: d76cf208-5653-4dae-b955-949f4d7aaedf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - search_api.server.library
+  module:
+    - search_api
+    - node
+id: member_notices
+name: 'Member Notices'
+description: ''
+read_only: false
+field_settings:
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+  body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: true
+      selected:
+        - member_notices
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  aggregated_field: {  }
+  rendered_item: {  }
+  add_url: {  }
+  tokenizer:
+    fields:
+      - title
+      - body
+    spaces: ''
+    overlap_cjk: 1
+    minimum_word_size: '3'
+    weights:
+      preprocess_index: -6
+      preprocess_query: -6
+  html_filter:
+    fields:
+      - body
+    title: true
+    alt: true
+    tags:
+      h1: 5
+      h2: 3
+      h3: 2
+      strong: 2
+      b: 2
+      em: 1
+      u: 1
+    weights:
+      preprocess_index: -15
+      preprocess_query: -15
+  ignorecase:
+    fields:
+      - title
+      - body
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+tracker_settings:
+  default: {  }
+options:
+  index_directly: true
+  cron_limit: 50
+server: library

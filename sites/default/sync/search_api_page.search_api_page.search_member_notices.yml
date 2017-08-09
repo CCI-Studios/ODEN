@@ -1,0 +1,19 @@
+uuid: 772a2b02-44c2-45d3-9cad-5994ea5d5fd4
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.member_notices
+id: search_member_notices
+label: 'Search Member Notices'
+path: /search-member-notices
+clean_url: true
+show_all_when_no_keys: false
+index: member_notices
+limit: 10
+searched_fields:
+  title: title
+  body: body
+style: search_results
+view_mode_configuration: {  }
+show_search_form: true

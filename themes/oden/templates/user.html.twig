@@ -32,5 +32,6 @@
 
 <div class="block--member-notices">
   <h2>{{ 'Documents and Notices'|t }}</h2>
+  {{ drupal_block('searchapipagesearchnoticesblockform', FALSE) }}
   {{ drupal_view('member_notices', 'block') }}
 </div>

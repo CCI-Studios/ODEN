@@ -16,7 +16,7 @@ third_party_settings:
 id: searchmembersform
 theme: oden
 region: content
-weight: -7
+weight: -6
 provider: null
 plugin: search_api_page_form_block
 settings:

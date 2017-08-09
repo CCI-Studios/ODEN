@@ -15,7 +15,7 @@ third_party_settings:
 id: top
 theme: oden
 region: top
-weight: -3
+weight: -18
 provider: null
 plugin: 'system_menu_block:top'
 settings:

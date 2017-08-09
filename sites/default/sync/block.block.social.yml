@@ -15,7 +15,7 @@ third_party_settings:
 id: social
 theme: oden
 region: top
-weight: -6
+weight: -21
 provider: null
 plugin: 'system_menu_block:social'
 settings:

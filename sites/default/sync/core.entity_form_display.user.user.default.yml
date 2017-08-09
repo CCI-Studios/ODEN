@@ -205,5 +205,6 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_opt_out_member_map: true
   langcode: true
   timezone: true

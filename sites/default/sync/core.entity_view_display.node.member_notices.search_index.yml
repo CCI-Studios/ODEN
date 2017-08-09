@@ -1,0 +1,21 @@
+uuid: 0a0cbc72-c4f6-4e1d-abed-43fcc61215ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.member_notices.body
+    - field.field.node.member_notices.field_files
+    - node.type.member_notices
+  module:
+    - user
+id: node.member_notices.search_index
+targetEntityType: node
+bundle: member_notices
+mode: search_index
+content: {  }
+hidden:
+  body: true
+  field_files: true
+  langcode: true
+  links: true

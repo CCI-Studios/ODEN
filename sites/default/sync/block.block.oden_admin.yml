@@ -13,7 +13,7 @@ _core:
 id: oden_admin
 theme: oden
 region: top
-weight: -20
+weight: -17
 provider: null
 plugin: 'system_menu_block:admin'
 settings:

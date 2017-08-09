@@ -1,0 +1,21 @@
+uuid: d8577372-5e23-4d9e-b539-027fd9ae241e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.member_notices.body
+    - field.field.node.member_notices.field_files
+    - node.type.member_notices
+  module:
+    - user
+id: node.member_notices.search_result
+targetEntityType: node
+bundle: member_notices
+mode: search_result
+content: {  }
+hidden:
+  body: true
+  field_files: true
+  langcode: true
+  links: true
