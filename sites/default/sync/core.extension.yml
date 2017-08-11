@@ -80,6 +80,7 @@ module:
   sendgrid_integration: 0
   simple_mail: 0
   sitemap: 0
+  smart_trim: 0
   stripe_api: 0
   system: 0
   taxonomy: 0
