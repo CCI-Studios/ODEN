@@ -15,6 +15,9 @@ function oden_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_stat
       "#markup" => '<div><img alt="fees.png" data-entity-type="" data-entity-uuid="" src="/sites/default/files/fees.png" /></div',
       "#weight" => 12
     );
+    if (!$form['field_website']['widget'][0]['uri']['#default_value'] && !$form['field_website']['widget'][0]['uri']['#value']) {
+      $form['field_website']['widget'][0]['uri']['#default_value'] = 'http://';
+    }
     $form['actions']['submit']['#value'] = t('Submit');
   } else {
     // print $form_id;
