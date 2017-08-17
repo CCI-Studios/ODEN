@@ -1,6 +1,8 @@
 (function(){
   //main menu dropdowns
-  document.querySelector(".menu--main").addEventListener("click", openDropdown);
+  var menu = document.querySelector(".menu--main");
+  if (!menu) return;
+  menu.addEventListener("click", openDropdown);
   function openDropdown(e) {
     if (e.target.tagName.toLowerCase() != "a") return;
     if (!e.target.parentNode.classList.contains("menu-item--expanded")) return;

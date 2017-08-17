@@ -5,18 +5,20 @@
   var infoWindows = [];
   var members;
   
-  createMap();
+  var container = document.querySelector(".map--members");
+  if (!container) return;
+  createMap(container);
   prepareMembersData();
   createMemberMarkers();
   
-  function createMap()
+  function createMap(container)
   {
     var mapOptions = {
       zoom: 6,
       center: getCenter(),
       scrollwheel: false
     };
-    map = new google.maps.Map(document.querySelector(".map--members"),mapOptions);
+    map = new google.maps.Map(container,mapOptions);
     geocoder = new google.maps.Geocoder();
   }
   function getCenter()
