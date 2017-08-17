@@ -34,7 +34,7 @@ $aliases['staging3'] = array(
 
 $aliases['live'] = array(
         'uri'=> 'live.odenetwork.com',
-        'root' => '/home7/odenetwo/public_html/subdomains/live/public_html',
+        'root' => '/home7/odenetwo/subdomains/live/public_html',
         'remote-host'=> '66.147.244.154',
         'remote-user'=> 'odenetwo',
         'path-aliases'=> array(
