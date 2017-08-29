@@ -1,0 +1,4 @@
+name: Default user create form blocked
+type: module
+description: 'Default user create form blocked'
+core: 8.x
